@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h3>Hello {{ user.username }}</h3>
+        <h3>Register for {{ event.event_name }}</h3>
+        <form>
+            <label for="car_name">Car Name</label>
+            <input type="text" name="car_name" value="{{ car.car_name }}">
+            <br>
+            
+            <!--car_owner = models.ForeignKey(User, on_delete=models.CASCADE)-->
+
+            <label for="car_year">Year</label>
+            <input type="number" name="car_year" min="1900" max="2024" value="{{ car.car_year }}">
+            <br>
+
+            <label for="car_make">Make</label>
+            <input type="text" name="car_make" value="{{ car.car_make }}">
+            <br>
+
+            <label for="car_model">Model</label>
+            <input type="text" name="car_model" value="{{ car.car_model }}">
+            <br>
+
+            <label for="car_modifications">Breifly explain your car's modifications.</label>
+            <input type="text" name="car_modifications" value="{{ car.car_modifications }}">
+            <br>
+
+            <label for="feature_consideration">Would you like your car to be considered as a feature car?</label>
+            <input type="checkbox" name="feature_consideration" value="{{ car.feature_consideration }}">
+            <br>
+
+            {% csrf_token %}
+
+            <button type="submit">Register!</button>
+
+        </form>
+        <hr>
+    </div>
+{% endblock content %}
