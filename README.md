@@ -1,108 +1,131 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Dangerous Maze
 
-Welcome WSMorrison,
+Portfolio Project 4, Full Stack Toolkit.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Program links
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- [Github repository](https://github.com/WSMorrison/The_Hard_Parkers)
+- [Heroku Overview](https://dashboard.heroku.com/apps/hardparkers)
+- [Deployed App](https://hardparkers.herokuapp.com/)
 
-## Gitpod Reminders
+![Front page of The Hard Parkers](./assets/images/placeholder.jpg)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Contents
+*Table of contents available as part of GitHub README.md header*
 
-`python3 -m http.server`
+# Rationale
 
-A blue button should appear to click: _Make Public_,
+Portfolio Project 4 is intended to show the student's ability to create a website that utilizes frameworks such as Django and Bootstrap, as well as show a practical understanding of a model-view-controller architecture.
 
-Another blue button should appear to click: _Open Browser_.
+The Hard Parkers website is intended to allow automotive enthusiasts to register their vehicles for events, as well as organize events for others to attend. This is intended to be a simple, fast, intuitive, and attractive way for users to find events they would like to attend, as well as a way for organizers to simplify registering vehicles while being able to enforce attendance caps and theme restrictions.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# User Experience
 
-A blue button should appear to click: _Make Public_,
+The Hard Parkers will have two levels of users, plus an admin functionality. An Attendee User will be able to register themselves and a car to published events. An Organizer User will have this ability, but also have the ability to publish events. Becoming an Organizer User will require approval by an admin.
 
-Another blue button should appear to click: _Open Browser_.
+When an unregistered user visits the site, they will see a list of upcoming events, in order of soonest first. An Attendee User will a list of the events they have a car attending first, followed by the list of upcoming events they are not attending. From this list, the Attendee User can open individual events and see more event details. Details modeled into the events include dates, number of cars, location, a description of the event and other information. From the details page, the Attendee User can register themselves and a car to the event if there are any spots open and if the registration deadline hasn't passed. To regist the vehicle, the user will have to input the year, make, model, and list some of the modifications done or other aspects of the vehicle's provenance. The user will also be able to select wether they want to be considered as a feature car, if cars are featured at that event.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+An Organizer User will have the ability to publish events. To publish an event, the user will have to indicate a time and date, location, number of cars, and other information that the attendees will need. The Organizer will also be able to indicate wether the meet will feature cars, so that attendees can decide if they want their car considered.
 
-To log into the Heroku toolbelt CLI:
+## Project Targets
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- The website will be simple and intuitive to use.
+- The events will be well organized and will clearly indicate the type of meet the event is, as well as what sort of vehicles it is intended for.
+- The 
+- The 
+- The 
+- The 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Project Outcome
 
-------
+The final product of this project will be a website that can quickly and elegantly connect automotive enthusiasts looking for events to attend with event organizers.
 
-## Release History
+## Planning
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Planning the website started with developing data models that hold the information on the events, users, and the cars. A wireframe was then developed, focusing on mobile display because the target audience is expected to largely use smaller devices.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Design
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The site is designed mobile first, not just as a part of the development process but because the target audience will likely use smaller devices to interact with the site.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+# Technology Implementation
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Language
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The web page aspects of the site are written using HTML, CSS and JS, using Bootstrap libraries where appropriate.
+[HTML](https://html.spec.whatwg.org/multipage/), [CSS](https://www.w3.org/Style/CSS/) [Bootstrap](https://getbootstrap.com/)
+The program is written in the Python programming language. The Python language is written using the Django framework. Django also administers the databases.
+[Python](https://www.python.org/), [Django](https://www.djangoproject.com/)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Technology
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- The website was built on the Code Institute Gipod Full Workspace Template. Available on request.
+- The website uses Elephant SQL to host the databases. [Elephant SQL](https://www.elephantsql.com/)
+- The website hosts images on Cloudinary. [Cloudinary](https://cloudinary.com/)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Deployment
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Code was written and version control was maintained in GitHub. [Github](https://github.com/)
+- The website was deployed as an app using Heroku. [Heroku](https://www.heroku.com/)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+When the code was deployment ready, it was deployed in Heroku by following these steps as outlined in the Code Institute Love Sandwiches Walkthrough Project, Deployment, Deploying our Project Part 1 and Part 2 lessons:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- A requirements.txt file was made to give Heroku the dependencies required by the program. This was done by issuing the command "pip3 freeze > requirements.txt" in the Gitpod terminal.
+- In the Heroku dashboard, a new app was created.
+- In the new app's page, the settings tab was selected, and the following settings were set:
+    - A config var was set as CLOUDINARY_URL, and the appropriate Cloudinary URL was set in the value field.
+    - A config var was set as DATABASE_URL, and the appropriate Elephant SQL URL was set in the value field.
+    - A config var was set as HEROKU_POSTGRESQL_WHITE_URL, and the appropriate URL was set in the value field.
+    - A config var was set as SECRET_KEY, and the appropriate secret key was set to the value field, to match the secret key in the GitHub env.py hidden file. 
+    - A config var was set as PORT for the key field, and 8000 for the value field.
+- In the deploy tab of the app's page, the following selections were made:
+    - The app was connected to the developer's appropriate Github repository.
+    - Automatic deploys were enabled.
+    - Deploy Branch was selected for the initial deployment.
+- When Heroku successfully deployed the App, the deployment was checked and tested.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Defensive Code
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Defensive Code Stuff
+- Defensive Code Stuff
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+# Features
 
-------
+- The page lists upcoming events by date.
 
-## FAQ about the uptime script
+![Locally hosted illustrative picture](./assets/images/placeholder.jpg)
 
-**Why have you added this script?**
+# Testing
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+The website was tested in Gitpod during development, to maintain continuity of functionality and to check that each added development worked properly. 
 
-**How will this affect me?**
+HTML was copy and pasted into the W3C Markup validator, and returned no errors. [W3C Markup validator](https://validator.w3.org/#validate_by_input)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+CSS was copy and pasted into the W3C CSS validator, and returned no errors. [W3C CSS validator](https://jigsaw.w3.org/css-validator/)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Do we put the stuff in the Python Linter?
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Locally hosted illustrative picture](./assets/images/placeholder.jpg)
 
-**So….?**
+Some bugs were exposed during initial development and during deployed testing, most were fixed.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Bugs
 
-**Can I opt out?**
+Talk about unalive silverfish
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Unfixed bugs
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+Talk about alive silverfish
 
-**Anything more?**
+# Credits
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Code Institute Full Stack lessons for the bulk of the understanding about Django, Bootstrap, and other frameworks. [Code Institute](https://codeinstitute.net/ie/)
+- Code Institute instructor Simen Daehlin for almost everything else. [Simen Daehlin Github](https://github.com/Eventyret)
+- Code Institute mentor Jubrile Akolade provided guidance on where to focus time building the project and an almost infinite amount of other support.
+- All of my Code Institute UCD July 2022 cohort, who have been available to answer questions through Slack.
+- Code Institute tutors accessed through the Code Institute LMS have been helpful with understanding various concepts during instruction.
+- Code regarding the MVC architecture is very similar to the Code Institute training code from the I Think Therefore I Blog Lessons. Available on request.
+    - Process for modifying Django's built in registration and sign-up code to fit this website was particularly instructive, from the "Adding Authentication - Part 2" lesson.
+- Basic HTML structure uses the Bootstrap Cards style library. [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/)
 
----
-
-Happy coding!
+For educational purposes only.
