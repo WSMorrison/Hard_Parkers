@@ -40,17 +40,15 @@ class Car(models.Model):
 
 
 class Siteuser(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, default='None')
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     event_organizer = models.BooleanField(default=False)
     site_owner = models.BooleanField(default=False)
 
+    @receiver(post_save, sender=User)
+    def create_siteuser(sender, instance, created, **kwargs):
+        if created:
+            Siteuser.objects.create(user=instance)
 
-@receiver(post_save, sender=User)
-def create_siteuser(sender, instance, created, **kwargs):
-    if created:
-        Siteuser.objects.create(user=instance)
-
-
-@receiver(post_save, sender=User)
-def save_siteuser(sender, instance, **kwargs):
-    instance.profile.save()
+    @receiver(post_save, sender=User)
+    def save_siteuser(sender, instance, **kwargs):
+        instance.siteuser.save()
