@@ -4,6 +4,14 @@ from .models import Event, Siteuser, Car
 from django import forms
 
 
+def EventOrg(request):
+    return render(request, 'eventorg.html', {})
+
+
+def OwnConPan(request):
+    return render(request, 'ownconpan.html', {})
+
+
 class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.order_by('event_date')
@@ -34,7 +42,7 @@ class EventReg(View):
             {'event': event}
         )
 
-    def post(self, request, even_name, *args, **kargs):
+    def post(self, request, event_name, *args, **kargs):
 
         car_form = Form(data=reques.post)
 
