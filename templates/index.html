@@ -3,22 +3,24 @@
 {% block content %}
 
     <section>
-        <div class="card w-90 text-center">
-            <h2>Your Events</h2>
-            {% for event in event_list %}
-                {% if user in event.attendee %}
-                <div class="card w-90" >
-                    <div class="card-body">
-                        <h5 class="card-title">{{ event.event_name }}</h2>
-                        <h6>{{ event.event_location }}</h6>
-                        <p>{{ event.event_date }}</p>
-                        <p>Registration closes {{ event.event_date_reg_close }}</p>
-                        <a href="{% url 'event_view' event.event_name %}" class="btn btn-primary">Details</a>
+        {% if user.is_authenticated %}
+            <div class="card w-90 text-center">
+                <h2>Your Events</h2>
+                {% for event in event_list %}
+                    {% if user in event.attendee %}
+                    <div class="card w-90" >
+                        <div class="card-body">
+                            <h5 class="card-title">{{ event.event_name }}</h2>
+                            <h6>{{ event.event_location }}</h6>
+                            <p>{{ event.event_date }}</p>
+                            <p>Registration closes {{ event.event_date_reg_close }}</p>
+                            <a href="{% url 'event_view' event.event_name %}" class="btn btn-primary">Details</a>
+                        </div>
                     </div>
-                </div>
-                {% endif %}
-            {% endfor %}
-        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
     </section>
     <section>
         <div class="card w-90 text-center">
