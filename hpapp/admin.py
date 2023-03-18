@@ -5,7 +5,7 @@ from .models import Event, Car, Siteuser
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
     title = ('Event Date')
-    list_filter = ('event_date',)
+    list_filter = ('event_date', 'organizer', 'attendee',)
 
 
 @admin.register(Car)

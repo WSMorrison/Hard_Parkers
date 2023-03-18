@@ -6,7 +6,8 @@ from django.dispatch import receiver
 
 class Event(models.Model):
     event_name = models.CharField(max_length=50, unique=True)
-    organizer = models.ForeignKey(User, on_delete=models.CASCADE)
+    organizer = models.ForeignKey(User, on_delete=models.CASCADE,
+                                  related_name='organizer_name')
     event_date = models.DateTimeField()
     event_date_reg_close = models.DateTimeField()
     event_location = models.CharField(max_length=100)
@@ -15,6 +16,7 @@ class Event(models.Model):
     feature_cars = models.BooleanField(default=False)
     number_feature_cars = models.IntegerField(default=0)
     event_description = models.TextField()
+    attendee = models.ManyToManyField(User, related_name='attendee_name')
 
     class Meta:
         ordering = ['-event_date']

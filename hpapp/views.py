@@ -4,14 +4,6 @@ from .models import Event, Siteuser, Car
 from django import forms
 
 
-def EventOrg(request):
-    return render(request, 'eventorg.html', {})
-
-
-def OwnConPan(request):
-    return render(request, 'ownconpan.html', {})
-
-
 class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.order_by('event_date')
@@ -44,7 +36,7 @@ class EventReg(View):
 
     def post(self, request, event_name, *args, **kargs):
 
-        car_form = Form(data=reques.post)
+        car_form = Form(data=request.post)
 
         if car_form.is_valid():
             car = car_form.save(commit=False)
@@ -57,3 +49,14 @@ class EventReg(View):
             request,
             'index.html'
         )
+
+
+class EventOrg(generic.ListView):
+    model = Event
+    queryset = Event.objects.order_by('event_date')
+    template_name = 'eventorg.html'
+    paginate_by = 10
+
+
+def OwnConPan(request):
+    return render(request, 'ownconpan.html', {})
