@@ -51,6 +51,17 @@ class EventReg(View):
         )
 
 
+class YourEventList(generic.ListView):
+    model = Event
+    template_name = 'yourevents.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        your_event_list = Event.objects.filter(attendee=self.request.user)
+        print('EVENTS: ', your_event_list)
+        return your_event_list
+
+
 class EventOrg(generic.ListView):
     model = Event
     queryset = Event.objects.order_by('event_date')
