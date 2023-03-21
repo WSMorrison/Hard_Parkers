@@ -12,8 +12,19 @@ class EventList(generic.ListView):
 
 
 class EventView(View):
-
     def get(self, request, event_name, *args, **kwargs):
+        event = get_object_or_404(Event, event_name=event_name)
+        is_attendee = False
+        if event.attendee.filter(id=self.request.user.id).exists():
+            is_attendee = True
+
+        return render(
+            request,
+            'eventview.html',
+            {'event': event, 'is_attendee': is_attendee, }
+        )
+
+    def post(self, request, event_name, *args, **kwargs):
         event = get_object_or_404(Event, event_name=event_name)
         is_attendee = False
         if event.attendee.filter(id=self.request.user.id).exists():
@@ -27,13 +38,23 @@ class EventView(View):
 
 
 class EventReg(View):
-
     def get(self, request, event_name, *args, **kargs):
         event = get_object_or_404(Event, event_name=event_name)
 
         return render(
             request,
             'eventreg.html',
+            {'event': event}
+        )
+
+
+class EventUnReg(View):
+    def get(self, request, event_name, *args, **kargs):
+        event = get_object_or_404(Event, event_name=event_name)
+
+        return render(
+            request,
+            'eventunreg.html',
             {'event': event}
         )
 
@@ -57,3 +78,16 @@ class EventOrg(generic.ListView):
 
 def OwnConPan(request):
     return render(request, 'ownconpan.html', {})
+
+
+class UserReg(View):
+    print('You got this far')
+
+    def post(self, request, event_name, *args, **kwargs):
+        event = get_object_or_404(Event, event_name=event_name)
+        if event.attendee.filter(id=request.user.id).exists():
+            event.attendee.remove(request.user)
+        else:
+            event.attendee.add(request.user)
+
+        return render(request, 'index.html', {})

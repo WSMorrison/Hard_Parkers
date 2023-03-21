@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h3>Thank you, {{ user.username }}, you are no longer registered for {{ event.event_name }}.</h3>
+        <a href="{% url 'home' %}" class="btn btn-primary">All upcoming events</a>
+    </div>
+{% endblock content %}

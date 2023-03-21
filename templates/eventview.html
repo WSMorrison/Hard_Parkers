@@ -14,11 +14,14 @@
         <p>{{ event.event_description }}</p>
         <a href="{{ event.event_location_url }}" target="_blank" rel="noopener" aria-label="Link to location, opens in new tab.">Location Link</a><br>
         {% if user.is_authenticated %}
-            {% if is_attendee %}
-            <h4>You're already registered, you fool!</h4>
-            {% else %}
-            <a href="{% url 'event_reg' event.event_name %}"  class="btn btn-primary">Register now!</a>
-            {% endif %}
+            <form action="{% url 'user_reg' event.event_name %}" method="POST">
+                {% csrf_token %}
+                {% if is_attendee %}
+                <button type="submit" name="event_unreg" value="{{event.event_name}}" class="btn-primary">Remove me from the list.</button>
+                {% else %}
+                <button type="submit" name="event_reg" value="{{event.event_name}}" class="btn-primary">Register Now!</button>
+                {% endif %}
+            </form>
         {% else %}
         Login to register.
         {% endif %}
