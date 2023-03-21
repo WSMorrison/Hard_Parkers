@@ -24,6 +24,9 @@ class Event(models.Model):
     def __str__(self):
         return self.event_name
 
+    def number_of_attendees(self):
+        return self.attendees.count()
+
 
 class Car(models.Model):
     car_name = models.CharField(max_length=20, unique=True)

@@ -14,7 +14,11 @@
         <p>{{ event.event_description }}</p>
         <a href="{{ event.event_location_url }}" target="_blank" rel="noopener" aria-label="Link to location, opens in new tab.">Location Link</a><br>
         {% if user.is_authenticated %}
-        <a href="{% url 'event_reg' event.event_name %}"  class="btn btn-primary">Register now!</a>
+            {% if is_attendee %}
+            <h4>You're already registered, you fool!</h4>
+            {% else %}
+            <a href="{% url 'event_reg' event.event_name %}"  class="btn btn-primary">Register now!</a>
+            {% endif %}
         {% else %}
         Login to register.
         {% endif %}

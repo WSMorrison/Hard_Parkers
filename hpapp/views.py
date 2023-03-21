@@ -15,11 +15,14 @@ class EventView(View):
 
     def get(self, request, event_name, *args, **kwargs):
         event = get_object_or_404(Event, event_name=event_name)
+        is_attendee = False
+        if event.attendee.filter(id=self.request.user.id).exists():
+            is_attendee = True
 
         return render(
             request,
             'eventview.html',
-            {'event': event}
+            {'event': event, 'is_attendee': is_attendee, }
         )
 
 
@@ -34,22 +37,6 @@ class EventReg(View):
             {'event': event}
         )
 
-    def post(self, request, event_name, *args, **kargs):
-
-        car_form = Form(data=request.post)
-
-        if car_form.is_valid():
-            car = car_form.save(commit=False)
-            car.car_owner = request.user.username
-            car.event = event_name
-        else:
-            car_form = Form()
-
-        return render(
-            request,
-            'index.html'
-        )
-
 
 class YourEventList(generic.ListView):
     model = Event
@@ -58,7 +45,6 @@ class YourEventList(generic.ListView):
 
     def get_queryset(self):
         your_event_list = Event.objects.filter(attendee=self.request.user)
-        print('EVENTS: ', your_event_list)
         return your_event_list
 
 
