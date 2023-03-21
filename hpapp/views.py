@@ -81,13 +81,18 @@ def OwnConPan(request):
 
 
 class UserReg(View):
-    print('You got this far')
-
     def post(self, request, event_name, *args, **kwargs):
         event = get_object_or_404(Event, event_name=event_name)
         if event.attendee.filter(id=request.user.id).exists():
             event.attendee.remove(request.user)
         else:
             event.attendee.add(request.user)
+        is_attendee = False
+        if event.attendee.filter(id=self.request.user.id).exists():
+            is_attendee = True
 
-        return render(request, 'index.html', {})
+        return render(
+            request,
+            'eventview.html',
+            {'event': event, 'is_attendee': is_attendee, }
+        )

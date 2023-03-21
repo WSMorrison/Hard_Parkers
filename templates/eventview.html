@@ -17,9 +17,9 @@
             <form action="{% url 'user_reg' event.event_name %}" method="POST">
                 {% csrf_token %}
                 {% if is_attendee %}
-                <button type="submit" name="event_unreg" value="{{event.event_name}}" class="btn-primary">Remove me from the list.</button>
+                <button type="submit" class="btn-primary">Remove me from the list.</button>
                 {% else %}
-                <button type="submit" name="event_reg" value="{{event.event_name}}" class="btn-primary">Register Now!</button>
+                <button type="submit" class="btn-primary">Register Now!</button>
                 {% endif %}
             </form>
         {% else %}
