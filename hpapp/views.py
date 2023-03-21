@@ -18,11 +18,7 @@ class EventView(View):
         if event.attendee.filter(id=self.request.user.id).exists():
             is_attendee = True
 
-        return render(
-            request,
-            'eventview.html',
-            {'event': event, 'is_attendee': is_attendee, }
-        )
+        return render(request, 'eventview.html', {'event': event, 'is_attendee': is_attendee, })
 
     def post(self, request, event_name, *args, **kwargs):
         event = get_object_or_404(Event, event_name=event_name)
@@ -30,33 +26,21 @@ class EventView(View):
         if event.attendee.filter(id=self.request.user.id).exists():
             is_attendee = True
 
-        return render(
-            request,
-            'eventview.html',
-            {'event': event, 'is_attendee': is_attendee, }
-        )
+        return render(request, 'eventview.html', {'event': event, 'is_attendee': is_attendee, })
 
 
 class EventReg(View):
     def get(self, request, event_name, *args, **kargs):
         event = get_object_or_404(Event, event_name=event_name)
 
-        return render(
-            request,
-            'eventreg.html',
-            {'event': event}
-        )
+        return render(request, 'eventreg.html', {'event': event})
 
 
 class EventUnReg(View):
     def get(self, request, event_name, *args, **kargs):
         event = get_object_or_404(Event, event_name=event_name)
 
-        return render(
-            request,
-            'eventunreg.html',
-            {'event': event}
-        )
+        return render(request, 'eventunreg.html', {'event': event})
 
 
 class YourEventList(generic.ListView):
@@ -87,12 +71,5 @@ class UserReg(View):
             event.attendee.remove(request.user)
         else:
             event.attendee.add(request.user)
-        is_attendee = False
-        if event.attendee.filter(id=self.request.user.id).exists():
-            is_attendee = True
-
-        return render(
-            request,
-            'eventview.html',
-            {'event': event, 'is_attendee': is_attendee, }
-        )
+# Here it should be going back to yourevents.html
+            return render(request, 'eventreg.html', {})
