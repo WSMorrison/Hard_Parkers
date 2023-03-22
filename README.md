@@ -111,6 +111,8 @@ Some bugs were exposed during initial development and during deployed testing, m
 
 ## Bugs
 
+- Early in development there was an issue where the user signed up for an event, they were able to view a list of their registered for events. If the user removed their registration for an event, the link would throw an error. Found the issue was that the if statement in the UserReg view only returned a result under one condition, but not the other.
+
 Talk about unalive silverfish
 
 ## Unfixed bugs
