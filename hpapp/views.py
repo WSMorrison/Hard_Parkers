@@ -69,7 +69,7 @@ class UserReg(View):
         event = get_object_or_404(Event, event_name=event_name)
         if event.attendee.filter(id=request.user.id).exists():
             event.attendee.remove(request.user)
+            return render(request, 'eventreg.html', {})
         else:
             event.attendee.add(request.user)
-# Here it should be going back to yourevents.html
             return render(request, 'eventreg.html', {})
