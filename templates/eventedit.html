@@ -2,7 +2,6 @@
 
 {% block content %}
     <div>
-        <h1>IS THIS CODE EVER USED?</h1>
         <h2>{{ event.event_name }}</h2>
         <h4>{{ event.event_location }}</h4>
         <p>{{ event.event_date }}</p>
@@ -15,7 +14,14 @@
         <p>{{ event.event_description }}</p>
         <a href="{{ event.event_location_url }}" target="_blank" rel="noopener" aria-label="Link to location, opens in new tab.">Location Link</a><br>
         {% if user.is_authenticated %}
-        Thanks for registering!
+            <form action="{% url 'user_reg' event.event_name %}" method="POST">
+                {% csrf_token %}
+                {% if is_attendee %}
+                <button type="submit" class="btn-primary">Remove me from the list.</button>
+                {% else %}
+                <button type="submit" class="btn-primary">Register Now!</button>
+                {% endif %}
+            </form>
         {% else %}
         Login to register.
         {% endif %}

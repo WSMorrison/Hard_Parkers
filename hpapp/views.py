@@ -23,12 +23,15 @@ class YourEventList(generic.ListView):
         return your_event_list
 
 
-# Not Working
+# Good
 class EventOrg(generic.ListView):
     model = Event
-    queryset = Event.objects.order_by('event_date')
     template_name = 'eventorg.html'
     paginate_by = 10
+
+    def get_queryset(self):
+        your_event_list = Event.objects.filter(organizer=self.request.user)
+        return your_event_list
 
 
 # Placeholder
