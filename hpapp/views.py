@@ -101,7 +101,6 @@ class UserReg(View):
             return render(request, 'eventreg.html', {})
 
 
-# Working
 # Render a form so an event organizer can organize an event.
 class EventEdit(View):
     def get(self, request):
@@ -117,3 +116,25 @@ class EventEdit(View):
             event_form = EventForm()
 
         return render(request, 'eventedit.html', {'event_form': EventForm()})
+
+
+# Working
+# Allows an organizer to delete an event.
+class EventDelete(View):
+    def get(self, request, event_name, *args, **kwargs):
+        event = get_object_or_404(Event, event_name=event_name)
+
+        return render(request, 'eventdelete.html', {'event': event})
+
+
+# Working
+# Deletes the event from the confirmation page.
+class ConfirmDelete(View):
+    def get(self, request, event_name, *args, **kargs):
+        event = get_object_or_404(Event, event_name=event_name)
+
+    def post(self, request, event_name, *args, **kargs):
+        event = get_object_or_404(Event, event_name=event_name)
+        Event.objects.filter(event_name=event_name).delete()
+
+        return render(request, 'confirmdelete.html', {'event': event})

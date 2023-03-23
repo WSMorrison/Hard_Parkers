@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h3>What have you done? {{ user.username }}, you just deleted that event!</h3>
+        <a href="{% url 'event_org' %}" class="btn btn-primary">Events You Organized</a>
+    </div>
+{% endblock content %}

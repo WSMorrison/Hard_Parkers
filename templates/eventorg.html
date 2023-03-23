@@ -13,6 +13,7 @@
                 <p>{{ event.event_date }}</p>
                 <p>Registration closes {{ event.event_date_reg_close }}</p>
                 <a href="{% url 'event_view' event.event_name %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'event_delete' event.event_name %}" class="btn btn-primary">Delete</a>
             </div>
         </div>
         {% endfor %}
