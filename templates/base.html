@@ -17,15 +17,15 @@
     <header>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-              <a class="nav-link active" href="{% url 'home' %}">Upcoming Events</a>
+              <a class="nav-link active" href="{% url 'home' %}">All Upcoming Events</a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'your_events' %}">Your Events</a>
+              <a class="nav-link" href="{% url 'your_events' %}">Your Attending Events</a>
             </li>
               {% if user.siteuser.event_organizer %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'event_org' %}">Events You Organized</a>
+                <a class="nav-link" href="{% url 'event_org' %}">Your Organized Events</a>
               </li>
               {% endif %}
               {% if user.siteuser.site_owner %}
