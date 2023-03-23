@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% load crispy_forms_tags %}
     <h1>Add event or Edit existing events here.</h1>
         <form method="post">
-            {{ event_form }}
-                {% csrf_token %}
+            {{ event_form | crispy }}
+            {% csrf_token %}
         </form>
 {% endblock content %}

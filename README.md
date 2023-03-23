@@ -52,10 +52,12 @@ The site is designed mobile first, not just as a part of the development process
 
 ## Language
 
-The web page aspects of the site are written using HTML, CSS and JS, using Bootstrap libraries where appropriate.
+The web page aspects of the site are written using HTML, CSS and JS, using Bootstrap 5 libraries where appropriate.
 [HTML](https://html.spec.whatwg.org/multipage/), [CSS](https://www.w3.org/Style/CSS/) [Bootstrap](https://getbootstrap.com/)
 The program is written in the Python programming language. The Python language is written using the Django framework. Django also administers the databases.
 [Python](https://www.python.org/), [Django](https://www.djangoproject.com/)
+Django Crispy Forms were used to aid in implementing forms. Crispy was told to use Bootstrap 4 libraries instead of Bootstrap 5, as it did not seem like Bootstrap 5 was fully integrated yet, or at least in a way not beyond the developer's understanding.
+[Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/index.html)
 
 ## Technology
 
