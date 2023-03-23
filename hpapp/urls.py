@@ -7,6 +7,8 @@ urlpatterns = [
      path('yourevents/', views.YourEventList.as_view(), name='your_events'),
      path('eventorg/', views.EventOrg.as_view(), name='event_org'),
      path('eventedit/', views.EventEdit.as_view(), name='event_edit'),
+     path('eventthanks/<str:event_name>',
+          views.EventThanks.as_view(), name='event_thanks'),
      path('ownconpan/', views.OwnConPan, name='own_con_pan'),
      path('<str:event_name>/', views.EventView.as_view(), name='event_view'),
      path('eventreg/<str:event_name>/',

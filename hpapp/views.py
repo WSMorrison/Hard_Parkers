@@ -115,10 +115,18 @@ class EventEdit(View):
         else:
             event_form = EventForm()
 
-        return render(request, 'eventedit.html', {'event_form': EventForm()})
+        return render(request, 'eventthanks.html', {'event': event})
 
 
 # Working
+# Thanks organizer for publishing a new event
+class EventThanks(View):
+    def get(self, request, event_name, *args, **kargs):
+        event = get_object_or_404(Event, event_name=event_name)
+
+        return render(request, 'eventthanks.html', {'event': event})
+
+
 # Allows an organizer to delete an event.
 class EventDelete(View):
     def get(self, request, event_name, *args, **kwargs):
@@ -127,7 +135,6 @@ class EventDelete(View):
         return render(request, 'eventdelete.html', {'event': event})
 
 
-# Working
 # Deletes the event from the confirmation page.
 class ConfirmDelete(View):
     def get(self, request, event_name, *args, **kargs):
