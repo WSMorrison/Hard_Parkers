@@ -106,3 +106,14 @@ class UserReg(View):
 class EventEdit(View):
     def get(self, request):
         return render(request, 'eventedit.html', {'event_form': EventForm()})
+
+    def post(self, request):
+        event_form = EventForm(data=request.POST)
+
+        if event_form.is_valid():
+            event_form.instance.organizer = request.user
+            event = event_form.save(commit=True)
+        else:
+            event_form = EventForm()
+
+        return render(request, 'eventedit.html', {'event_form': EventForm()})
