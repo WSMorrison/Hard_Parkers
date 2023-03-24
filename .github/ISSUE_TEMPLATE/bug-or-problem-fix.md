@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Thing** does not **do a thing** when it should **do some other thing**.
+**Thing** does **do a thing** when it should **do some other thing**.
 
 Description:
 
