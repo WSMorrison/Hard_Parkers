@@ -18,12 +18,12 @@ class EventList(generic.ListView):
 # Logged in user's list of events they have already registered for.
 class YourEventList(generic.ListView):
     model = Event
-    queryset = Event.objects.order_by('event_date')
     template_name = 'yourevents.html'
     paginate_by = 10
 
     def get_queryset(self):
-        your_event_list = Event.objects.filter(attendee=self.request.user).order_by('event_date')
+        your_event_list = Event.objects.filter(attendee=self.request.user
+                                               ).order_by('event_date')
         return your_event_list
 
 
