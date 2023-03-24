@@ -1,7 +1,7 @@
 ---
 name: Issue Template
 about: This is the template to use.
-title: ''
+title: 'Usertype: Blurb'
 labels: ''
 assignees: ''
 
@@ -14,5 +14,5 @@ Acceptance
 - A second feature or an aspect of a feature that needs to be implemented.
 
 Tasks:
--[] Do this thing.
--[] Do anyother thing.
+- [ ] Do this thing.
+- [ ] Do anyother thing.
