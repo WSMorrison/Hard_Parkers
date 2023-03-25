@@ -2,7 +2,7 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
-    <h1>Edit existing event here.</h1>
+    <h1>Add event or Edit existing events here.</h1>
         <form method="post">
             {{ event_form | crispy }}
             {% csrf_token %}

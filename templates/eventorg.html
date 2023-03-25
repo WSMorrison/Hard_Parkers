@@ -12,12 +12,12 @@
                 <h6>{{ event.event_location }}</h6>
                 <p>{{ event.event_date }}</p>
                 <p>Registration closes {{ event.event_date_reg_close }}</p>
-                <a href="{% url 'event_view' event.event_name %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'event_edit' event.event_name %}" class="btn btn-primary">Edit</a>
                 <a href="{% url 'event_delete' event.event_name %}" class="btn btn-primary">Delete</a>
             </div>
         </div>
         {% endfor %}
-    <a href="{% url 'event_edit' %}" class="btn btn-primary">Create New Event</a>
+    <a href="{% url 'event_create' %}" class="btn btn-primary">Create New Event</a>
     </div>
 </section>
 
