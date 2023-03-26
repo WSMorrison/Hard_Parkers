@@ -8,3 +8,10 @@ assignees: ''
 ---
 
 **This aspect** will be **this kind of way**.
+
+Acceptance:
+- This condition.
+
+Tasks:
+- [ ] Do this.
+- [ ] Also do this.
