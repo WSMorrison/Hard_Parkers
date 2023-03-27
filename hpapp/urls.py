@@ -21,9 +21,9 @@ urlpatterns = [
           views.EventDelete.as_view(), name='event_delete'),
      path('confirmdelete/<str:event_name>',
           views.ConfirmDelete.as_view(), name='confirm_delete'),
-#    path('eventthanks/<str:event_name>/',
-#         views.EventReg.as_view(), name='event_thanks'),
      path('register/<str:event_name>/',
           views.UserReg.as_view(), name='user_reg'),
+     path('attendees/<str:event_name>',
+          views.AttendeeList.as_view(), name='attendees'),
 
 ]

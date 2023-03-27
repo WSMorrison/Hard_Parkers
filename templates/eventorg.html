@@ -12,6 +12,7 @@
                 <h6>{{ event.event_location }}</h6>
                 <p>{{ event.event_date }}</p>
                 <p>Registration closes {{ event.event_date_reg_close }}</p>
+                <a href="{% url 'attendees' event.event_name %}" class="btn btn-primary">Attendee List</a>
                 <a href="{% url 'event_edit' event.event_name %}" class="btn btn-primary">Edit</a>
                 <a href="{% url 'event_delete' event.event_name %}" class="btn btn-primary">Delete</a>
             </div>

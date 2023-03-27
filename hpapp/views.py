@@ -102,6 +102,7 @@ class UserReg(View):
             return render(request, 'eventreg.html', {})
 
 
+# Good
 # Render a form so an event organizer can organize an event.
 class EventCreate(View):
     def get(self, request):
@@ -119,7 +120,7 @@ class EventCreate(View):
         return render(request, 'eventthanks.html', {'event': event})
 
 
-# Working
+# Good
 # Allows organizer to edit an existing event.
 class EventEdit(View):
     def get(self, request, event_name, *args, **kwargs):
@@ -171,3 +172,14 @@ class ConfirmDelete(View):
         Event.objects.filter(event_name=event_name).delete()
 
         return render(request, 'confirmdelete.html', {'event': event})
+
+
+# Working
+# Returns a list of attendees for a specific event.
+class AttendeeList(View):
+    def get(self, request, event_name, *args, **kwargs):
+        event = get_object_or_404(Event, event_name=event_name)
+        attendee_list = event.attendee.all()
+
+        return render(request, 'attendeelist.html',
+                      {'event': event, 'attendee_list': attendee_list})

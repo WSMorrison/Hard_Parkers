@@ -132,7 +132,7 @@ Talk about alive silverfish
 - Code Institute instructor Simen Daehlin for almost everything else. [Simen Daehlin Github](https://github.com/Eventyret)
 - Code Institute mentor Jubrile Akolade provided guidance on where to focus time building the project and an almost infinite amount of other support.
 - All of my Code Institute UCD July 2022 cohort, who have been available to answer questions through Slack.
-- Code Institute tutors accessed through the Code Institute LMS have been helpful with understanding various concepts during instruction.
+- Code Institute tutors accessed through the Code Institute LMS have been helpful with understanding various concepts during instruction. In particular Ed for explaining core view concepts that I wasn't understanding and setting this baby bird off to fly with his own wings, and Jason for helping specifically with event.attendee.all() returning the attendee list, instead of letting me smash stuff looking at the many to many relationships and the siteuser user model extension.
 - Code regarding the MVC architecture is very similar to the Code Institute training code from the I Think Therefore I Blog Lessons. Available on request.
     - Process for modifying Django's built in registration and sign-up code to fit this website was particularly instructive, from the "Adding Authentication - Part 2" lesson.
 - Basic HTML structure uses the Bootstrap Cards style library. [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/)
