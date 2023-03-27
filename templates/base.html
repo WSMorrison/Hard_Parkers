@@ -16,6 +16,10 @@
 <body>
     <!-- Header with nav bar -->
     <header>
+      <div>
+        <img src="{% static 'media/splash.jpg' %}" class="img-responsive" alt="A car meet during the golden hour.">
+      </div>
+      <div>
         <ul class="nav nav-tabs">
             <li class="nav-item">
               <a class="nav-link active" href="{% url 'home' %}">All Upcoming Events</a>
@@ -46,7 +50,7 @@
             </li>
             {% endif %}
           </ul>
-          <hr>
+        </div>
     </header>
     <!-- Body -->
     <main>

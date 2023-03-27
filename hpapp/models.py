@@ -25,7 +25,7 @@ class Event(models.Model):
         return self.event_name
 
     def number_of_attendees(self):
-        return self.attendees.count()
+        return self.attendee.count()
 
 
 class Car(models.Model):

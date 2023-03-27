@@ -21,9 +21,12 @@
     </header>
     <!-- Body -->
     <main>
-        <h3>Attendees for: {{ event.event_name }}</h3>
+        <h4>Attendees for: {{ event.event_name }}</h4>
+        <h5>At {{ event.event_location }}.</h5>
+        <h5>Maximum attendees: {{ event.number_cars }}.</h5>
+        <h5>Total attendees: {{ event.number_of_attendees }}.</h5>
         {% for attendee in attendee_list %}
-        <p>Username: {{ attendee }} Email: {{ attendee.email }}.</p>
+        <p>Username: {{ attendee }} ; Email: {{ attendee.email|default:"Not given." }}</p>
         {% endfor %}
     </main>
 

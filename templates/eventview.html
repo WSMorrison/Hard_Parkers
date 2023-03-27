@@ -19,7 +19,11 @@
                 {% if is_attendee %}
                 <button type="submit" class="btn-primary">Remove me from the list.</button>
                 {% else %}
-                <button type="submit" class="btn-primary">Register Now!</button>
+                    {% if is_closed %}
+                    <button type="submit" class="btn-primary" disabled>Registration Closed</button>
+                    {% else %}
+                    <button type="submit" class="btn-primary">Register Now!</button>
+                    {% endif %}
                 {% endif %}
             </form>
         {% else %}

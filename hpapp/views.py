@@ -3,13 +3,15 @@ from django.views import generic, View
 from .models import Event, Siteuser, Car
 from .forms import EventForm
 from django import forms
+import datetime
 
 
 # Good
 # Home page.
 class EventList(generic.ListView):
     model = Event
-    queryset = Event.objects.order_by('event_date')
+    queryset = Event.objects.filter(event_date__gte=datetime.date.today()
+                                    ).order_by('event_date')
     template_name = 'index.html'
     paginate_by = 10
 
@@ -23,6 +25,7 @@ class YourEventList(generic.ListView):
 
     def get_queryset(self):
         your_event_list = Event.objects.filter(attendee=self.request.user
+                                               ).filter(event_date__gte=datetime.date.today()
                                                ).order_by('event_date')
         return your_event_list
 
@@ -35,7 +38,8 @@ class EventOrg(generic.ListView):
     paginate_by = 10
 
     def get_queryset(self):
-        your_event_list = Event.objects.filter(organizer=self.request.user)
+        your_event_list = Event.objects.filter(organizer=self.request.user
+                                               ).order_by('event_date')
         return your_event_list
 
 
@@ -54,9 +58,13 @@ class EventView(View):
         is_attendee = False
         if event.attendee.filter(id=self.request.user.id).exists():
             is_attendee = True
+        is_closed = False
+        if event.event_date_reg_close.timestamp() <= datetime.datetime.now().timestamp():
+            is_closed = True
 
         return render(request, 'eventview.html',
-                      {'event': event, 'is_attendee': is_attendee, })
+                      {'event': event, 'is_attendee': is_attendee,
+                       'is_closed': is_closed})
 
     def post(self, request, event_name, *args, **kwargs):
         event = get_object_or_404(Event, event_name=event_name)
