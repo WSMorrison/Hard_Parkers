@@ -2,24 +2,25 @@
 
 {% block content %}
 
-<section>
-    <div class="card w-90 text-center">
-        <h2>You Organized All These, You Only Have You To Blame</h2>
-        {% for event in event_list %}
-        <div class="card w-90 text-center" >
-            <div class="card-body">
-                <h5 class="card-title">{{ event.event_name }}</h2>
-                <h6>{{ event.event_location }}</h6>
-                <p>{{ event.event_date }}</p>
-                <p>Registration closes {{ event.event_date_reg_close }}</p>
-                <a href="{% url 'attendees' event.event_name %}" target="_blank" class="btn btn-primary">Attendee List</a>
-                <a href="{% url 'event_edit' event.event_name %}" class="btn btn-primary">Edit</a>
-                <a href="{% url 'event_delete' event.event_name %}" class="btn btn-primary">Delete</a>
+    <section>
+        <div class="container text-center">
+            <h2>You Only Have You To Blame</h2>
+            <div class="container">
+                {% for event in event_list %}
+                <div class="card text-center" >
+                    <div class="card-body">
+                        <h5 class="card-title">{{ event.event_name }}</h2>
+                        <h6>{{ event.event_location }}</h6>
+                        <p>{{ event.event_date }}</p>
+                        <p>Registration closes {{ event.event_date_reg_close }}</p>
+                        <a href="{% url 'attendees' event.event_name %}" target="_blank" class="btn btn-primary">Attendee List</a>
+                        <a href="{% url 'event_edit' event.event_name %}" class="btn btn-primary">Edit</a>
+                        <a href="{% url 'event_delete' event.event_name %}" class="btn btn-primary">Delete</a>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
-    <a href="{% url 'event_create' %}" class="btn btn-primary">Create New Event</a>
-    </div>
 </section>
 
 {% endblock content %}

@@ -3,10 +3,11 @@
 {% block content %}
 
     <section>
-        <div class="card w-90 text-center">
-            <h2>Your Dumb Upcoming Events</h2>
+        <div class="container text-center">
+            <h2>Your Upcoming Events</h2>
+            <div class="container">
                 {% for event in event_list %}
-                <div class="card w-90 text-center" >
+                <div class="card text-center" >
                     <div class="card-body">
                         <h5 class="card-title">{{ event.event_name }}</h2>
                         <h6>{{ event.event_location }}</h6>
@@ -16,6 +17,7 @@
                     </div>
                 </div>
                 {% endfor %}
+            </div>
         </div>
     </section>
 
