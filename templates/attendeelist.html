@@ -16,24 +16,77 @@
 <body>
     <!-- Header without nav bar -->
     <header>
-        <h3>The Hard Parkers</h3>
-        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-12 col-sm-6">
+                    <h1 class="text-center">The Hard Parkers</h1>
+                    <hr>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
     </header>
     <!-- Body -->
     <main>
-        <h4>Attendees for: {{ event.event_name }}</h4>
-        <h5>At {{ event.event_location }}.</h5>
-        <h5>Maximum attendees: {{ event.number_cars }}.</h5>
-        <h5>Total attendees: {{ event.number_of_attendees }}.</h5>
-        {% for attendee in attendee_list %}
-        <p>Username: {{ attendee }} ; Email: {{ attendee.email|default:"Not given." }}</p>
-        {% endfor %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-xs-12 col-sm-6">
+                    <h2>Attendees for {{ event.event_name }}</h2>
+                    <h3>At {{ event.event_location }}</h3>
+                    <div class="row">
+                        <div class="col-3">
+                            <h4>Total: {{ event.number_of_attendees }}</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4>Max: {{ event.number_cars }}</h4>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    <div class="container g-0">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for attendee in attendee_list %}
+                                <tr>
+                                    <td>{{ attendee }}</td>
+                                    <td>{{ attendee.email|default:"Not given." }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <hr>
-        <p>The main thing is not to park, but to park hard. -Socrates</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-xs-12 col-sm-6">
+                    <hr>
+                    <figure>
+                        <blockquote class="blockquote text-center">
+                          <p>The main thing is not to park,<br class="d-md-none" /> but to park hard.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer text-center">
+                          <cite title="Source Title">Socrates</cite>
+                        </figcaption>
+                      </figure>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
     </footer>
 </body>
 
