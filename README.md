@@ -135,6 +135,7 @@ Talk about alive silverfish
 - Code Institute tutors accessed through the Code Institute LMS have been helpful with understanding various concepts during instruction. In particular Ed for explaining core view concepts that I wasn't understanding and setting this baby bird off to fly with his own wings, and Jason for helping specifically with event.attendee.all() returning the attendee list, instead of letting me smash stuff looking at the many to many relationships and the siteuser user model extension.
 - Code regarding the MVC architecture is very similar to the Code Institute training code from the I Think Therefore I Blog Lessons. Available on request.
     - Process for modifying Django's built in registration and sign-up code to fit this website was particularly instructive, from the "Adding Authentication - Part 2" lesson.
+- Method for making nav bar elements dynamic were best explained by [Sharma Coding YouTube Channel](https://www.youtube.com/watch?v=IY_ooX65BnQ).
 - Basic HTML structure uses the Bootstrap Cards style library. [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/)
 - Favicon icon by [Iconpacks](https://iconpacks.net/?utm_source=link-attribution&utm_content=1641), converted from .png to .ico by [favicon.io](https://favicon.io/favicon-converter/).
 

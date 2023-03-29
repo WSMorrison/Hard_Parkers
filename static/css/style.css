@@ -6,8 +6,51 @@ html {
     padding: 0;
 }
 
+:root {
+    --background-color-brown: 86, 55, 39;
+    --background-color-black: 55, 44, 46;
+    --text-color-white: 255, 255, 255;
+    --accent-color-gold: 222, 158, 72;
+    --accent-color-bronze: 122, 67, 29;
+}
+
+/* Color scheme cheat sheet */
+/* ------------------------ */
+.color-test-rgb {
+    color: rgb(86, 55, 39);
+    color: rgb(55, 44, 46);
+    color: rgb(255, 255, 255);
+    color: rgb(222, 158, 72);
+    color: rgb(122, 67, 29);
+} Area for adjusting colors
+
+.color-test-hex {
+    color: #563727;
+    color: #372C2E;
+    color: #FFFFFF;
+    color: #DE9E48;
+    color: #7A431D;
+} Area for adjusting colors
+/* ------------------------ */
+/* Color scheme cheat sheet */
+
 body {
-    font-size:1.6rem;
+    background-color: rgb(var(--background-color-black));
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+header { 
+    border: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    border: none !important;
+    margin: 0;
+    padding: 0;
 }
 
 #splash {
@@ -20,6 +63,14 @@ body {
 
 #headline {
     height: 30rem;
+}
+
+.bumper {
+    background-color: rgb(var(--background-color-black));
+}
+
+.center {
+    background-color: rgb(var(--background-color-brown));
 }
 
 .w-90 {

@@ -18,31 +18,28 @@
     <header>
       <!-- Splash -->
       <div class="container">
-        <div class="row">
-          <div class="col-sm-3"></div>
+        <div class="row justify-content-center">
           <div id="splash" class="col-12 col-sm-6">
             <div id="headline">HardParkers</div>
           </div>
-          <div class="col-sm-3"></div>
         </div>
       </div>
 
       <!-- Nav bar -->
-      <div class="container pt-2">
-        <div class="row">
-          <div class="col-sm-3"></div>
+      <div class="container pt-3">
+        <div class="row justify-content-center">
           <div class="col-sm-6">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                  <a class="nav-link active" href="{% url 'home' %}">All</a>
+                  <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">All</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'your_events' %}">Attending</a>
+                  <a class="nav-link {% if request.resolver_match.url_name == 'your_events' %}active{% endif %}" href="{% url 'your_events' %}">Attending</a>
                 </li>
                   {% if user.siteuser.event_organizer %}
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'event_org' %}">Organized</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'event_org' %}active{% endif %}" href="{% url 'event_org' %}">Organized</a>
                   </li>
                   {% endif %}
                   {% if user.siteuser.site_owner %}
@@ -51,35 +48,31 @@
                   </li>
                   {% endif %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
+                  <a class="nav-link {% if request.resolver_match.url_name == 'account_logout' %}active{% endif %}" href="{% url 'account_logout' %}">Log Out</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
+                  <a class="nav-link {% if request.resolver_match.url_name == 'account_login' %}active{% endif %}" href="{% url 'account_login' %}">Log In</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                  <a class="nav-link {% if request.resolver_match.url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 {% endif %}
               </ul>
             </div>
-          <div class="col-sm-3"></div>
         </div>
       </div>
     </header>
 
     <!-- Body -->
     <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3"></div>
+      <div class="container pt-3">
+        <div class="row justify-content-center">
           <div class="col-sm-6">
-            <div class="container"></div>
             {% block content %}
 
             {% endblock content %}
           </div>
-          <div class="col-sm-3"></div>
         </div>
       </div>
     </main>
@@ -87,8 +80,7 @@
     <!-- Footer with foot bar -->
     <footer>
       <div class="container pt-3">
-        <div class="row">
-          <div class="col-sm-3"></div>
+        <div class="row justify-content-center">
           <div class="col-sm-6">
             <h2>Find us</h2>
             <hr>
@@ -101,7 +93,6 @@
                 </figcaption>
               </figure>
           </div>
-          <div class="col-sm-3"></div>
         </div>
       </div>
     </footer>
