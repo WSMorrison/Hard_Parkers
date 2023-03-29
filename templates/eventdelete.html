@@ -4,6 +4,6 @@
     <h1>Are you sure you want to delete {{ event.event_name }}?</h1>
         <form action="{% url 'confirm_delete' event.event_name %}" method="POST">
             {% csrf_token %}
-            <button type="submit" class="btn-primary">Yes, absolve the world of this sin.</button>
+            <button type="submit" class="btn btn-primary">Yes, absolve the world of this sin.</button>
         </form> 
 {% endblock content %}

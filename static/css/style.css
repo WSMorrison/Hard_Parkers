@@ -6,37 +6,9 @@ html {
     padding: 0;
 }
 
-:root {
-    --background-color-brown: 86, 55, 39;
-    --background-color-black: 55, 44, 46;
-    --text-color-white: 255, 255, 255;
-    --accent-color-gold: 222, 158, 72;
-    --accent-color-bronze: 122, 67, 29;
-}
-
-/* Color scheme cheat sheet */
-/* ------------------------ */
-.color-test-rgb {
-    color: rgb(86, 55, 39);
-    color: rgb(55, 44, 46);
-    color: rgb(255, 255, 255);
-    color: rgb(222, 158, 72);
-    color: rgb(122, 67, 29);
-} Area for adjusting colors
-
-.color-test-hex {
-    color: #563727;
-    color: #372C2E;
-    color: #FFFFFF;
-    color: #DE9E48;
-    color: #7A431D;
-} Area for adjusting colors
-/* ------------------------ */
-/* Color scheme cheat sheet */
-
 body {
     background-color: rgb(var(--background-color-black));
-    font-size: 1.6rem;
+    font-size: 1.6rem; 
     margin: 0;
     padding: 0;
 }
@@ -53,6 +25,10 @@ footer {
     padding: 0;
 }
 
+#super-container {
+    min-height: calc(100vh - 13rem);
+}
+
 #splash {
     background: url(../media/splash.jpg) center;
     background-size: cover;
@@ -65,14 +41,35 @@ footer {
     height: 30rem;
 }
 
-.bumper {
-    background-color: rgb(var(--background-color-black));
-}
-
-.center {
-    background-color: rgb(var(--background-color-brown));
+.nav-link {
+    color: var(--bs-heading-color);
+    text-decoration: none;
 }
 
 .w-90 {
     width: 90%;
+}
+
+#socials-container {
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socials-links {
+    color: var(--bs-heading-color);
+    text-decoration: none;
+}
+
+.smol-link {
+    font-size: 1rem;
+    color: var(--bs-heading-warning);
+
+}
+
+.big-link {
+    font-size: 1.6rem;
+    color: var(--bs-heading-warning);
+
 }

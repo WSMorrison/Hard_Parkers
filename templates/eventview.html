@@ -17,12 +17,12 @@
             <form action="{% url 'user_reg' event.event_name %}" method="POST">
                 {% csrf_token %}
                 {% if is_attendee %}
-                <button type="submit" class="btn-primary">Remove me from the list.</button>
+                <button type="submit" class="btn btn-primary">Remove me from the list.</button>
                 {% else %}
                     {% if is_closed %}
-                    <button type="submit" class="btn-primary" disabled>Registration Closed</button>
+                    <button type="submit" class="btn btn-primary" disabled>Registration Closed</button>
                     {% else %}
-                    <button type="submit" class="btn-primary">Register Now!</button>
+                    <button type="submit" class="btn btn-primary">Register Now!</button>
                     {% endif %}
                 {% endif %}
             </form>

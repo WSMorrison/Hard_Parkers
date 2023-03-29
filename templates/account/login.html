@@ -6,10 +6,7 @@
 
 {% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
-
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+<h1 class="pb-2">{% trans "Sign In" %}</h1>
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
@@ -17,8 +14,12 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+  <button class="btn btn-primary btn-lg primaryAction" type="submit">{% trans "Sign In" %}</button>
+  <a class="smol-link secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
 </form>
 
+<p class="pt-2">{% blocktrans %}Don't have an account? <a class="big-link" href="{{ signup_url }}">Sign up here.</a>{% endblocktrans %}</p>
+
 {% endblock %}
+
+Don't have an account? Sign up here.
