@@ -21,8 +21,12 @@
       <!-- Splash -->
       <div class="container">
         <div class="row justify-content-center">
-          <div id="splash" class="col-12 col-sm-6">
-            <div id="headline">HardParkers</div>
+          <div id="splash" class="col-12 col-sm-8">
+            <div id="headline-container">
+              <div>
+                <h1 id="headline">HardParkers</h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -30,7 +34,7 @@
       <!-- Nav bar -->
       <div class="container pt-3">
         <div class="row justify-content-center">
-          <div class="col-sm-6">
+          <div class="col-sm-8">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                   <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">All</a>
@@ -70,7 +74,7 @@
     <main>
       <div class="container pt-3">
         <div class="row justify-content-center">
-          <div class="col-sm-6">
+          <div class="col-sm-8">
             {% block content %}
 
             {% endblock content %}
@@ -84,7 +88,7 @@
   <footer>
     <div class="container pt-3">
       <div class="row justify-content-center">
-        <div class="col-sm-6">
+        <div class="col-sm-8">
           <!--<div>
             <h2>Find us:</h2>
           </div>-->

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue");
+
 html {
     font-size: 62.5%;
 /*    scroll-behavior: smooth;*/
@@ -37,8 +39,14 @@ footer {
     align-items: center;
 }
 
-#headline {
+#headline-container {
     height: 30rem;
+}
+
+#headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6rem;
+    color: #ffffff;
 }
 
 .nav-link {
@@ -71,5 +79,20 @@ footer {
 .big-link {
     font-size: 1.6rem;
     color: var(--bs-heading-warning);
+}
+
+@media only screen and (min-width: 390px) {
+
+    #headline {
+        font-size: 8rem;
+    }
+
+}
+
+@media only screen and (min-width: 576px) {
+
+    #headline {
+        font-size: 10rem;
+    }
 
 }
