@@ -28,7 +28,7 @@
                     <form action="{% url 'user_reg' event.event_name %}" method="POST">
                         {% csrf_token %}
                         {% if is_attendee %}
-                        <button class="btn btn-primary btn-lg pt-2" type="submit">Remove me from the list.</button>
+                        <button class="btn btn-primary btn-lg pt-2" type="submit">Remove Me</button>
                         {% else %}
                             {% if is_closed %}
                             <button class="btn btn-primary btn-lg pt-2" type="submit" disabled>Registration Closed</button>
