@@ -1,9 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Are you sure you want to delete {{ event.event_name }}?</h1>
-        <form action="{% url 'confirm_delete' event.event_name %}" method="POST">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-primary">Yes, absolve the world of this sin.</button>
-        </form> 
+
+    <div class="container pt-3">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 text-center">
+                <p class="card-mid">Are you sure you want to delete {{ event.event_name }}?</p>
+                <p class="card-mid">THIS CANNOT BE UNDONE!</p>
+                <div class="container">
+                    <div class="row justify-content-center pt-3">
+                        <div class="col-5 text-center">
+                            <a class="btn btn-primary btn-lg" href="{% url 'event_org' %}">Take Me Back</a>
+                        </div>
+                        <div class="col-5 text-center">
+                            <form action="{% url 'confirm_delete' event.event_name %}" method="POST">
+                                {% csrf_token %}
+                                <button class="btn btn-warning btn-lg" type="submit">DELETE EVENT</button>
+                            </form>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock content %}

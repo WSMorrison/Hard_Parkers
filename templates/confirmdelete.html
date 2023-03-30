@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div>
-        <h3>What have you done? {{ user.username }}, you just deleted that event!</h3>
-        <a href="{% url 'event_org' %}" class="btn btn-primary">Events You Organized</a>
+
+    <div class="container pt-3">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 text-center">
+                <p class="card-mid">Thank you, {{ user.username }}.</p>
+                <p class="card-mid">You have permanently deleted this event.</p>
+                <a class="btn btn-primary btn-lg" href="{% url 'event_org' %}">Events You Organized</a>
+            </div>
+        </div>
     </div>
+
 {% endblock content %}
