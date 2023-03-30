@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div>
-        <h3>Thank you for organizing {{ event.event_name }}, {{ user.username }}.</h3>
-        <a href="{% url 'event_org' %}" class="btn btn-primary">Events You Organized</a>
+
+    <div class="container pt-3">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 text-center">
+                <p class="card-mid">Thank you for organizing {{ event.event_name }}, {{ user.username }}.</p>
+                <a class="btn btn-primary btn-lg mt-3" href="{% url 'event_org' %}">Events You Organized</a>
+            </div>
+        </div>
     </div>
+
 {% endblock content %}

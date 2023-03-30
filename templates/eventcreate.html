@@ -2,10 +2,14 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
-    <h1>Add event or Edit existing events here.</h1>
+
+    <h1>Add your event here.</h1>
         <form method="post">
             {{ event_form | crispy }}
             {% csrf_token %}
-            <button type="submit" class="btn btn-primary">Publish Your Event</button>
+            <div class="text-center mt-3">
+                <button class="btn btn-primary btn-lg" type="submit">Publish Your Event</button>
+            </div>
         </form>
+
 {% endblock content %}

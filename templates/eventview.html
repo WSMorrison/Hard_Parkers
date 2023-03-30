@@ -3,8 +3,8 @@
 {% block content %}
     <div>
         <div class="text-center">
-            <h2 class="tab-title pt-3">{{ event.event_name }}</h2>
-            <p class="card-big pt-3">{{ event.event_location }}</p>
+            <h2 class="tab-title mt-3">{{ event.event_name }}</h2>
+            <p class="card-big mt-3">{{ event.event_location }}</p>
             <p>{{ event.event_date }}</p>
             <p>Registration closes {{ event.event_date_reg_close }}</p>
             <span class="text-capitalize">{{ event.organizer }}</span><span> organized this event, and the event is capped at {{ event.number_cars }} cars.</span>
@@ -13,27 +13,27 @@
             {% endif %}
         </div>
         <div class="container">
-            <p class="card-mid pt-3 pb-">About this event:</p>
-            <div class="card text-left pt-3">
-                <p class="px-3">{{ event.event_description }}</p>
+            <p class="card-mid mt-3 pb-">About this event:</p>
+            <div class="card text-left px-3 pt-3">
+                <p class="align-middle">{{ event.event_description }}</p>
             </div>
         </div>
         <div class="container">
-            <div class="row justify-content-center pt-3">
+            <div class="row justify-content-center mt-3">
                 <div class="col-5 text-center"> 
-                    <a class="btn btn-secondary btn-lg pt-2" href="{{ event.event_location_url }}" target="_blank" rel="noopener" aria-label="Link to location, opens in new tab.">Location Map</a><br>
+                    <a class="btn btn-secondary btn-lg mt-2" href="{{ event.event_location_url }}" target="_blank" rel="noopener" aria-label="Link to location, opens in new tab.">Location Map</a><br>
                 </div>
                 <div class="col-5 text-center">    
                     {% if user.is_authenticated %}
                     <form action="{% url 'user_reg' event.event_name %}" method="POST">
                         {% csrf_token %}
                         {% if is_attendee %}
-                        <button class="btn btn-primary btn-lg pt-2" type="submit">Remove Me</button>
+                        <button class="btn btn-primary btn-lg mt-2" type="submit">Remove Me</button>
                         {% else %}
                             {% if is_closed %}
-                            <button class="btn btn-primary btn-lg pt-2" type="submit" disabled>Registration Closed</button>
+                            <button class="btn btn-primary btn-lg mt-2" type="submit" disabled>Registration Closed</button>
                             {% else %}
-                            <button class="btn btn-primary btn-lg pt-2" type="submit">Register Now!</button>
+                            <button class="btn btn-primary btn-lg mt-2" type="submit">Register Now!</button>
                             {% endif %}
                         {% endif %}
                     </form>

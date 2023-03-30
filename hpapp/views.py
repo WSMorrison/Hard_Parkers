@@ -125,6 +125,8 @@ class EventCreate(View):
         else:
             event_form = EventForm()
 
+            return render(request, 'eventcreate.html', {'event_form': EventForm()})
+
         return render(request, 'eventthanks.html', {'event': event})
 
 
@@ -135,7 +137,8 @@ class EventEdit(View):
         event = get_object_or_404(Event, event_name=event_name)
         event_form = EventForm(instance=event)
 
-        return render(request, 'eventedit.html', {'event_form': event_form})
+        return render(request, 'eventedit.html', {'event_form': event_form,
+                                                  'event': event})
 
     def post(self, request, event_name, *args, **kargs):
         event = Event.objects.get(event_name=event_name)
@@ -182,7 +185,7 @@ class ConfirmDelete(View):
         return render(request, 'confirmdelete.html', {'event': event})
 
 
-# Working
+# Goods
 # Returns a list of attendees for a specific event.
 class AttendeeList(View):
     def get(self, request, event_name, *args, **kwargs):
