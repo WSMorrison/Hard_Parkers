@@ -125,7 +125,8 @@ class EventCreate(View):
         else:
             event_form = EventForm()
 
-            return render(request, 'eventcreate.html', {'event_form': EventForm()})
+            return render(request, 'eventcreate.html',
+                          {'event_form': EventForm()})
 
         return render(request, 'eventthanks.html', {'event': event})
 
@@ -147,6 +148,12 @@ class EventEdit(View):
             event_form = EventForm(request.POST, instance=event)
             if event_form.is_valid():
                 event_form.save()
+            else:
+                event_form = EventForm(instance=event)
+
+                return render(request, 'eventedit.html',
+                              {'event_form': event_form,
+                               'event': event})
 
             return render(request, 'eventthanks.html', {'event': event})
 
