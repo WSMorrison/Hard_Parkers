@@ -146,7 +146,7 @@ class EventEdit(View):
 
         if request.method == 'POST':
             edit_form = EventForm(request.POST, instance=event)
-            if eedit_form.is_valid():
+            if edit_form.is_valid():
                 edit_form.save()
             else:
                 edit_form = EditForm(instance=event)
