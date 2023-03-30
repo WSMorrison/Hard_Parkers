@@ -5,7 +5,7 @@
 
     <h1>Edit {{ event.event_name }} here.</h1>
     <form method="post">
-        {{ event_form | crispy }}
+        {{ edit_form | crispy }}
         {% csrf_token %}
         <div class="text-center mt-3">
             <button class="btn btn-primary btn-lg" type="submit">Publish Your Event</button>

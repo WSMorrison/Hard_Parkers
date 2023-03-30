@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Event, Siteuser, Car
-from .forms import EventForm
+from .forms import EventForm, EditForm
 from django import forms
 import datetime
 
@@ -136,23 +136,23 @@ class EventCreate(View):
 class EventEdit(View):
     def get(self, request, event_name, *args, **kwargs):
         event = get_object_or_404(Event, event_name=event_name)
-        event_form = EventForm(instance=event)
+        edit_form = EditForm(instance=event)
 
-        return render(request, 'eventedit.html', {'event_form': event_form,
+        return render(request, 'eventedit.html', {'edit_form': edit_form,
                                                   'event': event})
 
     def post(self, request, event_name, *args, **kargs):
         event = Event.objects.get(event_name=event_name)
 
         if request.method == 'POST':
-            event_form = EventForm(request.POST, instance=event)
-            if event_form.is_valid():
-                event_form.save()
+            edit_form = EventForm(request.POST, instance=event)
+            if eedit_form.is_valid():
+                edit_form.save()
             else:
-                event_form = EventForm(instance=event)
+                edit_form = EditForm(instance=event)
 
                 return render(request, 'eventedit.html',
-                              {'event_form': event_form,
+                              {'event_form': edit_form,
                                'event': event})
 
             return render(request, 'eventthanks.html', {'event': event})
