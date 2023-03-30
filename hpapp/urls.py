@@ -25,5 +25,4 @@ urlpatterns = [
           views.UserReg.as_view(), name='user_reg'),
      path('attendees/<str:event_name>',
           views.AttendeeList.as_view(), name='attendees'),
-
 ]
