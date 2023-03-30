@@ -8,7 +8,7 @@ Portfolio Project 4, Full Stack Toolkit.
 - [Heroku Overview](https://dashboard.heroku.com/apps/hardparkers)
 - [Deployed App](https://hardparkers.herokuapp.com/)
 
-![Front page of The Hard Parkers](./assets/images/placeholder.jpg)
+![Front page of The Hard Parkers.](/assets/readme-images/placeholder.jpg)
 
 ## Contents
 *Table of contents available as part of GitHub README.md header*
@@ -100,7 +100,7 @@ When the code was deployment ready, it was deployed in Heroku by following these
 
 - The page lists upcoming events by date.
 
-![Locally hosted illustrative picture](./assets/images/placeholder.jpg)
+![Locally hosted illustrative picture](/assets/readme-images/placeholder.jpg)
 
 # Testing
 
@@ -112,7 +112,7 @@ CSS was copy and pasted into the W3C CSS validator, and returned no errors. [W3C
 
 Do we put the stuff in the Python Linter?
 
-![Locally hosted illustrative picture](./assets/images/placeholder.jpg)
+![Locally hosted illustrative picture](/assets/readme-images/placeholder.jpg)
 
 Some bugs were exposed during initial development and during deployed testing, most were fixed.
 
