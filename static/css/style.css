@@ -31,7 +31,7 @@ footer {
 }
 
 #splash {
-    background: url(/images/splash.jpg) center;    
+    background: url(static/images/splash.jpg) center;    
     background-size: cover;
     display: flex;
     justify-content: center;
