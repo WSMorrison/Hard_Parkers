@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: rgb(var(--background-color-black));
+    background-color: #2d2d2d;
     font-size: 1.6rem; 
     margin: 0;
     padding: 0;
