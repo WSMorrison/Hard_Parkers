@@ -31,7 +31,7 @@ footer {
 }
 
 #splash {
-    background: url('/media/images/splash.jpg') center;    
+    background: url('https://res.cloudinary.com/di9x4jslg/image/upload/v1680184012/static/images/splash.68d2ec5facf0.jpg') center;    
     background-size: cover;
     display: flex;
     justify-content: center;
