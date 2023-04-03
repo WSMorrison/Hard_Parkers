@@ -1,12 +1,14 @@
 from .models import Event
 from django import forms
+from crispy_forms.helper import FormHelper
+from datetime import datetime
 
 
 class EventForm(forms.ModelForm):
     event_date = forms.DateTimeField(
-        widget=forms.TextInput(attrs={'type': 'date'}))
+        widget=forms.TextInput(attrs={'type': 'date', 'min': datetime.now().date()}))
     event_date_reg_close = forms.DateTimeField(
-        widget=forms.TextInput(attrs={'type': 'date'}))
+        widget=forms.TextInput(attrs={'type': 'date', 'min': datetime.now().date()}))
 
     class Meta:
         model = Event
