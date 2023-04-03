@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Event, Siteuser, Car
+from .models import Event, Siteuser
 from .forms import EventForm, EditForm
 from django import forms
 import datetime

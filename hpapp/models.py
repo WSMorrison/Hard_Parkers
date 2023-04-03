@@ -28,22 +28,6 @@ class Event(models.Model):
         return self.attendee.count()
 
 
-class Car(models.Model):
-    car_name = models.CharField(max_length=20, unique=True)
-    car_owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    car_year = models.IntegerField()
-    car_make = models.CharField(max_length=20)
-    car_model = models.CharField(max_length=50)
-    car_origin = models.CharField(max_length=10)
-    car_modifications = models.CharField(max_length=200)
-    feature_consideration = models.BooleanField(default=False)
-    feature_approved = models.BooleanField(default=False)
-    car_event = models.CharField(max_length=50, default='No Event Specified')
-
-    def __str__(self):
-        return f"{self.car_owner}'s {self.car_year} {self.car_model}"
-
-
 class Siteuser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     event_organizer = models.BooleanField(default=False)
