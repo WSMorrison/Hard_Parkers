@@ -15,7 +15,8 @@
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <button class="btn btn-primary btn-lg" type="submit">{% trans "Sign Up" %}</button>
-  <p class="pt-2">{% blocktrans %}Already have an account? <a class="big-link" href="{{ login_url }}">Log in here.</a>{% endblocktrans %}</p>
 </form>
+
+<p class="pt-2">{% blocktrans %}Already have an account? <a class="big-link" href="{{ login_url }}">Log in here.</a>{% endblocktrans %}</p>
 
 {% endblock %}

@@ -33,7 +33,7 @@ DEBUG = False
 # UNCOMMENT THIS WHEN SETTING DEBUG TO FALSE!
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['hardparkers.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['hardparkers.herokuapp.com/', 'localhost']
 
 
 # Application definition
@@ -127,6 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
