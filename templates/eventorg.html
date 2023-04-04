@@ -17,8 +17,8 @@
                     <div class="card-body">
                         <h3 class="card-title card-big">{{ event.event_name }}</h3>
                         <h4 class="card-mid mt-2">{{ event.event_location }}</h4>
-                        <p class="card-smol mt-2">{{ event.event_date }}</p>
-                        <p class="card-smol mt-2">Registration closes {{ event.event_date_reg_close }}</p>
+                        <p class="card-smol mt-2">{{ event.event_date }}, {{ event.event_time }}.</p>
+                        <p class="card-smol mt-2">Registration closes {{ event.event_date_reg_close }}, {{ event.event_time_reg_close }}</p>
                         <a class="btn btn-primary btn-lg mt-2" href="{% url 'attendees' event.event_name %}" target="_blank">Attendee List</a>
                         <a class="btn btn-primary btn-lg mt-2" href="{% url 'event_edit' event.event_name %}">Edit</a>
                         <a class="btn btn-primary btn-lg mt-2" href="{% url 'event_delete' event.event_name %}">Delete</a>
