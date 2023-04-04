@@ -2,14 +2,17 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+import datetime
 
 
 class Event(models.Model):
     event_name = models.CharField(max_length=50, unique=True)
     organizer = models.ForeignKey(User, on_delete=models.CASCADE,
                                   related_name='organizer_name')
-    event_date = models.DateTimeField()
-    event_date_reg_close = models.DateTimeField()
+    event_date = models.DateField()
+    event_time = models.TimeField(default=datetime.time(8, 00))
+    event_date_reg_close = models.DateField()
+    event_time_reg_close = models.TimeField(default=datetime.time(23, 59))
     event_location = models.CharField(max_length=100)
     event_location_url = models.URLField(max_length=200)
     number_cars = models.IntegerField(default=1)

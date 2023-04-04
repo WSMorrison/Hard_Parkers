@@ -59,7 +59,7 @@ class EventView(View):
         if event.attendee.filter(id=self.request.user.id).exists():
             is_attendee = True
         is_closed = False
-        if event.event_date_reg_close.timestamp() <= datetime.datetime.now().timestamp():
+        if event.event_date_reg_close <= datetime.date.today():
             is_closed = True
 
         return render(request, 'eventview.html',
