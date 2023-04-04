@@ -39,31 +39,31 @@
                 <li class="nav-item">
                   <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">All</a>
                 </li>
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                  <a class="nav-link {% if request.resolver_match.url_name == 'your_events' %}active{% endif %}" href="{% url 'your_events' %}">Attending</a>
-                </li>
-                  {% if user.siteuser.event_organizer %}
+                  {% if user.is_authenticated %}
                   <li class="nav-item">
-                    <a class="nav-link {% if request.resolver_match.url_name == 'event_org' %}active{% endif %}" href="{% url 'event_org' %}">Organized</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'your_events' %}active{% endif %}" href="{% url 'your_events' %}">Attending</a>
+                  </li>
+                    {% if user.siteuser.event_organizer %}
+                    <li class="nav-item">
+                      <a class="nav-link {% if request.resolver_match.url_name == 'event_org' %}active{% endif %}" href="{% url 'event_org' %}">Organized</a>
+                    </li>
+                    {% endif %}
+                    {% if user.siteuser.site_owner %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'own_con_pan' %}">Owner Control Panel</a>
+                    </li>
+                    {% endif %}
+                  <li class="nav-item">
+                    <a class="nav-link nav-link-right {% if request.resolver_match.url_name == 'account_logout' %}active{% endif %}" href="{% url 'account_logout' %}">Log Out</a>
+                  </li>
+                  {% else %}
+                  <li class="nav-item">
+                    <a class="nav-link nav-link-right {% if request.resolver_match.url_name == 'account_login' %}active{% endif %}" href="{% url 'account_login' %}">Log In</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nav-link-right {% if request.resolver_match.url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_signup' %}">Sign Up</a>
                   </li>
                   {% endif %}
-                  {% if user.siteuser.site_owner %}
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'own_con_pan' %}">Owner Control Panel</a>
-                  </li>
-                  {% endif %}
-                <li class="nav-item">
-                  <a class="nav-link {% if request.resolver_match.url_name == 'account_logout' %}active{% endif %}" href="{% url 'account_logout' %}">Log Out</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                  <a class="nav-link {% if request.resolver_match.url_name == 'account_login' %}active{% endif %}" href="{% url 'account_login' %}">Log In</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% if request.resolver_match.url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_signup' %}">Sign Up</a>
-                </li>
-                {% endif %}
               </ul>
             </div>
         </div>

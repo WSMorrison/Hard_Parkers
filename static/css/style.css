@@ -53,6 +53,10 @@ footer {
     text-decoration: none;
 }
 
+.nav-link-right {
+    margin-right: 1rem;
+}
+
 .w-90 {
     width: 90%;
 }
@@ -103,6 +107,10 @@ footer {
 
 .asteriskField {
     display: none;
+}
+
+.form-control {
+    font-size: 1.6rem;
 }
 
 @media only screen and (min-width: 390px) {
