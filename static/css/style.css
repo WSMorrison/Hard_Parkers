@@ -43,7 +43,8 @@ footer {
 #headline {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 6rem;
-    color: #ffffff;
+    font-weight: 400;
+    color: #f1f1f1;
 }
 
 .nav-link {

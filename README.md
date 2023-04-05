@@ -58,7 +58,7 @@ When a visitor first accesses the website, they see the splash image and main. o
 
 On the index page, visitors are given a button that allows the visitor to see the details of the event. The details show on a new page with the same header and footer as the index page. Details include the event location, the event date and time, and the date and time when registration closes. There is a button that can take the visitor to a map, linked to a new tab in the visitor's browser. The visitor is encouraged to login to the site if they aren't already, so they can register for the event. The visitor is also given the opportunity to sign up for the site if they are not already, or login if they are. These pages are available as tabs on a navbar below the splash image.
 
-Once logged in, the User has all of the above persmissions ad capabilites. In addition, the User is displayed a button that allows them to register for the event. The site thanks the User and redirects them to a list of all the events they are registered to attend. In the nav bar, there is also a tab to the attending page, that list of all the events the User is registered for. This list is similar to the list on the index page, but it only shows the events that the User is registered for. When a User accesses the event details from either the index or their attending page, it displays the details of the event, and a button to either remove their registration or register for the event accordingly.  
+Once logged in, the User has all of the above persmissions and capabilites. In addition, the User is displayed a button that allows them to register for the event. The site thanks the User and redirects them to a list of all the events they are registered to attend. In the nav bar, there is also a tab to the attending page, that list of all the events the User is registered for. This list is similar to the list on the index page, but it only shows the events that the User is registered for. When a User accesses the event details from either the index or their attending page, it displays the details of the event, and a button to either remove their registration or register for the event accordingly.  
 
 Once an event's registration is passed, the registration button is inactive. The event remains on index and attending lists until the event passes, when it is no longer displayed.
 
@@ -66,41 +66,94 @@ If a visitor logs in and has Organizer permissions, they are granted all of the 
 
 A visitor who is a site owner, can access all the functionality of the User and Organizer, as well as access to the Django admin panel. This allows the Owner to delete any other user, and any event from the site, as well  promote a signed up User to an Organizer or remove those promotions. This gives the Owner the ability to approve trusted Organizers, or remove them and other Users who would like to be removed, or perhaps do not participate in a way that promotes car culture at large.
 
+All visitors are welcome and the site is responsive for use on mobile, tablet, and even large screen devices such as laptop or desktop computers. However, the majority of Users will be accessing the site from a mobile device by a huge margin. And due to the nature of the events, it's likely if not intended that Organizers will use the site from their mobile device as well. For this reason, the site is intentionally very simple in design, with simple colors and high contrast buttons so that it is easy to see, read, and use.
+
+<hr>
+
 ## Design
 
-👩🏻‍💻 View an example of a completed design section [here](https://github.com/kera-cudmore/earth-day-hackathon-2022#Design)
+<hr>
 
 ### Colour Scheme
 
-Add all information about your colour scheme for your site here. You can explain why you choose the colours you did?
+A high contrast, simple colorscheme was chosen to make the website as easy to navigate as possible. A Bootswatch colorscheme was chosen for ease of implementation. Spacelab had the ideal mix of clear colors and imaging to allow the buttons to stand out clearly but without being garish and distracting. 
 
-I like to include a palette of the colour scheme here, my favourite site for creating a colour palette is [coolors](https://coolors.co/), but there are lots of other sites that also do the same thing, like [ColorSpace](https://mycolor.space/?hex=%23F5F5F5&sub=1), [Muzli Colors](https://colors.muz.li/), [Adobe Colour Wheel](https://color.adobe.com/create/color-wheel) and [Canva](https://www.canva.com/colors/color-palette-generator/) to name a few.
+![Example Bootswatch Spacelab colorscheme](/assets/readme-images/BootswatchSpacelab.png)
+
+[Bootswatch Spacelab](https://bootswatch.com/spacelab/)
 
 ### Typography
 
-If you've imported fonts to use in your project, add some information about them here. You can include information like:
+The native Bootstrap fonts were retained for use for their known accessibility and contrast. They are also a very simple, clean sans serif font that fit with the overall idea of the website's easy usability.
 
-Why did you choose the font you have?
-Is this an accessibly friendly font?
-What weights have you included?
+The Headline is Bebas Neue. This font was chosen for maximum dramatic impact. It is an all capitals font with one weight, 400, which is also ideal for legibility as weights over 400 or 500 can be crowded and unclear. The idea is to evoke emotion without overwhelming it.
 
-I also like to include an image of the fonts chosen as a reference.
+![Bebas Neue font from Google Fonts](/assets/readme-images/BebasNeue.png)
 
-[Google Fonts](https://fonts.google.com/) is a popular choice for importing fonts to use in your project, as it doesn't require you to download the fonts to use them.
+[Bebas Neue, Google Fonts](https://fonts.google.com/specimen/Bebas+Neue)
 
 ### Imagery
 
-Use this section to explain what sort of imagery you plan to use through your site.
+For the sake of simplicity, the website only has one image. The splash image is intended to give the visitor an idea of what the website is about, with an impactful and emotional image not just of interesting cars at a meet, but lit with the sought golden hour evening light that evokes the feeling of being at a well run car meet with a good, relaxed vibe and good friends. There could be a temptation to allow Organizers to use their own image to capture the attention of Users, but the risk is that the website could end up a mess of incompatable images and styles that would make the site confusing, garish, and unpleasant to look at. This would take away from spirit of a simple, clean, and calm website.
 
 ### Wireframes
 
-Add the images or links for your wireframes here.
+Wireframes were built in Balsamiq's online application. One wireframe was made for all size of device, as it was intentional from the beginning that the site remain cohesive and similar across all platforms. Like many popular social media platforms, the site is geared around a vertical scroll.
 
-There are lots of different options to create your wireframes - Code Institute students can access [Balsamiq](https://balsamiq.com/) as part of the course.
+<details>
+<summary>Index Page Wireframe</summary>
+<br>
 
-Some other options include [Figma](https://www.figma.com/), [AdobeXD](https://www.adobe.com/products/xd.html), [Sketch](https://www.sketch.com/?utm_source=google&utm_medium=cpc&adgroup=uxui&device=c&matchtype=e&utm_campaign=ADDICTMOBILE_SKETCH_GAD_DG_UK_T1_ALWAYS-ON_S_TRF_PROS_BRAND&utm_term=sketch&utm_source=google&utm_medium=cpc&utm_content=TOF_BRND__generic&hsa_acc=8710913982&hsa_cam=16831089317&hsa_grp=134620695759&hsa_ad=592060065319&hsa_src=g&hsa_tgt=kwd-14921750&hsa_kw=sketch&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwr4eYBhDrARIsANPywCjRIFn93DMezYnsyE5Fic_8l8kynJtut0GYMU01TiohHjwziFtlH0gaAhteEALw_wcB) and [Mockup](https://apps.apple.com/us/app/mockup-sketch-ui-ux/id1527554407) to name just a few! Or you can even go old school and get those wireframes completed using pen and paper. Just snap an image of the completed wireframes to add the images to the README.
+![Main, index page](/assets/readme-images/WF1Index.png)
+
+</details>
+
+<details>
+<summary>Index Page Wireframe</summary>
+<br>
+
+![Your Events page](/assets/readme-images/WF2YourEvents.png)
+
+</details>
+
+<details>
+<summary>Index Page Wireframe</summary>
+<br>
+
+![Your Organized Events page](/assets/readme-images/WF3Organized.png)
+
+</details>
+
+<details>
+<summary>Index Page Wireframe</summary>
+<br>
+
+![Event Detail page](/assets/readme-images/WF4Detail.png)
+
+</details>
+
+<details>
+<summary>Index Page Wireframe</summary>
+<br>
+
+![Event Create and Edit pages](/assets/readme-images/WF5Create.png)
+
+</details>
+
+<details>
+<summary>Index Page Wireframe</summary>
+<br>
+
+![Attendee printable page](/assets/readme-images/WF6Attendee.png)
+
+</details>
+<br>
+
+<hr>
 
 ## Features
+
+<hr>
 
 👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/TheQuizArms#Features)
 
