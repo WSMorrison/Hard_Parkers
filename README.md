@@ -4,9 +4,10 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
 
 ![Front page of The HardParkers as input to AmIResponsive.](/assets/readme-images/placeholder.jpg)
 
-[The HardParkers](https://hardparkers.herokuapp.com/)
+### The deployed site can be found here: [The HardParkers](https://hardparkers.herokuapp.com/)
 
----
+<br>
+<hr>
 
 ## CONTENTS
 
@@ -42,7 +43,8 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
 
----
+<br>
+<hr>
 
 ## User Experience (UX)
 
@@ -68,6 +70,7 @@ If a visitor logs in and has Organizer permissions, they are granted all of the 
 
 A visitor who is a site owner, can access all the functionality of the User and Organizer, as well as access to the Django admin panel. This allows the Owner to delete any other user, and any event from the site, as well  promote a signed up User to an Organizer or remove those promotions. This gives the Owner the ability to approve trusted Organizers, or remove them and other Users who would like to be removed, or perhaps do not participate in a way that promotes car culture at large.
 
+<br>
 <hr>
 
 ## Design
@@ -150,8 +153,8 @@ Click on the heading below to view individual wireframes:
 </details>
 <br>
 Wireframes were built in [Balsamiq's online application.](https://balsamiq.cloud/)
-<br>
 
+<br>
 <hr>
 
 ## Features
