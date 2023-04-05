@@ -35,7 +35,7 @@
       <div class="container mt-3">
         <div class="row justify-content-center">
           <div class="col-sm-8">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs justify-content-center">
                 <li class="nav-item">
                   <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">All</a>
                 </li>
@@ -54,14 +54,14 @@
                     </li>
                     {% endif %}
                   <li class="nav-item">
-                    <a class="nav-link nav-link-right {% if request.resolver_match.url_name == 'account_logout' %}active{% endif %}" href="{% url 'account_logout' %}">Log Out</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'account_logout' %}active{% endif %}" href="{% url 'account_logout' %}">Log Out</a>
                   </li>
                   {% else %}
                   <li class="nav-item">
-                    <a class="nav-link nav-link-right {% if request.resolver_match.url_name == 'account_login' %}active{% endif %}" href="{% url 'account_login' %}">Log In</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'account_login' %}active{% endif %}" href="{% url 'account_login' %}">Log In</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link nav-link-right {% if request.resolver_match.url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_signup' %}">Sign Up</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_signup' %}">Sign Up</a>
                   </li>
                   {% endif %}
               </ul>

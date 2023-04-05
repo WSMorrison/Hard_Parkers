@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Event, Siteuser
-from .forms import EventForm, EditForm
+from .forms import EventForm
 from django import forms
 import datetime
 
@@ -25,8 +25,7 @@ class YourEventList(generic.ListView):
 
     def get_queryset(self):
         your_event_list = Event.objects.filter(attendee=self.request.user
-                                               ).filter(event_date__gte=datetime.date.today()
-                                               ).order_by('event_date')
+                                               ).filter(event_date__gte=datetime.date.today()).order_by('event_date')
         return your_event_list
 
 
@@ -136,7 +135,7 @@ class EventCreate(View):
 class EventEdit(View):
     def get(self, request, event_name, *args, **kwargs):
         event = get_object_or_404(Event, event_name=event_name)
-        edit_form = EditForm(instance=event)
+        edit_form = EventForm(instance=event)
 
         return render(request, 'eventedit.html', {'edit_form': edit_form,
                                                   'event': event})
@@ -149,7 +148,7 @@ class EventEdit(View):
             if edit_form.is_valid():
                 edit_form.save()
             else:
-                edit_form = EditForm(instance=event)
+                edit_form = EventForm(instance=event)
 
                 return render(request, 'eventedit.html',
                               {'event_form': edit_form,

@@ -2,8 +2,6 @@
 
 html {
     font-size: 62.5%;
-/*    scroll-behavior: smooth;*/
-/*    scroll-padding-top: 8rem;*/
     margin: 0;
     padding: 0;
 }
@@ -53,8 +51,8 @@ footer {
     text-decoration: none;
 }
 
-.nav-link-right {
-    margin-right: 1rem;
+.nav-item {
+    border-width: 2px;
 }
 
 .w-90 {
