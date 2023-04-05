@@ -33,7 +33,7 @@ DEBUG = False
 # UNCOMMENT THIS WHEN SETTING DEBUG TO FALSE!
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['hardparkers.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['hardparkers.herokuapp.com', 'localhost']
 
 
 # Application definition
