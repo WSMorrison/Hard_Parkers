@@ -1,4 +1,4 @@
-# The HardParkers
+# The Hardparkers
 
 The HardParkers website is is a simple, streamlined, and mobile focused resource for automotive enthusiasts to find meets and shows they would like to attend in their area. It allows event organizers to publish their event details and for participants to register to attend, making it simple for organizers to get the word out and easy for enthusiasts to find events that match their interests.
 
@@ -11,9 +11,11 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
 <br>
 <hr>
 
-## CONTENTS
+## Contents
 
-* [User Experience](#user-experience-ux)
+<hr>
+
+* [User Experience](#user-experience)
   * [User Stories](#user-stories)
 
 * [Design](#design)
@@ -23,7 +25,8 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
   * [Wireframes](#wireframes)
 
 * [Features](#features)
-  * [General Features on Each Page](#general-features-on-each-page)
+  * [General Features on All Pages](#general-features-on-all-pages)
+  * [Features of Individual Pages](#features-of-individual-pages)
   * [Future Implementations](#future-implementations)
   * [Accessibility](#accessibility)
 
@@ -31,24 +34,23 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
   * [Languages Used](#languages-used)
   * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 
-* [Deployment & Local Development](#deployment--local-development)
-  * [Deployment](#deployment)
+* [Local Development and Deployment](#local-development-and-deployment)
   * [Local Development](#local-development)
-    * [How to Fork](#how-to-fork)
-    * [How to Clone](#how-to-clone)
+  * [Deployment](#deployment)
+  * [How to Fork or Clone](#how-to-fork-or-clone)
 
 * [Testing](#testing)
 
 * [Credits](#credits)
   * [Code Used](#code-used)
-  * [Content](#content)
   * [Media](#media)
-  * [Acknowledgments](#acknowledgments)
 
 <br>
 <hr>
 
-## User Experience (UX)
+## User Experience
+
+<hr>
 
 Portfolio Project 4 is intended to show the student's ability to create a website that utilizes frameworks such as Django and Bootstrap, as well as show a practical understanding of a model-view-controller architecture.
 
@@ -172,9 +174,9 @@ The page has five major pages and attendant confirmation pages. There are some f
 <summary>General page features</summary>
 <br>
 
-![General features](/assets/readme-images/placeholder.jpg)
+![General features](/assets/readme-images/GenFeaPage.png)
 
-1. The page includes a favicon that is displayed with the title in the visitor's browser tab.
+1. The page includes a favicon that is displayed with the title in the visitor's browser tab. (Not shown)
 2. The header and splash images is common to all pages, and if clicked takes the visitor to the index page.
 3. The navbar is tabbed and the tabs reflect the page is currently navigated to.
 4. The unlogged in visitor is given the opportunity to log in, of sign up if they haven't already.
@@ -193,7 +195,7 @@ The individual pages have some features unique to each. For demostration purpose
 <summary>Index page features</summary>
 <br>
 
-![Index page](/assets/readme-images/placeholder.jpg)
+![Index page](/assets/readme-images/AllUpcPage.png)
 
 1. Tabbed nav bar indicating the currently navigated page.
 2. Event card.
@@ -206,7 +208,7 @@ The individual pages have some features unique to each. For demostration purpose
 <summary>Attending Events page features</summary>
 <br>
 
-![Attending Events page](/assets/readme-images/placeholder.jpg)
+![Attending Events page](/assets/readme-images/AttEvePage.png)
 
 1. Tabbed nav bar indicating the currently navigated page.
 2. Page shows only the events the currently logged in Organizer is registered to attend.
@@ -220,7 +222,7 @@ The individual pages have some features unique to each. For demostration purpose
 <summary>Organized Events page features</summary>
 <br>
 
-![Organized Events page](/assets/readme-images/placeholder.jpg)
+![Organized Events page](/assets/readme-images/OrgEvePage.png)
 
 1. Tabbed nav bar indicating the currently navigated page.
 2. Prominent button that allows user to create a new event.
@@ -234,7 +236,7 @@ The individual pages have some features unique to each. For demostration purpose
 <summary>Event Details page features</summary>
 <br>
 
-![Event Details page](/assets/readme-images/placeholder.jpg)
+![Event Details page](/assets/readme-images/EveDetPage.png)
 
 1. Tabbed nav bar indicates that this page is not navigable from the nav bar, but allows the user to nav out of the page using the nav bar navigation.
 2. Event details, including the title, date, location, and when registration ends.
@@ -244,7 +246,7 @@ The individual pages have some features unique to each. For demostration purpose
 
 Examples of the registration button when visitor is already registered and registration is open, left, and when visitor is not registered and registration is closed, right.
 
-![Registration button states](/assets/readme-images/placeholder.jpg)
+![Registration button states](/assets/readme-images/Buttons.png)
 
 </details>
 
@@ -252,7 +254,7 @@ Examples of the registration button when visitor is already registered and regis
 <summary>Event Create page features</summary>
 <br>
 
-![Event Create page](/assets/readme-images/placeholder.jpg)
+![Event Create page](/assets/readme-images/EveCrePage.png)
 
 1. Tabbed nav bar indicates that this page is not navigable from the nav bar, but allows the user to nav out of the page using the nav bar navigation.
 2. Event creation form.
@@ -271,7 +273,7 @@ Examples of the registration button when visitor is already registered and regis
 <summary>Event Edit page features</summary>
 <br>
 
-![Event Edit page](/assets/readme-images/placeholder.jpg)
+![Event Edit page](/assets/readme-images/EveEdiPage.png)
 
 1. Tabbed nav bar indicates that this page is not navigable from the nav bar, but allows the user to nav out of the page using the nav bar navigation.
 2. Event edit form.
@@ -284,12 +286,16 @@ Examples of the registration button when visitor is already registered and regis
 <summary>Attendee List page features</summary>
 <br>
 
-![Attendee List page](/assets/readme-images/placeholder.jpg)
+![Attendee List page](/assets/readme-images/AttLisPage.png)
 
 Attendee list page opens in a new browser tab. This site does not include the standard header and footer.
 1. Very light, printer friendly styling.
 2. Event information.
 3. List of attendee usernames and emails.
+
+Example of the physical, on paper list printed directly from a desktop version of the webpage.
+
+![Printed, physical Attendee List page.](/assets/readme-images/PhyLis.png)
 
 </details>
 
@@ -297,7 +303,7 @@ Attendee list page opens in a new browser tab. This site does not include the st
 <summary>User Login page</summary>
 <br>
 
-![User Login page](/assets/readme-images/placeholder.jpg)
+![User Login page](/assets/readme-images/UseLogPage.png)
 
 User logout, sign in pages similar.
 
@@ -307,7 +313,7 @@ User logout, sign in pages similar.
 <summary>Site Owner page</summary>
 <br>
 
-![Site Owner page](/assets/readme-images/placeholder.jpg)
+![Site Owner page](/assets/readme-images/OwnConPage.png)
 
 Site Owner page has a link to the Django admin control panel. From the standard Django admin control panel, the site Owner can delete, edit, and create users and events and promote a User's permissions to an Organizer's permissions.
 
@@ -352,6 +358,7 @@ This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript pr
 - [Balsamiq](https://balsamiq.cloud/)
 - [Boostrap](https://getbootstrap.com/)
 - [Bootswatch](https://bootswatch.com/)
+- [Bulk Resize Photos](https://bulkresizephotos.com/en)
 - [Cloudinary](https://cloudinary.com/)
 - Code Institute Gitpod Full Template - Available on request.
 - [Django](https://www.djangoproject.com/)
@@ -361,9 +368,11 @@ This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript pr
 - [Favicon.io](https://favicon.io/)
 - [GitHub](https://github.com/)
 - [GitPod](https://gitpod.io/)
+- [Gnu Image Manipulation Program](https://www.gimp.org/)
 - [Google Fonts](https://fonts.google.com/)
 - [Google Maps](https://www.google.com/maps/@53.281599,-6.2396888,14z)
 - [Heroku](https://www.heroku.com)
+- [Markup, the native Android phot editing tool](https://www.android.com/)
 - [MiniWebtool](https://miniwebtool.com/django-secret-key-generator/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [SQLite](https://sqlite.org/index.html)
@@ -549,13 +558,19 @@ When the app is deployed successfully, click View App. There should be a congrat
 ## Testing
 
 <hr>
+
 Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
 
 Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
   
 Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file [here](milestone1-testing.md)
 
+<br>
+<hr>
+
 ## Credits
+
+<hr>
 
 - Code Institute Full Stack lessons for the bulk of the understanding about Django, Bootstrap, and other frameworks. [Code Institute](https://codeinstitute.net/ie/)
 - Code Institute instructor Simen Daehlin for almost everything else. [Simen Daehlin Github](https://github.com/Eventyret)
