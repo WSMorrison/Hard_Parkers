@@ -163,29 +163,51 @@ Wireframes were built in [Balsamiq's online application.](https://balsamiq.cloud
 
 ### General Features on All Pages
 
-The page has five major pages and attendant confirmation pages. There are some features that are common among all pages. 
+The page has five major pages and attendant confirmation pages. There are some features that are common among all pages. Events Organized page shown with an Organizer logged in.
 
-The page includes a faviocon that is displayed with the title in the visitor's browser tab.
+<details>
+<summary>General page features</summary>
+<br>
 
-![Favicon image](/assets/readme-images/placeholder.jpg)
+![General features](/assets/readme-images/placeholder.jpg)
 
-The header and splash image is common to all pages, and if clicked takes the visitor to the index page.
+1. The page includes a favicon that is displayed with the title in the visitor's browser tab.
+2. The header and splace images is common to all pages, and if clicked takes the visitor to the index page.
+3. The navbar is tabbed and the tabs reflect the page is currently navigated to.
+4. The footer includes links to social media. Twitter is omitted because Twitter is dead. It is replaced with a link to eBay, which isn't social media but is more in keeping with the spirit of the page.
 
-![Splash image image](/assets/readme-images/placeholder.jpg)
-
-The nav bar is tabbed, and the tabs reflect the page the visitor is currently navigated to. It is shown here with an Organizer logged in, and navigated to the Events Organized page as an example.
-
-![Nav bar tabs image](/assets/readme-images/placeholder.jpg)
-
-The footer includes links to social media. Twitter is omitted because Twitter is dead.
-
-![Footer image](/assets/readme-images/placeholder.jpg)
+</details>
 
 <br>
 
 ### Features of Individual Pages
 
-The individual pages have some features unique to each.
+The individual pages have some features unique to each. For demostration purposes, all images are shown with an Organizer logged in unless otherwise noted.
+
+<details>
+<summary>Index page features</summary>
+<br>
+
+![Index page](/assets/readme-images/placeholder.jpg)
+
+1. Tabbed nav bar indicating the currently navigated page.
+2. Event card.
+3. Button that links visitor to the Event Details.
+4. Pagination and pagination links.
+
+</details>
+
+<details>
+<summary>Index page features</summary>
+<br>
+
+![Index page](/assets/readme-images/placeholder.jpg)
+
+</details>
+
+
+
+<br>
 
 
 
