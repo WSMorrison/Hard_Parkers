@@ -13,7 +13,7 @@ class EventList(generic.ListView):
     queryset = Event.objects.filter(event_date__gte=datetime.date.today()
                                     ).order_by('event_date')
     template_name = 'index.html'
-    paginate_by = 10
+    paginate_by = 5
 
 
 # Good
@@ -21,7 +21,7 @@ class EventList(generic.ListView):
 class YourEventList(generic.ListView):
     model = Event
     template_name = 'yourevents.html'
-    paginate_by = 10
+    paginate_by = 5
 
     def get_queryset(self):
         your_event_list = Event.objects.filter(attendee=self.request.user
@@ -34,7 +34,7 @@ class YourEventList(generic.ListView):
 class EventOrg(generic.ListView):
     model = Event
     template_name = 'eventorg.html'
-    paginate_by = 10
+    paginate_by = 5
 
     def get_queryset(self):
         your_event_list = Event.objects.filter(organizer=self.request.user

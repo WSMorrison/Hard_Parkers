@@ -58,7 +58,7 @@ There are three levels of user for The HardParkers. There are basic users (Users
 
 All visitors are welcome and the site is responsive for use on mobile, tablet, and even large screen devices such as laptop or desktop computers. However, the majority of Users will be accessing the site from a mobile device. And due to the nature of the events, it's likely if not intended that Organizers will use the site from their mobile device as well. For this reason, the site is intentionally very simple in design, with simple colors and high contrast buttons so that it is easy to see, read, and use.
 
-When a visitor first accesses the website, they see the splash image and main. or index page.  The index page shows the first ten of a paginated list of all upcoming events. The footer of the index and most other pages holds links to social media, and an inspiring quote to encourage any site visitor to attend car shows.
+When a visitor first accesses the website, they see the splash image and main. or index page.  The index page shows the first five of a paginated list of all upcoming events. The footer of the index and most other pages holds links to social media, and an inspiring quote to encourage any site visitor to attend car shows.
 
 On the index page, visitors are given a button that allows the visitor to see the details of the event. The details show on a new page with the same header and footer as the index page. Details include the event location, the event date and time, and the date and time when registration closes. There is a button that can take the visitor to a map, linked to a new tab in the visitor's browser. The visitor is encouraged to login to the site if they aren't already, so they can register for the event. The visitor is also given the opportunity to sign up for the site if they are not already, or login if they are. These pages are available as tabs on a navbar below the splash image.
 
@@ -161,11 +161,33 @@ Wireframes were built in [Balsamiq's online application.](https://balsamiq.cloud
 
 <hr>
 
-👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/TheQuizArms#Features)
+### General Features on All Pages
 
-This section can be used to explain what pages your site is made up of.
+The page has five major pages and attendant confirmation pages. There are some features that are common among all pages. 
 
-### General features on each page
+The page includes a faviocon that is displayed with the title in the visitor's browser tab.
+
+![Favicon image](/assets/readme-images/placeholder.jpg)
+
+The header and splash image is common to all pages, and if clicked takes the visitor to the index page.
+
+![Splash image image](/assets/readme-images/placeholder.jpg)
+
+The nav bar is tabbed, and the tabs reflect the page the visitor is currently navigated to. It is shown here with an Organizer logged in, and navigated to the Events Organized page as an example.
+
+![Nav bar tabs image](/assets/readme-images/placeholder.jpg)
+
+The footer includes links to social media. Twitter is omitted because Twitter is dead.
+
+![Footer image](/assets/readme-images/placeholder.jpg)
+
+<br>
+
+### Features of Individual Pages
+
+The individual pages have some features unique to each.
+
+
 
 If there is a feature that appears on all pages of your site, include it here. Examples of what to include would the the navigation, a footer and a favicon.
 
