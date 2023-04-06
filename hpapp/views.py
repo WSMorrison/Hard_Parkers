@@ -6,7 +6,6 @@ from django import forms
 import datetime
 
 
-# Good
 # Home page.
 class EventList(generic.ListView):
     model = Event
@@ -16,7 +15,6 @@ class EventList(generic.ListView):
     paginate_by = 5
 
 
-# Good
 # Logged in user's list of events they have already registered for.
 class YourEventList(generic.ListView):
     model = Event
@@ -25,11 +23,13 @@ class YourEventList(generic.ListView):
 
     def get_queryset(self):
         your_event_list = Event.objects.filter(attendee=self.request.user
-                                               ).filter(event_date__gte=datetime.date.today()).order_by('event_date')
+                                               ).filter(
+                                                event_date__gte=datetime.
+                                                date.today()
+                                                ).order_by('event_date')
         return your_event_list
 
 
-# Good
 # Event organizer's list of events they have organized.
 class EventOrg(generic.ListView):
     model = Event
@@ -42,13 +42,11 @@ class EventOrg(generic.ListView):
         return your_event_list
 
 
-# Placeholder
 # Owner control panel for approving event organizers, etc.
 def OwnConPan(request):
     return render(request, 'ownconpan.html', {})
 
 
-# Good
 # Logged in user can view an event and either register for it if not
 # already registered, and unregister if already registered.
 class EventView(View):
@@ -75,7 +73,6 @@ class EventView(View):
                       {'event': event, 'is_attendee': is_attendee, })
 
 
-# Good
 # Notification that user has successfully registered for an event,
 # passes them back to their event list with a button.
 class EventReg(View):
@@ -85,7 +82,6 @@ class EventReg(View):
         return render(request, 'eventreg.html', {'event': event})
 
 
-# Good
 # Notification that a user has successfully left an event,
 # passes them back to their event list with a button.
 class EventUnReg(View):
@@ -95,7 +91,6 @@ class EventUnReg(View):
         return render(request, 'eventunreg.html', {'event': event})
 
 
-# Good
 # The code that adds or removes a user object
 # from the attendee list of an Event.
 class UserReg(View):
@@ -109,7 +104,6 @@ class UserReg(View):
             return render(request, 'eventreg.html', {})
 
 
-# Good
 # Render a form so an event organizer can organize an event.
 class EventCreate(View):
     def get(self, request):
@@ -130,7 +124,6 @@ class EventCreate(View):
         return render(request, 'eventthanks.html', {'event': event})
 
 
-# Good
 # Allows organizer to edit an existing event.
 class EventEdit(View):
     def get(self, request, event_name, *args, **kwargs):
@@ -160,7 +153,6 @@ class EventEdit(View):
             event_form = EventForm(instance=event)
 
 
-# Good
 # Thanks organizer for publishing a new event
 class EventThanks(View):
     def get(self, request, event_name, *args, **kargs):
@@ -169,7 +161,6 @@ class EventThanks(View):
         return render(request, 'eventthanks.html', {'event': event})
 
 
-# Good
 # Allows an organizer to delete an event.
 class EventDelete(View):
     def get(self, request, event_name, *args, **kwargs):
@@ -178,7 +169,6 @@ class EventDelete(View):
         return render(request, 'eventdelete.html', {'event': event})
 
 
-# Good
 # Deletes the event from the confirmation page.
 class ConfirmDelete(View):
     def get(self, request, event_name, *args, **kargs):
@@ -191,7 +181,6 @@ class ConfirmDelete(View):
         return render(request, 'confirmdelete.html', {'event': event})
 
 
-# Goods
 # Returns a list of attendees for a specific event.
 class AttendeeList(View):
     def get(self, request, event_name, *args, **kwargs):

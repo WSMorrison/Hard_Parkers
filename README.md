@@ -35,6 +35,7 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
   * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 
 * [Local Development and Deployment](#local-development-and-deployment)
+  * [Note On Commit History](#note-on-commit-history)
   * [Local Development](#local-development)
   * [Deployment](#deployment)
   * [How to Fork or Clone](#how-to-fork-or-clone)
@@ -329,17 +330,22 @@ The most interesting future implmentation would be to create a front end control
 
 It would also be helpful for a user to be able to register for an event and input what car they are bringing. This would help the event organizer limit the attendance to appropriate vehicles. The obvious continuation of this feature would be allowing an organizer to choose to be able to approve or not approve Users for event attendance. It would also lead to the user being able to register one or more vehicles that are linked to their username, that allows them to choose one or another from the database for registration to an event.
 
+Another future improvement would be to put not just a link to Google Maps, but to integrate a map into the event detail page from the Organizer's input url.
+
+
+
 ### Accessibility
 
-Be an amazing developer and get used to thinking about accessibility in all of your projects!
+Care was taken to make sure the website was accessible.
 
-This is the place to make a note of anything you have done with accessibility in mind. Some examples include:
+  - The page is developed to use high contrast text, simple interface and easy to follow buttons. 
+  - Aria labels are on any button that is not labelled.
+  - The tabs are all marked current so that the page indicates where the navigation currently is. 
+  - The HTML follows a clear semantic flow.
 
-Have you used icons and added aria-labels to enable screen readers to understand these?
-Have you ensured your site meets the minimum contrast requirements?
-Have you chosen fonts that are dyslexia/accessible friendly?
+![Lighthouse score for page](/assets/readme-images/Lighthouse.png)
 
-Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
+The accessibility score is less than 100% because the "Background and foreground colors do not have a sufficient contrast ratio," however, changing the colors did not seem to make any difference in the score.
 
 <br>
 <hr>
@@ -361,6 +367,7 @@ This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript pr
 - [Bulk Resize Photos](https://bulkresizephotos.com/en)
 - [Cloudinary](https://cloudinary.com/)
 - Code Institute Gitpod Full Template - Available on request.
+- [Code Institute Python linter](https://pep8ci.herokuapp.com/)
 - [Django](https://www.djangoproject.com/)
   - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
   - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
@@ -372,11 +379,14 @@ This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript pr
 - [Google Fonts](https://fonts.google.com/)
 - [Google Maps](https://www.google.com/maps/@53.281599,-6.2396888,14z)
 - [Heroku](https://www.heroku.com)
-- [Markup, the native Android phot editing tool](https://www.android.com/)
+- [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/)
+- [Markup, the native Android photo editing tool](https://www.android.com/)
 - [MiniWebtool](https://miniwebtool.com/django-secret-key-generator/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [SQLite](https://sqlite.org/index.html)
 - [TinyPNG](https://tinypng.com/)
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input)
 
 <br>
 <hr>
@@ -384,6 +394,10 @@ This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript pr
 ## Local Development and Deployment
 
 <hr>
+
+### Note On Commit History
+
+This is a second attempt at this website. During an earlier iteration, there was a problem with the database models while attempting to extend the built in Django user model. The method of extending the model ultimately did not work, and the models in the database were thought to be broken beyond repair. Ultimately it was learned that of course, the models could have been at worst deleted and rewritten or at best, could have actually been modified. Instead, the repository was rebuilt and the working code; html, views, urls, settings and whatever working models existed, were copied into the appropriate locations of the new repository. This means that 26 commits from the old repository are not logged into this one, and there are large jumps in development early in the project that aren't reflected in the commit history. In hindsight, the correct answer would have been to repair the models in the database, or branch the workspace in Git. The previous repository can be found there: [The Hard Parkers repository](https://github.com/WSMorrison/The_Hard_Parkers)
 
 ### Local Development
 
@@ -559,11 +573,21 @@ When the app is deployed successfully, click View App. There should be a congrat
 
 <hr>
 
-Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
+The HTML for the website was put through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Each page of the site was tested by opening the page, viewing page source, and copying and pasting the source coude into the validator. This avoided any issues with the template tags upsetting the validator to the point that it did not check the rest of the code. Any errors found they were fixed. As credit to Django's automated page generation through template tags, the only errors were in the hand written code of the base.html; a stray closing </i> tag in the footer, and a <br class="d-md-none" /> in the blockquote to try to influence the line break that did not have any effect. Both were fixed, and each page was returned without errors.
 
-Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
-  
-Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file [here](milestone1-testing.md)
+![W3C Markup validator representative return](/assets/readme-images/W3CHTMLValidator.png)
+
+The CSS was put through the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/). The short, hand written CSS file checked without errors.
+
+![W3C CSS validator representative return](/assets/readme-images/W3CCSSValidator.png)
+
+The Python code was checked with the [Code Institute Python linter](https://pep8ci.herokuapp.com/). Each hand written python file was checked with the linter; forms.py, models.py, urls.py, and views.py. Each was returned without errors.
+
+![CI Python linter representative return](/assets/readme-images/CIPythonLinter.png)
+
+In addition to formal manual testing, the site was shown to friends who would be representative as users for this website. Despite the Code Institute instruction suggesting that the website was too plain and not visually interesting, all representative user tester appreciated the simple and clear design. 
+
+The printable attendee list printed smoothly and without needing any tweaking for a good, straightforward print. It was also tested for printing to a .pdf, which it did directly and without issue.
 
 <br>
 <hr>
