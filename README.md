@@ -608,6 +608,7 @@ The printable attendee list printed smoothly and without needing any tweaking fo
     - Process for modifying Django's built in registration and sign-up code to fit this website was particularly instructive, from the "Adding Authentication - Part 2" lesson.
 - Method for making nav bar elements dynamic were best explained by [Sharma Coding YouTube Channel](https://www.youtube.com/watch?v=IY_ooX65BnQ).
 - Basic HTML structure uses the Bootstrap Cards style library. [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/)
+- This Readme file follows the roadmap by Kera Cudmore and her incomperable [readme template and example.](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md)
 
 ### Media
 
