@@ -36,6 +36,10 @@ footer {
     align-items: center;
 }
 
+#splash-url {
+    text-decoration: none;
+}
+
 #headline-container {
     height: 30rem;
 }
