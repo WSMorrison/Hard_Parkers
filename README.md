@@ -166,7 +166,7 @@ Wireframes were built in [Balsamiq's online application.](https://balsamiq.cloud
 
 ### General Features on All Pages
 
-The page has five major pages and attendant confirmation pages. There are some features that are common among all pages. Events Organized page shown with an Organizer logged in.
+The page has five major pages and attendant confirmation pages. There are some features that are common among all pages.
 
 <details>
 <summary>General page features</summary>
@@ -175,9 +175,11 @@ The page has five major pages and attendant confirmation pages. There are some f
 ![General features](/assets/readme-images/placeholder.jpg)
 
 1. The page includes a favicon that is displayed with the title in the visitor's browser tab.
-2. The header and splace images is common to all pages, and if clicked takes the visitor to the index page.
+2. The header and splash images is common to all pages, and if clicked takes the visitor to the index page.
 3. The navbar is tabbed and the tabs reflect the page is currently navigated to.
-4. The footer includes links to social media. Twitter is omitted because Twitter is dead. It is replaced with a link to eBay, which isn't social media but is more in keeping with the spirit of the page.
+4. The unlogged in visitor is given the opportunity to log in, of sign up if they haven't already.
+5. The unlogged in visitor is shown all events, and can see the details of the events, but cannot register for them.
+6. The footer includes links to social media. Twitter is omitted because Twitter is dead. It is replaced with a link to eBay, which isn't social media but is more in keeping with the spirit of the page.
 
 </details>
 
@@ -238,9 +240,9 @@ The individual pages have some features unique to each. For demostration purpose
 2. Event details, including the title, date, location, and when registration ends.
 3. Event description.
 4. Button that opens a google.maps page in a new tab so the visitor can see the location on a full map.
-5. Registration button. Currently reflecting that the Organizer is registered for this event, and allowing the Organizer to remove their registration.
+5. Registration button. Currently reflecting that the Organizer is not registered for this event, and allowing the Organizer to registrater.
 
-Examples of the registration button when visitor is not registered and registration is open, left, and when visitor is not registered and registration is closed, right.
+Examples of the registration button when visitor is already registered and registration is open, left, and when visitor is not registered and registration is closed, right.
 
 ![Registration button states](/assets/readme-images/placeholder.jpg)
 
