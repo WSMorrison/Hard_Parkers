@@ -2,7 +2,9 @@
 
 The HardParkers website is is a simple, streamlined, and mobile focused resource for automotive enthusiasts to find meets and shows they would like to attend in their area. It allows event organizers to publish their event details and for participants to register to attend, making it simple for organizers to get the word out and easy for enthusiasts to find events that match their interests.
 
-![Front page of The HardParkers as input to AmIResponsive.](/assets/readme-images/placeholder.jpg)
+![Front page of The HardParkers as input to AmIResponsive.](/assets/readme-images/Responsive.png)
+
+[AmIResponsive](https://ui.dev/amiresponsive)
 
 ### The deployed site can be found here: [The HardParkers](https://hardparkers.herokuapp.com/)
 
@@ -152,6 +154,7 @@ Click on the heading below to view individual wireframes:
 
 </details>
 <br>
+
 Wireframes were built in [Balsamiq's online application.](https://balsamiq.cloud/)
 
 <br>
@@ -198,26 +201,125 @@ The individual pages have some features unique to each. For demostration purpose
 </details>
 
 <details>
-<summary>Index page features</summary>
+<summary>Attending Events page features</summary>
 <br>
 
-![Index page](/assets/readme-images/placeholder.jpg)
+![Attending Events page](/assets/readme-images/placeholder.jpg)
+
+1. Tabbed nav bar indicating the currently navigated page.
+2. Page shows only the events the currently logged in Organizer is registered to attend.
+3. Event card.
+4. Button that links visitor to the Event details.
+5. No pagination, because logged in Organizer is only attending three events. There is pagination for attending events when necessary.
 
 </details>
 
+<details>
+<summary>Organized Events page features</summary>
+<br>
 
+![Organized Events page](/assets/readme-images/placeholder.jpg)
+
+1. Tabbed nav bar indicating the currently navigated page.
+2. Prominent button that allows user to create a new event.
+3. Button that allows Organizer to access Event Edit page.
+4. Button that allows the Organizer to delete the event.
+5. Button that generates a lightly styled, printable page that allows the user to check attendees.
+
+</details>
+
+<details>
+<summary>Event Details page features</summary>
+<br>
+
+![Event Details page](/assets/readme-images/placeholder.jpg)
+
+1. Tabbed nav bar indicates that this page is not navigable from the nav bar, but allows the user to nav out of the page using the nav bar navigation.
+2. Event details, including the title, date, location, and when registration ends.
+3. Event description.
+4. Button that opens a google.maps page in a new tab so the visitor can see the location on a full map.
+5. Registration button. Currently reflecting that the Organizer is registered for this event, and allowing the Organizer to remove their registration.
+
+Examples of the registration button when visitor is not registered and registration is open, left, and when visitor is not registered and registration is closed, right.
+
+![Registration button states](/assets/readme-images/placeholder.jpg)
+
+</details>
+
+<details>
+<summary>Event Create page features</summary>
+<br>
+
+![Event Create page](/assets/readme-images/placeholder.jpg)
+
+1. Tabbed nav bar indicates that this page is not navigable from the nav bar, but allows the user to nav out of the page using the nav bar navigation.
+2. Event creation form.
+3. Event date field with date picker, picker only allows the Organizer to select future dates.
+4. Event time field with default prepopulated.
+5. Event registration closes date and time fields similar to event date fields.
+6. Event location field.
+7. Event location URL field.
+8. Number of cars allowed.
+9. Event description text area.
+10. Button to publish event.
+
+</details>
+
+<details>
+<summary>Event Edit page features</summary>
+<br>
+
+![Event Edit page](/assets/readme-images/placeholder.jpg)
+
+1. Tabbed nav bar indicates that this page is not navigable from the nav bar, but allows the user to nav out of the page using the nav bar navigation.
+2. Event edit form.
+3. Event edit form is prepopulated with existing event data from the database.
+4. Button to publish edited event.
+
+</details>
+
+<details>
+<summary>Attendee List page features</summary>
+<br>
+
+![Attendee List page](/assets/readme-images/placeholder.jpg)
+
+Attendee list page opens in a new browser tab. This site does not include the standard header and footer.
+1. Very light, printer friendly styling.
+2. Event information.
+3. List of attendee usernames and emails.
+
+</details>
+
+<details>
+<summary>User Login page</summary>
+<br>
+
+![User Login page](/assets/readme-images/placeholder.jpg)
+
+User logout, sign in pages similar.
+
+</details>
+
+<details>
+<summary>Site Owner page</summary>
+<br>
+
+![Site Owner page](/assets/readme-images/placeholder.jpg)
+
+Site Owner page has a link to the Django admin control panel. From the standard Django admin control panel, the site Owner can delete, edit, and create users and events and promote a User's permissions to an Organizer's permissions.
+
+</details>
 
 <br>
 
-
-
-If there is a feature that appears on all pages of your site, include it here. Examples of what to include would the the navigation, a footer and a favicon.
-
-I then like to add a screenshot of each page of the site here, i use [amiresponsive](https://ui.dev/amiresponsive) which allows me to grab an image of the site as it would be displayed on mobile, tablet and desktop, this helps to show the responsiveness of the site.
-
 ### Future Implementations
 
-What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
+The HardParkers is a fully formed site, but as with anything there are at least a few improvements that could be made to better reflect the usage.
+
+The most interesting future implmentation would be to create a front end control panel for the site Owner. From here, the site owner could do all the User promotion, user and event editing and deletion that they can do in the Django admin panel.
+
+It would also be helpful for a user to be able to register for an event and input what car they are bringing. This would help the event organizer limit the attendance to appropriate vehicles. The obvious continuation of this feature would be allowing an organizer to choose to be able to approve or not approve Users for event attendance. It would also lead to the user being able to register one or more vehicles that are linked to their username, that allows them to choose one or another from the database for registration to an event.
 
 ### Accessibility
 
@@ -231,44 +333,220 @@ Have you chosen fonts that are dyslexia/accessible friendly?
 
 Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
 
+<br>
+<hr>
+
 ## Technologies Used
 
-👩🏻‍💻 View an example of a completed Technologies Used section [here](https://github.com/kera-cudmore/Bully-Book-Club#Technologies-Used)
+<hr>
 
 ### Languages Used
 
-Make a note here of all the languages used in creating your project. For the first project this will most likely just be HTML & CSS.
+This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript programming languages. 
 
 ### Frameworks, Libraries & Programs Used
 
-Add any frameworks, libraries or programs used while creating your project.
+- [AmIResponsive](https://ui.dev/amiresponsive)
+- [Balsamiq](https://balsamiq.cloud/)
+- [Boostrap](https://getbootstrap.com/)
+- [Bootswatch](https://bootswatch.com/)
+- [Cloudinary](https://cloudinary.com/)
+- Code Institute Gitpod Full Template - Available on request.
+- [Django](https://www.djangoproject.com/)
+  - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+  - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
+- [Elephant SQL](https://www.elephantsql.com/)
+- [Favicon.io](https://favicon.io/)
+- [GitHub](https://github.com/)
+- [GitPod](https://gitpod.io/)
+- [Google Fonts](https://fonts.google.com/)
+- [Google Maps](https://www.google.com/maps/@53.281599,-6.2396888,14z)
+- [Heroku](https://www.heroku.com)
+- [MiniWebtool](https://miniwebtool.com/django-secret-key-generator/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [SQLite](https://sqlite.org/index.html)
+- [TinyPNG](https://tinypng.com/)
 
-Make sure to include things like git, GitHub, the program used to make your wireframes, any programs used to compress your images, did you use a CSS framework like Bootstrap? If so add it here (add the version used).
+<br>
+<hr>
 
-A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
+## Local Development and Deployment
 
-## Deployment & Local Development
-
-👩🏻‍💻 View an example of a completed Deployment & Local Development section [here](https://github.com/kera-cudmore/TheQuizArms#Deployment)
-
-### Deployment
-
-Include instructions here on how to deploy your project. For your first project you will most likely be using GitHub Pages.
+<hr>
 
 ### Local Development
 
-The local development section gives instructions on how someone else could make a copy of your project to play with on their local machine. This section will get more complex in the later projects, and can be a great reference to yourself if you forget how to do this.
+The Hardparkers was developed locally in a [GitPod](https://gitpod.io/) environment.
 
-#### How to Fork
+The environment repository was generated from the Code Institute Full template, available on request.
 
-Place instructions on how to fork your project here.
+Once the repository was generated, the following steps were taken to install the Django framework:
 
-#### How to Clone
+  - In the Terminal:
+    1. Django and Gunicorn were installed: <code>pip3 install 'django<4' gunicorn</code>
+    2. The supported libraries were installed: <code>pip3 install dj_database_url psycopg2</code>
+    3. Install the Cloudinary libaries: <code>pip3 install dj3-cloudinary-storage</code>
+    4. The requirements file was created: <code>pip3 freeze --local > requirements.txt</code>
+    5. The project was created: <code>django-admin startproject hardparkers .</code>
+    6. The app was created: <code>python3 manage.py startapp hpapp</code>
 
-Place instructions on how to clone your project here.
+  - In the project, "hardparkers" folder, the settings.py file is opened and modified:
+    1. Add the app the end of the <code>INSTALLED_APPS = [ ]</code> section, add: <code>'HPAPP',</code> 
+    2. Save the file <kbd>ctrl</kbd> + <kbd>s</kbd>
+
+  - Back in the Terminal:
+    1. The changes are migrated: <code>python3 manage.py migrate</code>
+    2. Run the server to test the progress: <code>python3 manage.py runserver</code>
+
+  - In GitPod, there will be a pop-up on screen allowing the server to be opened in Port 8000. Open the port in browser, and there should be a congratulations page with an animated image of a little rocket, like below:
+<details>
+<summary>Example of Django's little congratulatory rocket.</summary>
+<br>
+
+![Good job rocket](/assets/readme-images/DjangoSuccess.png)
+
+</details> 
+
+<br>
+The databases were hosted for production with [Elephant SQL.](https://www.elephantsql.com/)
+
+Create an Elephant SQL account if there isn't an existing one, then log in to access the dashboard.
+
+  1. Click the green "Create New Instance" button in the top right corner.
+  2. Set up the plan:<br>
+    <code>hardparkers</code> was selected as the database name.<br>
+    "Tiny Turtle (Free)" is an appropriate plan for a project of this size.
+  4. Click the green "Select Region" button in the bottom right.
+  5. Select an appropriate data center, one nearest to your location is ideal.
+  6. Click the green "Review" button in the bottom right.
+  7. Check that all the details are correct, and if they are, click the green "Create instance" button in the bottom right.
+  8. From the Elephant SQL dashboard, click on your database name.
+  9. Copy the URL, Elephant SQL provides a handy clipboard icon button to copy the entire URL.
+
+In the work environment, create an env.py file in the root directory. In the .gitignore file, add <code>env.py</code>
+
+Open the env.py file:
+  1. Add <code>import os</code> which should remain at the top of the file.
+  2. Add <code>os.environ["DATABASE_URL"]="<kbd>the url copied from Elephant SQL</kbd>"</code>
+  3. Add <code>os.environ["SECRET_KEY"]="<kbd>a secret key</kbd>"</code><br>
+    The secret key can be anything, but this project generated the secret key on [MiniWebtool.](https://miniwebtool.com/django-secret-key-generator/)
+  4. Save the file <kbd>ctrl</kbd> + <kbd>s</kbd>
+
+The static files are stored in [Cloudinary.](https://cloudinary.com/) 
+
+Create a Cloudinary account if there isn't an existing one, then log in:
+  1. Navigate to the dashboard. 
+  2. Copy the API Environment variable, there is a handy copy button to use.
+
+In the env.py file of the workspace:
+  1. Add <code>os.environ["CLOUDINARY_URL]="<kbd>the url copied from Cloudinary</kbd>"</code>
+  2. Remember to remove <kbd>CLOUDINARY_URL=</kbd> from the front of the copied url.
+
+In the settings.py file in the workspace:
+  1. Find the <code>INSTALLED_APPS = [</code> ... <code>]</code> section.
+  2. Add <code>'cloudinary_storage',</code> immediately above the existing <code>'django.contrib.staticfiles',</code> entry.
+  3. Add <code>'cloudinary',</code> immediately below the existing <code>'django.contrib.staticfiles',</code> entry.
+  4. Find the <code>STATIC_URL = '/static/'</code> entry.
+  5. Immediately below it, add <code>STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'</code>.
+  6. Below that, add <code>STATICFILES_DIRS = [os.path,join(BASE_DIR, 'static)]</code>.
+  7. Next add <code>STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')</code>.
+  8. Skip a line, then add <code>MEDIA_URL = '/media/'</code> and on the next line <code>DEFAULT_FILE_STORAGE = 'cloudinary_storage.MediaCloudinaryStorage'</code>
+  9. And believe it or not, it's incredibly condescending to remark on how simple this all is.
+  10. Find <code>BASE_DIR = Path(__file__).resolve().parent.parent</code> near the top of settings.py.
+  11. Add <code>TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')</code>
+  12. Find the <code>TEMPLATES = [</code> ... <code>]</code>, specifically <code>'DIRS': [],</code>.
+  13. Inside the <code>'DIRS': [],</code> brackets, add <code>TEMPLATES_DIR</code> so all together it reads <code>'DIRS':[TEMPLATES_DIR],</code>.
+
+In the root directory of the workspace:
+  1. Add a media folder.
+  2. Add a static folder.
+  3. Add a templates folder.
+
+In the same settings.py file as before and at the top, immediately below the <code>from pathlib import Path</code>:
+  1. Add <code>import os</code>
+  2. <code>import dj_database_url</code>
+  3. <code>if os.path.isfile('env.py'):</code>
+  4. Indented below the if statement: <code>import env</code>
+
+In the settings.py file, find the <code>SECRET_KEY =</code> variable.
+  1. Change the whole line to <code>SECRET_KEY = os.environ.get('SECRET_KEY')</code>
+
+Continuing in the settings.py file, find the <code>DATABASES =</code> variable.
+  1. Comment out the entire existing <code>DATABASES = {</code> ... <code>}</code>
+  2. Instead add <code>DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}</code>
+  3. Save the file <kbd>ctrl</kbd> + <kbd>s</kbd>
+
+Now it is appropriate to git add, git commit, and git push the work. Pushing at this point will avoid an angry automatic email reminding you that your SECRET_KEY was exposed. If the files were pushed earlier and the email was sent, it's ok, the new SECRET_KEY will be used going forward and hasn't been exposed yet.
+
+<br>
+
+### Deployment
+
+The Hardparkers was deployed to [Heroku.](https://www.heroku.com) 
+
+Once logged into Heroku, the following steps were followed to deploy the project:
+  1. In the Heroku dashboard, click the "New" button in the top right corner.
+  2. From the menu that drops down from the button, click "Create new app."
+  3. The app was named <code>hardparkers</code>.
+  4. Select the appropriate region. Then click the "Create app" button.
+  5. From the Heroku dashboard, click on the app name.
+  6. In the app control panel, select settings.
+  7. In settings, click the Reveal Config Vars button.
+  8. In Config Vars, add a <code>SECRET_KEY</code> in the first KEY position. In the VALUE position, add <kbd>the SECRET_KEY from the env.py file</kbd>.
+  9. Add <code>DATABASE_URL</code> in the next KEY position. In the VALUE position, add <kbd>the url copied from Elephant SQL</kbd>.
+  10. Add <code>CLOUDINARY_URL</code> in the next KEY position, then for VALUE add <kbd>the url copied from Cloudinary</kbd>. Remember to just copy the url in place, like in the env.py file.
+  11. Add <code>PORT</code> in the next Key position, with <code>8000</code> as the VALUE.
+  12. During production, there was an additional KEY and VALUE, <code>DISABLE_COLLECTSTATIC</code> and <code>1</code> respectively. These were removed from Heroku before final deployment, and isn't needed for a direct to deployment cloning.
+  
+In the settings.py file of the workspace:
+  1. Find <code>ALLOWED_HOSTS = []</code>.
+  2. Add code so that it reads <code>ALLOWED_HOSTS = [<kbd>'appname.heroku.com'</kbd>, 'localhost'],</code> where <kbd>appname.heroku.com</kbd> is the appname url from Heroku.
+
+In the root of the workspace:
+  1. Create a file called <code>Procfile</code>, without an extension.
+  2. Inside the Procfile, add <code>web: gunicorn codestar.wsgi</code>.
+
+Git add, git commit, and git push.
+
+In Heroku, navigate to the app.
+  1. Click the Deploy tab.
+  2. Connect the workspace to Heroku in the area marked Deployment Method.
+  3. Search for the repository.
+  4. Click the connect button associated with the correct repository.
+  5. Click deploy branch.
+
+When the app is deployed successfully, click View App. There should be a congratulations page with an animated image of a little rocket, like below:
+
+<details>
+<summary>Example of Django's little congratulatory rocket.</summary>
+<br>
+
+![Good job rocket](/assets/readme-images/DjangoSuccess.png)
+
+</details> 
+
+<br>
+
+### How to Fork or Clone
+
+ - To fork or clone the project:
+    1. Log-in to GitHub, sign up if necessary.
+    2. Navigate the browser to the repostiory for [the HardParkers project.](https://github.com/WSMorrison/Hard_Parkers)
+    3. Fork or clone the project:
+        - To fork the project, click the button in the top right corner marked "Fork."
+        - To clone the repository:
+          1. Click the green button above the file card marked "<> Code"
+          2. Choose if you want to clone the project in HTTPS, SSH or GitHub CLI. 
+          3. Copy the generated link below the choices.
+          4. Open a new project repository of your preferred code editor.
+          5. In the terminal of your code editor, type <code>git clone</code> and paste the link from before.
+          6. Press <kbd>Enter</kbd>
+<br>
+<hr>
 
 ## Testing
 
+<hr>
 Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
 
 Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
@@ -277,22 +555,22 @@ Use this part of the README to link to your TESTING.md file - you can view the e
 
 ## Credits
 
-👩🏻‍💻 View an example of a completed Credits section [here](https://github.com/kera-cudmore/BookWorm#Credits)
-
-The Credits section is where you can credit all the people and sources you used throughout your project.
+- Code Institute Full Stack lessons for the bulk of the understanding about Django, Bootstrap, and other frameworks. [Code Institute](https://codeinstitute.net/ie/)
+- Code Institute instructor Simen Daehlin for almost everything else. [Simen Daehlin Github](https://github.com/Eventyret)
+- Code Institute mentor Jubrile Akolade provided guidance on where to focus time building the project and an almost infinite amount of other support.
+- All of my Code Institute UCD July 2022 cohort, who have been available to answer questions through Slack.
+- Code Institute tutors accessed through the Code Institute LMS have been helpful with understanding various concepts during instruction. In particular Ed for explaining core view concepts that I wasn't understanding and setting this baby bird off to fly with his own wings, and Jason for helping specifically with event.attendee.all() returning the attendee list, instead of letting me smash stuff looking at the many to many relationships and the siteuser user model extension.
 
 ### Code Used
 
-If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
+- Code regarding the MVC architecture is very similar to the Code Institute training code from the I Think Therefore I Blog Lessons. Available on request.
+    - Process for modifying Django's built in registration and sign-up code to fit this website was particularly instructive, from the "Adding Authentication - Part 2" lesson.
+- Method for making nav bar elements dynamic were best explained by [Sharma Coding YouTube Channel](https://www.youtube.com/watch?v=IY_ooX65BnQ).
+- Basic HTML structure uses the Bootstrap Cards style library. [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/)
 
-### Content
+### Media
 
-Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
+- Favicon icon by [Iconpacks](https://iconpacks.net/?utm_source=link-attribution&utm_content=1641), converted from .png to .ico by [favicon.io](https://favicon.io/favicon-converter/).
+- Splash image by Trevor Yale Ryan, as published on [Speedhunters](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/).
 
-###  Media
-
-If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
-  
-###  Acknowledgments
-
-If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
+For educational purposes only.
