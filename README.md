@@ -104,6 +104,8 @@ The Headline is Bebas Neue. This font was chosen for maximum dramatic impact. It
 
 For the sake of simplicity, the website only has one image. The splash image is intended to give the visitor an idea of what the website is about, with an impactful and emotional image not just of interesting cars at a meet, but lit with the sought golden hour evening light that evokes the feeling of being at a well run car meet with a good, relaxed vibe and good friends. There could be a temptation to allow Organizers to use their own image to capture the attention of Users, but the risk is that the website could end up a mess of incompatable images and styles that would make the site confusing, garish, and unpleasant to look at. This would take away from spirit of a simple, clean, and calm website.
 
+The splash image is by Trevor Yale Ryan, and was originally published on the [Speedhunters](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/). It will serve as a placeholder until an appropriate new image can be taken at a local event.
+
 ### Wireframes
 
 One wireframe was made for all sizes of device, as it was intentional from the beginning that the site remain cohesive and similar across all platforms. Like many popular social media platforms, the site is geared around a vertical scroll.
@@ -160,6 +162,20 @@ Click on the heading below to view individual wireframes:
 
 Wireframes were built in [Balsamiq's online application.](https://balsamiq.cloud/)
 
+### Flowchart
+
+This project required careful planning ahead to make sure that the purpose was clear and the flow through the site is as simple as the design. A flowchart was developed to help visualize where the user would be navigating through the page. The flowchart did not reflect the deployed site exactly, and the ability to sign up or log in at any time was omitted for clarity, but the permissions are shown.
+
+Click below to view the flowchart.
+<details>
+<summary>HardParkers development flowchart.</summary>
+<br>
+
+![HardParkers Flowchart](/assets/readme-images/HardParkersFlowchart.png)
+
+</details>
+ 
+
 <br>
 <hr>
 
@@ -171,6 +187,7 @@ Wireframes were built in [Balsamiq's online application.](https://balsamiq.cloud
 
 The page has five major pages and attendant confirmation pages. There are some features that are common among all pages.
 
+Click on the heading below to view individual pages:
 <details>
 <summary>General page features</summary>
 <br>
@@ -331,8 +348,6 @@ The most interesting future implmentation would be to create a front end control
 It would also be helpful for a user to be able to register for an event and input what car they are bringing. This would help the event organizer limit the attendance to appropriate vehicles. The obvious continuation of this feature would be allowing an organizer to choose to be able to approve or not approve Users for event attendance. It would also lead to the user being able to register one or more vehicles that are linked to their username, that allows them to choose one or another from the database for registration to an event.
 
 Another future improvement would be to put not just a link to Google Maps, but to integrate a map into the event detail page from the Organizer's input url.
-
-
 
 ### Accessibility
 
@@ -613,6 +628,6 @@ The printable attendee list printed smoothly and without needing any tweaking fo
 ### Media
 
 - Favicon icon by [Iconpacks](https://iconpacks.net/?utm_source=link-attribution&utm_content=1641), converted from .png to .ico by [favicon.io](https://favicon.io/favicon-converter/).
-- Splash image by Trevor Yale Ryan, as published on [Speedhunters](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/).
+- Splash image by Trevor Yale Ryan, as published on the HardParkers' dialectical nemesis, [Speedhunters](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/).
 
 For educational purposes only.
