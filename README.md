@@ -174,7 +174,8 @@ Click below to view the flowchart.
 ![HardParkers Flowchart](/assets/readme-images/HardParkersFlowchart.png)
 
 </details>
- 
+
+Flowrchart was built with [LucidChart.](https://lucid.app/lucidchart/) 
 
 <br>
 <hr>
@@ -395,6 +396,7 @@ This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript pr
 - [Google Maps](https://www.google.com/maps/@53.281599,-6.2396888,14z)
 - [Heroku](https://www.heroku.com)
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/)
+- [LucidChart](https://lucid.app/lucidchart/) 
 - [Markup, the native Android photo editing tool](https://www.android.com/)
 - [MiniWebtool](https://miniwebtool.com/django-secret-key-generator/)
 - [PostgreSQL](https://www.postgresql.org/)
@@ -621,13 +623,13 @@ The printable attendee list printed smoothly and without needing any tweaking fo
 
 - Code regarding the MVC architecture is very similar to the Code Institute training code from the I Think Therefore I Blog Lessons. Available on request.
     - Process for modifying Django's built in registration and sign-up code to fit this website was particularly instructive, from the "Adding Authentication - Part 2" lesson.
-- Method for making nav bar elements dynamic were best explained by [Sharma Coding YouTube Channel](https://www.youtube.com/watch?v=IY_ooX65BnQ).
-- Basic HTML structure uses the Bootstrap Cards style library. [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/)
+- Method for making nav bar elements dynamic were best explained by [Sharma Coding YouTube Channel.](https://www.youtube.com/watch?v=IY_ooX65BnQ).
+- Basic HTML structure uses the Bootstrap Cards [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/) style library.
 - This Readme file follows the roadmap by Kera Cudmore and her incomperable [readme template and example.](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md)
 
 ### Media
 
-- Favicon icon by [Iconpacks](https://iconpacks.net/?utm_source=link-attribution&utm_content=1641), converted from .png to .ico by [favicon.io](https://favicon.io/favicon-converter/).
-- Splash image by Trevor Yale Ryan, as published on the HardParkers' dialectical nemesis, [Speedhunters](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/).
+- Favicon icon by [Iconpacks](https://iconpacks.net/?utm_source=link-attribution&utm_content=1641), converted from .png to .ico by [favicon.io.](https://favicon.io/favicon-converter/).
+- Splash image by Trevor Yale Ryan, as published on the HardParkers' dialectical nemesis, [Speedhunters.](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/).
 
 For educational purposes only.

@@ -185,7 +185,7 @@ class ConfirmDelete(View):
 class AttendeeList(View):
     def get(self, request, event_name, *args, **kwargs):
         event = get_object_or_404(Event, event_name=event_name)
-        attendee_list = event.attendee.all()
+        attendee_list = event.attendee.all().order_by('username')
 
         return render(request, 'attendeelist.html',
                       {'event': event, 'attendee_list': attendee_list})
