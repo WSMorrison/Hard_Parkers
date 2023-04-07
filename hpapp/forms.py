@@ -19,7 +19,7 @@ class EventForm(forms.ModelForm):
                                                  'min': datetime.now().date()}
                                                  ))
     event_location_url = forms.CharField(label='Share Google Maps link here:',
-                                         widget=forms.TextInput(attrs={
+                                         widget=forms.URLInput(attrs={
                                           'placeholder': 'Must be a valid URL'}
                                            ))
 

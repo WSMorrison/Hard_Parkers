@@ -23,10 +23,12 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
   * [Typography](#typography)
   * [Imagery](#imagery)
   * [Wireframes](#wireframes)
+  * [Flowchart](#flowchart)
 
 * [Features](#features)
   * [General Features on All Pages](#general-features-on-all-pages)
   * [Features of Individual Pages](#features-of-individual-pages)
+  * [Defensive Design](#defensive-design)
   * [Future Implementations](#future-implementations)
   * [Accessibility](#accessibility)
 
@@ -41,6 +43,9 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
   * [How to Fork or Clone](#how-to-fork-or-clone)
 
 * [Testing](#testing)
+  * [Code Validation](#code-validation)
+  * [Systematic Manual Testing](#systematic-manual-testing)
+  * [Representative User Manual Testing](#representative-user-manual-testing)
 
 * [Credits](#credits)
   * [Code Used](#code-used)
@@ -340,6 +345,23 @@ Site Owner page has a link to the Django admin control panel. From the standard 
 
 <br>
 
+### Defensive Design
+
+Django and Django Crispy forms includes considerable validation built in. For example, when a user signs up, the leading and trailing whitespace is stripped from the username, the email is validated, and the password has to stand up to several challenges.
+
+In the event create forms, the native Django Crispy forms have defensive code built in.
+  - The text field inputs automatically strips leading and trailing whitespaces.
+  - The date widgets automatically format the dates.
+  - The time widgets automatically format the times.
+  - The number of cars input field ensures that a number is input.
+  - The text area automatically strips leading and trailing whitespaces.
+
+Defensive code added includes:
+  - The date form inputs have additional code that ensures that the dates are in the future.
+
+
+<br>
+
 ### Future Implementations
 
 The HardParkers is a fully formed site, but as with anything there are at least a few improvements that could be made to better reflect the usage.
@@ -590,6 +612,8 @@ When the app is deployed successfully, click View App. There should be a congrat
 
 <hr>
 
+### Code Validation
+
 The HTML for the website was put through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Each page of the site was tested by opening the page, viewing page source, and copying and pasting the source coude into the validator. This avoided any issues with the template tags upsetting the validator to the point that it did not check the rest of the code. Any errors found they were fixed. As credit to Django's automated page generation through template tags, the only errors were in the hand written code of the base.html; a stray closing </i> tag in the footer, and a <br class="d-md-none" /> in the blockquote to try to influence the line break that did not have any effect. Both were fixed, and each page was returned without errors.
 
 ![W3C Markup validator representative return](/assets/readme-images/W3CHTMLValidator.png)
@@ -601,6 +625,10 @@ The CSS was put through the [W3C CSS Validation Service](https://jigsaw.w3.org/c
 The Python code was checked with the [Code Institute Python linter](https://pep8ci.herokuapp.com/). Each hand written python file was checked with the linter; forms.py, models.py, urls.py, and views.py. Each was returned without errors.
 
 ![CI Python linter representative return](/assets/readme-images/CIPythonLinter.png)
+
+### Systematic Manual Testing
+
+### Representative User Manual Testing
 
 In addition to formal manual testing, the site was shown to friends who would be representative as users for this website. Despite the Code Institute instruction suggesting that the website was too plain and not visually interesting, all representative user tester appreciated the simple and clear design. 
 
