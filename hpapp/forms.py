@@ -10,7 +10,7 @@ from datetime import datetime
 
 def google_maps_ok(value):
     if 'https://goo.gl/maps/' not in value:
-        raise forms.ValidationError('On Google Maps, copy and paste from "SHARE"')
+        raise forms.ValidationError('On Google Maps copy and paste from SHARE')
 
 
 # Form for Event creation.
