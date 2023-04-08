@@ -111,15 +111,13 @@ class EventCreate(View):
 
     def post(self, request):
         event_form = EventForm(data=request.POST)
-
         if event_form.is_valid():
             event_form.instance.organizer = request.user
             event = event_form.save(commit=True)
         else:
-            event_form = EventForm()
 
             return render(request, 'eventcreate.html',
-                          {'event_form': EventForm()})
+                          {'event_form': event_form})
 
         return render(request, 'eventthanks.html', {'event': event})
 
@@ -130,8 +128,8 @@ class EventEdit(View):
         event = get_object_or_404(Event, event_name=event_name)
         edit_form = EventForm(instance=event)
 
-        return render(request, 'eventedit.html', {'edit_form': edit_form,
-                                                  'event': event})
+        return render(request, 'eventedit.html',
+                      {'edit_form': edit_form, 'event': event})
 
     def post(self, request, event_name, *args, **kargs):
         event = Event.objects.get(event_name=event_name)
