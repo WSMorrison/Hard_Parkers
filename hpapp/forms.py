@@ -18,16 +18,12 @@ class EventForm(forms.ModelForm):
                                                  'type': 'date',
                                                  'min': datetime.now().date()}
                                                  ))
-    event_location_url = forms.CharField(label='Share Google Maps link here:',
-                                         widget=forms.URLInput(attrs={
-                                          'placeholder': 'Must be a valid URL'}
-                                           ))
 
     class Meta:
         model = Event
         fields = ('event_name', 'event_date', 'event_time',
                   'event_date_reg_close', 'event_time_reg_close',
-                  'event_location', 'event_location_url',
+                  'event_location',
                   'number_cars', 'event_description',)
         labels = {'event_name': 'Your event name:',
                   'event_date': 'The event date:',
