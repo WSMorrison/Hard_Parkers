@@ -16,6 +16,8 @@ def google_maps_ok(value):
 def number_cars_ok(value):
     if value <= 0:
         raise forms.ValidationError("There can't be any parking without cars!")
+    elif value >= 199:
+        raise forms.ValidationError("Don't be ridiculous, Cousin Larry!")
 
 
 # Form for Event creation.
