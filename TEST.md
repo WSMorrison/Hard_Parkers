@@ -4,9 +4,9 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
 
 This readme will discuss the testing of the app. Some of the information can also be found on the main ReadMe, but this Testing ReadMe will go into greater detail about the systematic manual testing.
 
-### The deployed site can be found here: [The HardParkers](https://hardparkers.herokuapp.com/)
-
 The main ReadMe can be found [here.](/README.md)
+
+### The deployed site can be found here: [The HardParkers](https://hardparkers.herokuapp.com/)
 
 <br>
 <hr>
@@ -50,7 +50,7 @@ The accessibility score is less than 100% because the "Background and foreground
 
 ### Code Validation
 
-The HTML for the website was put through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Each page of the site was tested by opening the page, viewing page source, and copying and pasting the source coude into the validator. This avoided any issues with the template tags upsetting the validator to the point that it did not check the rest of the code. Any errors found they were fixed. As credit to Django's automated page generation through template tags, the only errors were in the hand written code of the base.html; a stray closing </i> tag in the footer, and a <br class="d-md-none" /> in the blockquote to try to influence the line break that did not have any effect. Both were fixed, and each page was returned without errors.
+The HTML for the website was put through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Each page of the site was tested by opening the page, viewing page source, and copying and pasting the source coude into the validator. This avoided any issues with the template tags upsetting the validator to the point that it did not check the rest of the code. Any errors found they were fixed. As credit to Django's automated page generation through template tags, the only errors were in the hand written code of the base.html; a stray closing italic tag in the footer, and an attempt at a responsive break in the blockquote to try to influence the line break that did not have any effect. Both were fixed, and each page was returned without errors.
 
 ![W3C Markup validator representative return](/assets/readme-images/W3CHTMLValidator.png)
 
@@ -70,4 +70,6 @@ In addition to formal manual testing, the site was shown to friends who would be
 
 The printable attendee list printed smoothly and without needing any tweaking for a good, straightforward print. It was also tested for printing to a .pdf, which it did directly and without issue.
 
+<br>
+<hr>
 For educational purposes only.

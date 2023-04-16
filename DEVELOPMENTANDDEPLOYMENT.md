@@ -4,9 +4,9 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
 
 This readme will discuss the local development and deployment of the app. It will detail the process of setting up the workspace, the database and file hosing, and deployment.
 
-### The deployed site can be found here: [The HardParkers](https://hardparkers.herokuapp.com/)
-
 The main ReadMe can be found [here.](/README.md)
+
+### The deployed site can be found here: [The HardParkers](https://hardparkers.herokuapp.com/)
 
 <br>
 <hr>
@@ -14,7 +14,6 @@ The main ReadMe can be found [here.](/README.md)
 ## Contents
 
 * [Local Development and Deployment](#local-development-and-deployment)
-  * [Note On Commit History](#note-on-commit-history)
   * [Local Development](#local-development)
   * [Deployment](#deployment)
   * [How to Fork or Clone](#how-to-fork-or-clone)
@@ -27,10 +26,6 @@ The main ReadMe can be found [here.](/README.md)
 ## Local Development and Deployment
 
 <hr>
-
-### Note On Commit History
-
-This is a second attempt at this website. During an earlier iteration, there was a problem with the database models while attempting to extend the built in Django user model. The method of extending the model ultimately did not work, and the models in the database were thought to be broken beyond repair. Ultimately it was learned that of course, the models could have been at worst deleted and rewritten or at best, could have actually been modified. Instead, the repository was rebuilt and the working code; html, views, urls, settings and whatever working models existed, were copied into the appropriate locations of the new repository. This means that 26 commits from the old repository are not logged into this one. This will not meaningfulling impact the total number of commits, as at least that many were wasted trying to get the splash image to deploy in Heroku from Cloudinary. More importantly, it explains why there are large jumps in development early in the project that aren't reflected in the commit history. In hindsight, the correct answer would have been to repair the models in the database, or branch the workspace in Git. The previous repository can be found there: [The Hard Parkers repository](https://github.com/WSMorrison/The_Hard_Parkers)
 
 ### Local Development
 
@@ -199,5 +194,8 @@ When the app is deployed successfully, click View App. There should be a congrat
           4. Open a new project repository of your preferred code editor.
           5. In the terminal of your code editor, type <code>git clone</code> and paste the link from before.
           6. Press <kbd>Enter</kbd>
+
+<br>
+<hr>
 
 For educational purposes only.

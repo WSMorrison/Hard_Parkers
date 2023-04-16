@@ -457,7 +457,7 @@ Information on how to fork or clone the repository can be found in [the developm
 
 <hr>
 
-Information on testing can be found in [the testing ReadmMe](/TEST.md)
+Information on testing can be found in [the testing ReadMe](/TEST.md)
 
 <br>
 <hr>
@@ -485,4 +485,6 @@ Information on testing can be found in [the testing ReadmMe](/TEST.md)
 - Favicon icon by [Iconpacks](https://iconpacks.net/?utm_source=link-attribution&utm_content=1641), converted from .png to .ico by [favicon.io.](https://favicon.io/favicon-converter/).
 - Splash image by Trevor Yale Ryan, as published on the HardParkers' dialectical nemesis, [Speedhunters.](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/).
 
+<br>
+<hr>
 For educational purposes only.
