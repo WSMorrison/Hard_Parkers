@@ -15,7 +15,7 @@ class Event(models.Model):
     event_time_reg_close = models.TimeField(default=datetime.time(23, 59))
     event_location = models.CharField(max_length=100)
     event_location_url = models.URLField(max_length=200,
-                                         default='https://www.google.com/maps')
+                                         default='https://goo.gl/maps/')
     number_cars = models.IntegerField(default=1)
     feature_cars = models.BooleanField(default=False)
     number_feature_cars = models.IntegerField(default=0)
