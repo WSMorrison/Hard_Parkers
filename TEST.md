@@ -64,6 +64,91 @@ The Python code was checked with the [Code Institute Python linter](https://pep8
 
 ### Systematic Manual Testing
 
+The following tables will describe the systematic manual testing done to ensure that the app is working properly.
+
+#### Unlogged-in User
+
+| Element                 | Action   | Expected Result                                                        | Outcome |
+|-------------------------|----------|------------------------------------------------------------------------|---------|
+| **Index Page** |
+| Splash Image            | Hover    | Indicate link                                                          | Pass    |
+| Splash Image            | Click    | Navigate to home tab                                                   | Pass    |
+| Nav Bar                 | Display  | Show All, Log In, Sign Up tabs                                         | Pass    |
+| Nav Bar                 | Display  | Indicate navigated tab                                                 | Pass    |
+| Footer                  | Display  | Display social meda links                                              | Pass    |
+| Footer                  | Display  | Display famous Socrates quote                                          | Pass    |
+| Social media links      | Hover    | Indicate link                                                          | Pass    |
+| Social media links      | Click    | Open appropriate social media in new browser tab                       | Pass    |
+| All Upcoming Events tab | Display  | Display upcoming events                                                | Pass    |
+| All Upcoming Events tab | Display  | Display upcoming events with the soonest first                         | Pass    |
+| All Upcoming Events tab | Display  | Display selected details of appropriate event record                   | Pass    |
+| All Upcoming Events tab | Paginate | Paginate after 5 events                                                | Pass    |
+| All Upcoming Events tab | Paginate | Navigate through pagination pages                                      | Pass    |
+| All Upcoming Events tab | Display  | Display Details button                                                 | Pass    |
+| Details button          | Hover    | Indicate link                                                          | Pass    |
+| Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
+| Log In tab - nav bar    | Hover    | Indicate link                                                          | Pass    |
+| Log In tab - nav bar    | Click    | Navigate to Log In page as site tab                                    | Pass    |
+| Sign Up tab - nav bar   | Hover    | Indicate link                                                          | Pass    |
+| Sign Up tab - nav bar   | Click    | Navigate to Sign Up page as site tab                                   | Pass    |
+| **Log In page:** |
+| Nav Bar              | Display | Indicate navigated tab                      | Pass      |
+| Username Field       | Hover   | Indicate textfield                          | Pass      |
+| Username Field       | Input   | Cleans input                                | Pass      |
+| Username Field       | Input   | Validates input                             | Pass      |
+| Username Field       | Input   | Accepts good input                          | Pass      |
+| Password Field       | Hover   | Incidcates textfield                        | Pass      |
+| Password Field       | Input   | Cleans input                                | Pass      |
+| Password Field       | Input   | Validates input                             | Pass      |
+| Password Field       | Input   | Accepts good input                          | Pass      |
+| Password Field       | Input   | Obscures keystrokes                         | Pass      |
+| Remember Me checkbox | Click   | Checks box                                  | Pass      |
+| Remember Me checkbox | Clicked | Remembers user                              | Pass [^1] |
+| Log In button        | Hover   | Indicate link                               | Pass      |
+| Log In button        | Click   | Logs user in, navigates to main, index page | Pass      |
+| Sign Up Here link    | Hover   | Indicate link                               | Pass      |
+| Sign Up Here link    | Click   | Navigate to Sign Up tab                     | Pass      |
+| **Sign Up page:** |
+| Nav bar              | Display | Indicate navigated tab                      | Pass |
+|----------------------|---------|---------------------------------------------|------|
+| Username Field       | Hover   | Indicates textfield                         | Pass |
+| Username Field       | Input   | Cleans input                                | Pass |
+| Username Field       | Input   | Validates input                             | Pass |
+| Unsername Field      | Input   | Accepts input                               | Pass |
+| E-mail Field         | Display | Indicates optional                          | Pass |
+| E-mail Field         | Hover   | Indicates textfield                         | Pass |
+| E-mail Field         | Input   | Cleans input                                | Pass |
+| E-mail Field         | Input   | Validates input                             | Pass |
+| E-mail Field         | Input   | Accepts input                               | Pass |
+| Password Field       | Hover   | Indicates textfield                         | Pass |
+| Password Field       | Input   | Cleans input                                | Pass |
+| Password Field       | Input   | Validates input                             | Pass |
+| Password Field       | Input   | Accepts input                               | Pass |
+| Password Again Field | Hover   | Indicates textfield                         | Pass |
+| Password Again Field | Input   | Cleans input                                | Pass |
+| Password Again Field | Input   | Validates input                             | Pass |
+| Password Again Field | Input   | Accepts input                               | Pass |
+| Password Again Field | Input   | Checks Password Again against Password      | Pass |
+| Sign Up button       | Hover   | Indicate link                               | Pass |
+| Sign Up button       | Click   | Adds user to database                       | Pass |
+| Sign Up button       | Click   | Logs user in, navigates to main, index page | Pass |
+| Log In Here link     | Hover   | Indicate link                               | Pass |
+| Log In Here link     | Click   | Navigate to Log In tab                      | Pass |
+
+
+
+
+Sign Up page:
+
+
+[^1]: Depending on browser settings.
+
+#### Basic Site User
+
+#### Event Organizer
+
+#### Site Owner
+
 ### Representative User Manual Testing
 
 In addition to formal manual testing, the site was shown to friends who would be representative as users for this website. Despite the Code Institute instruction suggesting that the website was too plain and not visually interesting, all representative user tester appreciated the simple and clear design. 
