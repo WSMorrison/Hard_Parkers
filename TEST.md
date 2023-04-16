@@ -410,7 +410,7 @@ The following features were tested while logged in as an Organizer.
 | Attendee page | Display | List or registered users and usernames, alphabetically by username | Pass |
 | Attendee page | Display | Footer with only famous Socrates quote                             | Pass |
 | **You should really take a break** |
-| [Enjoy this bit of comedy?](https://www.youtube.com/watch?v=dLECCmKnrys) |
+| [Enjoy this bit of comedy.](https://www.youtube.com/watch?v=dLECCmKnrys) |
 | It's six and a half minutes but it's absolutely worth it. |
 | **Edit Event page:** |
 | Header and footer              | Display | Consistent with all other pages                                                   | Pass      |
