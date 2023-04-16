@@ -409,6 +409,78 @@ The following features were tested while logged in as an Organizer.
 | Attendee page | Display | Maximum number of attendees                                        | Pass |
 | Attendee page | Display | List or registered users and usernames, alphabetically by username | Pass |
 | Attendee page | Display | Footer with only famous Socrates quote                             | Pass |
+| **You should really take a break** |
+| [Enjoy this bit of comedy?](https://www.youtube.com/watch?v=dLECCmKnrys) |
+| It's six and a half minutes but it's absolutely worth it. |
+| **Edit Event page:** |
+| Header and footer              | Display | Consistent with all other pages                                                   | Pass      |
+| Form                           | Display | Form label: Edit eventname here. with appropriate event name from event record    | Pass      |
+| Event Name field               | Display | Label: Your event name:                                                           | Pass      |
+| Event Name field               | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Event Name field               | Hover   | Indicates textfield                                                               | Pass      |
+| Event Name field               | Input   | Cleans input                                                                      | Pass      |
+| Event Name field               | Input   | Validates input                                                                   | Pass      |
+| Event Name field               | Input   | Accepts input                                                                     | Pass      |
+| Event Name field               | Input   | Checks event name against other event names in event objects to ensure its unique | Pass      |
+| Event Name field               | Input   | Prevents form from posting and tells user if field is blank or invalid            | Pass      |
+| Event Name field               | Input   | Prevents form from posting and tells user if name is not unique                   | Pass      |
+| Event Date field               | Display | Label: The event date:                                                            | Pass      |
+| Event Date field               | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Event Date field               | Input   | Option for manual input or date picker                                            | Pass      |
+| Event Date field               | Input   | Date picker checks manual input date is in the future                             | Pass      |
+| Event Date field               | Input   | Date picker excludes dates in the past                                            | Pass      |
+| Event Date field               | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Event Date field               | Input   | Prevents form from posting and tells user if date is not in the future            | Pass      |
+| Event Time field               | Display | Label: At time:                                                                   | Pass      |
+| Event Time field               | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Event Time field               | Input   | Accepts default placeholder time unedited                                         | Pass      |
+| Event Time field               | Input   | Validates time                                                                    | Pass      |
+| Event Time field               | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Registration Closes field      | Display | Label: Registration closes:                                                       | Pass      |
+| Registration Closes field      | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Registration Closes field      | Input   | Option for manual input of date picker                                            | Pass      |
+| Registration Closes field      | Input   | Date picker checks manual input date is in the future                             | Pass      |
+| Registration Closes field      | Input   | Date picker excludes dates in the past                                            | Pass      |
+| Registration Closes field      | Input   | Date picker checks manual input date is before event date                         | Fail [^2] |
+| Registration Closes field      | Input   | Date picker excluded dates dates after the event date                             | Fail [^2] |
+| Registration Closes field      | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Registration Closes field      | Input   | Prevents form from posting if date is not in the future                           | Pass      |
+| Registration Closes Time field | Display | Label: At time:                                                                   | Pass      |
+| Registration Closes Time field | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Registration Closes Time field | Input   | Accepts default placeholder time undedited                                        | Pass      |
+| Registration Closes Time field | Input   | Validates time                                                                    | Pass      |
+| Registration Closes Time field | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Location field                 | Display | Label: The location:                                                              | Pass      |
+| Location field                 | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Location field                 | Hover   | Indicates charfield                                                               | Pass      |
+| Location field                 | Input   | Cleans input                                                                      | Pass      |
+| Location field                 | Input   | Validates input                                                                   | Pass      |
+| Location field                 | Input   | Accepts input                                                                     | Pass      |
+| Location field                 | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Location URL field             | Display | Label: Share Google Maps link here:                                               | Pass      |
+| Location URL field             | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Location URL field             | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Location URL field             | Input   | Defends against any input that does not start with "https://goo.gl/maps/"         | Pass      |
+| Number of Cars field           | Display | Label: How many cars may register?                                                | Pass      |
+| Number of Cars field           | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Number of Cars field           | Input   | Cleans input                                                                      | Pass      |
+| Number of Cars field           | Input   | Validates input as integer and greater than 0                                     | Pass      |
+| Number of Cars field           | Input   | Accepts input                                                                     | Pass      |
+| Number of Cars field           | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Event Description field        | Display | Label: Briefly describe your event:                                               | Pass      |
+| Event Description field        | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Event Description field        | Input   | Cleans input                                                                      | Pass      |
+| Event Description field        | Input   | Validates input                                                                   | Pass      |
+| Event Description field        | Input   | Accepts input                                                                     | Pass      |
+| Event Description field        | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Publish Your Event button      | Hover   | Indicates link                                                                    | Pass      |
+| Publish Your Event button      | Click   | Adds new event record to database                                                 | Pass      |
+| Publish Your Event button      | Click   | Redirects user to thank you for organizing page                                   | Pass      |
+| **Delete Event confirmation page:** |
+
+| **Thank you for creating your event page:** |
+
+| **Thank you for deleting your even page:** |
 
 #### Site Owner
 
