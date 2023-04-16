@@ -13,6 +13,11 @@ def google_maps_ok(value):
         raise forms.ValidationError('On Google Maps copy and paste from SHARE')
 
 
+def number_cars_ok(value):
+    if value <= 0:
+        raise forms.ValidationError("There can't be any parking without cars!")
+
+
 # Form for Event creation.
 class EventForm(forms.ModelForm):
     event_date = forms.DateTimeField(label='The event date:',
@@ -23,7 +28,8 @@ class EventForm(forms.ModelForm):
     event_date_reg_close = forms.DateTimeField(label='Registration closes:',
                                                widget=forms.TextInput(attrs={
                                                  'type': 'date',
-                                                 'min': datetime.now().date()}
+                                                 'min': datetime.now().date(),
+                                                 'max': event_date}
                                                  ))
 
     event_location_url = forms.CharField(label='Share Google Maps link here:',
@@ -31,6 +37,9 @@ class EventForm(forms.ModelForm):
                                          widget=forms.URLInput(attrs={
                                           'placeholder': 'https://goo.gl/maps/'
                                           }))
+
+    number_cars = forms.IntegerField(label='How many cars may register?',
+                                     validators=[number_cars_ok])
 
     class Meta:
         model = Event

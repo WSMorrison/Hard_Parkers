@@ -58,6 +58,8 @@ class EventView(View):
         is_closed = False
         if event.event_date_reg_close <= datetime.date.today():
             is_closed = True
+#        elif event.number_of_attendees >= event.number_cars:
+#            is_closed = True
 
         return render(request, 'eventview.html',
                       {'event': event, 'is_attendee': is_attendee,
