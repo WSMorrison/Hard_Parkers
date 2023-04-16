@@ -423,6 +423,7 @@ This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript pr
 - [MiniWebtool](https://miniwebtool.com/django-secret-key-generator/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [SQLite](https://sqlite.org/index.html)
+- [Tables Generator - Markdown](https://www.tablesgenerator.com/markdown_tables)
 - [TinyPNG](https://tinypng.com/)
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 - [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input)

@@ -4,6 +4,8 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
 
 This readme will discuss the testing of the app. Some of the information can also be found on the main ReadMe, but this Testing ReadMe will go into greater detail about the systematic manual testing.
 
+The site was tested as an unlogged-in visitor, as a logged-in basic user (User), as a logged-in event promoter and organizer (Organizer), and as a logged in the site owner or admin (Owner). Much of the functionality was the same or similar, but permissions were different and there were different aspects of the project that required different aspects of testing.
+
 The main ReadMe can be found [here.](/README.md)
 
 ### The deployed site can be found here: [The HardParkers](https://hardparkers.herokuapp.com/)
@@ -68,6 +70,8 @@ The following tables will describe the systematic manual testing done to ensure 
 
 #### Unlogged-in User
 
+The following features were tested as an unlogged-in user:
+
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
 | **Index Page** |
@@ -110,7 +114,6 @@ The following tables will describe the systematic manual testing done to ensure 
 | Sign Up Here link    | Click   | Navigate to Sign Up tab                     | Pass      |
 | **Sign Up page:** |
 | Nav bar              | Display | Indicate navigated tab                      | Pass |
-|----------------------|---------|---------------------------------------------|------|
 | Username Field       | Hover   | Indicates textfield                         | Pass |
 | Username Field       | Input   | Cleans input                                | Pass |
 | Username Field       | Input   | Validates input                             | Pass |
@@ -134,16 +137,74 @@ The following tables will describe the systematic manual testing done to ensure 
 | Sign Up button       | Click   | Logs user in, navigates to main, index page | Pass |
 | Log In Here link     | Hover   | Indicate link                               | Pass |
 | Log In Here link     | Click   | Navigate to Log In tab                      | Pass |
-
-
-
-
-Sign Up page:
-
+| **Details page** |
+| Details page           | Display | Title for correct event record                                     | Pass |
+| Details page           | Display | Location for correct event record                                  | Pass |
+| Details page           | Display | Date for correct event record                                      | Pass |
+| Details page           | Display | Registration close date for correct event record                   | Pass |
+| Details page           | Display | Username of event organizer                                        | Pass |
+| Details page           | Display | Number of cars able to register                                    | Pass |
+| Details page           | Display | About this event text box                                          | Pass |
+| Location Map button    | Hover   | Indicate link                                                      | Pass |
+| Location Map button    | Click   | Open google maps link in new browser tab, for correct event record | Pass |
+| Login to register link | Hover   | Indicate link                                                      | Pass |
+| Login to register link | Click   | Navigate to Log In page as site tab                                | Pass |
 
 [^1]: Depending on browser settings.
 
 #### Basic Site User
+
+The following features were tested while logged in as a User.
+
+| Element                 | Action   | Expected Result                                                        | Outcome |
+|-------------------------|----------|------------------------------------------------------------------------|---------|
+| **Index Page** |
+| Splash Image            | Hover    | Indicate link                                                          | Pass    |
+| Splash Image            | Click    | Navigate to home tab                                                   | Pass    |
+| Nav Bar                 | Display  | Show All, Attending, Log Out tabs                                      | Pass    |
+| Nav Bar                 | Display  | Indicate navigated tab                                                 | Pass    |
+| Footer                  | Display  | Display social meda links                                              | Pass    |
+| Footer                  | Display  | Display famous Socrates quote                                          | Pass    |
+| Social media links      | Hover    | Indicate link                                                          | Pass    |
+| Social media links      | Click    | Open appropriate social media in new browser tab                       | Pass    |
+| All Upcoming Events tab | Display  | Display upcoming events                                                | Pass    |
+| All Upcoming Events tab | Display  | Display upcoming events with the soonest first                         | Pass    |
+| All Upcoming Events tab | Display  | Display selected details of appropriate event record                   | Pass    |
+| All Upcoming Events tab | Paginate | Paginate after 5 events                                                | Pass    |
+| All Upcoming Events tab | Paginate | Navigate through pagination pages                                      | Pass    |
+| All Upcoming Events tab | Display  | Display Details button                                                 | Pass    |
+| Details button          | Hover    | Indicate link                                                          | Pass    |
+| Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
+| **Attending Events page** |
+| Nav Bar                 | Display  | Indicated navigated tab                                                | Pass    |
+| Attending Events tab    | Display  | Display attending events                                               | Pass    |
+| Attending Events tab    | Display  | Display attending events with the soonest first                        | Pass    |
+| Attending Events tab    | Display  | Display selected details of appropriate event record                   | Pass    |
+| Attending Events tab    | Paginate | Paginate after 5 events                                                | Pass    |
+| Attending Events tab    | Paginate | Navigate through pagination pages                                      | Pass    |
+| Attending Events tab    | Display  | Display Details button                                                 | Pass    |
+| Details button          | Hover    | Indicate link                                                          | Pass    |
+| Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
+| **Log Out Page** |
+| Nav bar         | Display | Indicate navigated tab            | Pass |
+| Log Out button  | Hover   | Indicate link                     | Pass |
+| Log Out button  | Click   | Log user out                      | Pass |
+| Log Out button  | Click   | Redirect user to main, index page | Pass |
+| **Details page** |
+| Details page         | Display | Title for correct event record                                     | Pass |
+| Details page         | Display | Location for correct event record                                  | Pass |
+| Details page         | Display | Date for correct event record                                      | Pass |
+| Details page         | Display | Registration close date for correct event record                   | Pass |
+| Details page         | Display | Username of event organizer                                        | Pass |
+| Details page         | Display | Number of cars able to register                                    | Pass |
+| Details page         | Display | About this event text box                                          | Pass |
+| Location Map button  | Hover   | Indicate link                                                      | Pass |
+| Location Map button  | Click   | Open google maps link in new browser tab, for correct event record | Pass |
+| Register Now! button | Hover   | Indicate link                                                      | Pass |
+| Register Now! button | Click   | Add user to correct event record attendee list                     | Pass |
+| Register Now! button | Click   | Redirect user to thank you page                                    | Pass |
+
+
 
 #### Event Organizer
 
