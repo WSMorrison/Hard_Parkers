@@ -188,4 +188,4 @@ class AttendeeList(View):
         attendee_list = event.attendee.all().order_by('username')
 
         return render(request, 'attendeelist.html',
-                      {'event': event, 'attendee_list': attendee_list})       
+                      {'event': event, 'attendee_list': attendee_list})

@@ -8,9 +8,6 @@
             <p>{{ event.event_date }}, {{event.event_time }}</p>
             <p>Registration closes {{ event.event_date_reg_close }}, {{event.event_time_reg_close }}</p>
             <span class="text-capitalize">{{ event.organizer }}</span><span> organized this event, and the event is capped at {{ event.number_cars }} cars.</span>
-            {% if event.feature_cars %}
-            <p>There will be {{ event.number_feature_cars }} feature cars at this event, approved by {{ event.organizer }}</p>
-            {% endif %}
         </div>
         <div class="container">
             <p class="card-mid mt-3 pb-">About this event:</p>

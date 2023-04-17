@@ -8,6 +8,7 @@ from crispy_forms.bootstrap import InlineField
 from datetime import datetime
 
 
+# Custom validators.
 def google_maps_ok(value):
     if value.startswith('https://goo.gl/maps/') is False:
         raise forms.ValidationError('On Google Maps copy and paste from SHARE')
@@ -20,7 +21,7 @@ def number_cars_ok(value):
         raise forms.ValidationError("Maximum is 199 at this time.")
 
 
-# Form for Event creation.
+# Form for Event creation and Event editing
 class EventForm(forms.ModelForm):
     event_date = forms.DateTimeField(label='The event date:',
                                      widget=forms.TextInput(attrs={
