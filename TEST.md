@@ -17,55 +17,54 @@ The main ReadMe can be found [here.](/README.md)
 
 <hr>
 
-* [Testing](#testing)
-    * [Responsiveness](#responsiveness)
-    * [Accessibility](#accessibility)
-    * [Code Validation](#code-validation)
-    * [Systematic Manual Testing](#systematic-manual-testing)
-      * [Unlogged-in user](#unlogged-in-user)
-        * [Index page](#index-page-unlogged-in-user)
-        * [Log In page](#log-in-page-unlogged-in-user)
-        * [Sign Up page](#sign-up-page-unlogged-in-user)
-        * [Details page](#details-page-unlogged-in-user)
-      * [Basic Site User](#basic-site-user)
-        * [Index page](#index-page-user)
-        * [Attending Events page](#attending-events-page-user)
-        * [Log Out page](#log-out-page-organizer)
-        * [Details page](#details-page-user)
-        * [Thank you for registering page](#thank-you-for-registering-page-user)
-        * [Thank you for unregistering page](#thank-you-for-unregistering-page-user)
-      * [Event Organizer](#event-organizer)
-        * [Index page](#index-page-organizer)
-        * [Attending Events page](#attending-events-page-organizer)
-        * [Organized Events page](#organized-events-page-organizer)
-        * [LogOut page](#log-out-page-organizer)
-        * [Details page](#details-page-organizer)
-        * [Thank you for registering page](#thank-you-for-registering-page-organizer)
-        * [Thank you for unregistering page](#thank-you-for-unregistering-page-organizer)
-        * [Create Event page](#create-event-page-organizer)
-        * [Attendee page](#attendee-page-organizer)
-        * [Edit Event page](#edit-event-page-organizer)
-        * [Delete Event confirmation page](#delete-event-confirmation-page-organizer)
-        * [Thank you for creating your event page](#thank-you-for-creating-your-event-page-organizer)
-        * [Thank you for deleting your event page](#thank-you-for-deleting-your-event-page-organizer)
-      * [Site Owner](#site-owner)
-        * [Index page](#index-page-owner)
-        * [Attending Events page](#attending-events-page-owner)
-        * [Organized Events page](#organized-events-page-owner)
-        * [Owner Control Panel page](#owner-control-panel-page-owner)
-        * [LogOut page](#log-out-page-owner)
-        * [Details page](#details-page-owner)
-        * [Thank you for registering page](#thank-you-for-registering-page-owner)
-        * [Thank you for unregistering page](#thank-you-for-unregistering-page-owner)
-        * [Create Event page](#create-event-page-owner)
-        * [Attendee page](#attendee-page-owner)
-        * [Edit Event page](#edit-event-page-owner)
-        * [Delete Event confirmation page](#delete-event-confirmation-page-owner)
-        * [Thank you for creating your event page](#thank-you-for-creating-your-event-page-owner)
-        * [Thank you for deleting your event page](#thank-you-for-deleting-your-event-page-owner)
-        * [Admin Panel](#admin-panel-owner)
-
-    * [Representative User Manual Testing](#representative-user-manual-testing)
+- [Testing](#testing)
+  - [Responsiveness](#responsiveness)
+  - [Accessibility](#accessibility)
+  - [Code Validation](#code-validation)
+  - [Systematic Manual Testing](#systematic-manual-testing)
+    - [Unlogged-in user](#unlogged-in-user)
+      - [Index page](#index-page-unlogged-in-user)
+      - [Log In page](#log-in-page-unlogged-in-user)
+      - [Sign Up page](#sign-up-page-unlogged-in-user)
+      - [Details page](#details-page-unlogged-in-user)
+    - [Basic Site User](#basic-site-user)
+      - [Index page](#index-page-user)
+      - [Attending Events page](#attending-events-page-user)
+      - [Log Out page](#log-out-page-organizer)
+      - [Details page](#details-page-user)
+      - [Thank you for registering page](#thank-you-for-registering-page-user)
+      - [Thank you for unregistering page](#thank-you-for-unregistering-page-user)
+    - [Event Organizer](#event-organizer)
+      - [Index page](#index-page-organizer)
+      - [Attending Events page](#attending-events-page-organizer)
+      - [Organized Events page](#organized-events-page-organizer)
+      - [LogOut page](#log-out-page-organizer)
+      - [Details page](#details-page-organizer)
+      - [Thank you for registering page](#thank-you-for-registering-page-organizer)
+      - [Thank you for unregistering page](#thank-you-for-unregistering-page-organizer)
+      - [Create Event page](#create-event-page-organizer)
+      - [Attendee page](#attendee-page-organizer)
+      - [Edit Event page](#edit-event-page-organizer)
+      - [Delete Event confirmation page](#delete-event-confirmation-page-organizer)
+      - [Thank you for creating your event page](#thank-you-for-creating-your-event-page-organizer)
+      - [Thank you for deleting your event page](#thank-you-for-deleting-your-event-page-organizer)
+    - [Site Owner](#site-owner)
+      - [Index page](#index-page-owner)
+      - [Attending Events page](#attending-events-page-owner)
+      - [Organized Events page](#organized-events-page-owner)
+      - [Owner Control Panel page](#owner-control-panel-page-owner)
+      - [LogOut page](#log-out-page-owner)
+      - [Details page](#details-page-owner)
+      - [Thank you for registering page](#thank-you-for-registering-page-owner)
+      - [Thank you for unregistering page](#thank-you-for-unregistering-page-owner)
+      - [Create Event page](#create-event-page-owner)
+      - [Attendee page](#attendee-page-owner)
+      - [Edit Event page](#edit-event-page-owner)
+      - [Delete Event confirmation page](#delete-event-confirmation-page-owner)
+      - [Thank you for creating your event page](#thank-you-for-creating-your-event-page-owner)
+      - [Thank you for deleting your event page](#thank-you-for-deleting-your-event-page-owner)
+      - [Admin Panel](#admin-panel-owner)
+  - [Representative User Manual Testing](#representative-user-manual-testing)
 
 <br>
 <hr>
@@ -944,9 +943,18 @@ The following features were tested while logged in as the site Owner.
 
 ### Representative User Manual Testing
 
-In addition to formal manual testing, the site was shown to friends who would be representative as users for this website. Despite the Code Institute instruction suggesting that the website was too plain and not visually interesting, all representative user tester appreciated the simple and clear design. 
+In addition to formal manual testing, the site was shown to friends who would be representative as users for this website. Most of these testers are active in the car community, or at least adjacent enough to the car community to provide relevant, valuable feedback.
 
-The printable attendee list printed smoothly and without needing any tweaking for a good, straightforward print. It was also tested for printing to a .pdf, which it did directly and without issue.
+- Despite the Code Institute instruction suggesting the website is too visually plain, representative user testers appreciated the simple and clear design.
+- Representative user testers were able to visit the site, view event lists and event details.
+- Navigation was clear and easy to follow.
+- Users were able to sign up for user accounts.
+- Users were able to register for events they liked.
+- Users were able to view a list of events they were registered for.
+- Users were able to unregister for events they decided they didn't like.
+- Users given the persmissions were able to create events and edit events easily.
+- Some input was given about the map URL field and the defensive design was adjusted to make it more simple.
+- The printable attendee list printed without any formatting adjustments for a straightforward print. It was also tested for printing to a .pdf, which it did directly and without issue.
 
 <br>
 <hr>
