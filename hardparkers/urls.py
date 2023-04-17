@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from allauth.socialaccount.models import SocialToken, SocialAccount, SocialApp
+from django.contrib.sites.models import Site
 
 
 urlpatterns = [
@@ -22,3 +24,9 @@ urlpatterns = [
     path('', include('hpapp.urls'), name='hpapp_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
+
+admin.site.unregister(SocialToken)
+admin.site.unregister(SocialAccount)
+admin.site.unregister(SocialApp)
+admin.site.unregister(Site)

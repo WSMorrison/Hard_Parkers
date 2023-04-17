@@ -496,6 +496,7 @@ Information on testing can be found in [the testing ReadMe](/TEST.md)
     - Process for modifying Django's built in registration and sign-up code to fit this website was particularly instructive, from the "Adding Authentication - Part 2" lesson.
 - Method for making nav bar elements dynamic were best explained by [Sharma Coding YouTube Channel.](https://www.youtube.com/watch?v=IY_ooX65BnQ).
 - Excellent explanations for how to make custom validators for the Django forms found on [geeksforgeeks.org.](https://www.geeksforgeeks.org/custom-field-validations-in-django-forms/)
+- Code for removing Django Auth Socials and Socials Tokens, and from which removing sites was inferred, was found on [Stackoverflow](https://stackoverflow.com/questions/65166963/how-to-hide-unregister-the-accounts-and-social-accounts-created-by-django-allaut)
 - Basic HTML structure uses the Bootstrap Cards [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/) style library.
 - This Readme file follows the roadmap by Kera Cudmore and her incomperable [readme template and example.](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md)
 
