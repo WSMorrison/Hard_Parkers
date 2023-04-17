@@ -22,6 +22,15 @@ The main ReadMe can be found [here.](/README.md)
     * [Accessibility](#accessibility)
     * [Code Validation](#code-validation)
     * [Systematic Manual Testing](#systematic-manual-testing)
+      * [Unlogged-in user](#unlogged-in-user)
+        * [Index Page](#index-page-unlogged-in-user)
+        * [Log In Page](#log-in-page-unlogged-in-user)
+        * [Sign Up Page](#sign-up-page-unlogged-in-user)
+        * [Details Page](#details-page-unlogged-in-user)
+      * [Basic Site User](#basic-site-user)
+        * []
+      * [Event Organizer](#event-organizer)
+      * [Site Owner](#site-owner)
     * [Representative User Manual Testing](#representative-user-manual-testing)
 
 <br>
@@ -72,9 +81,10 @@ The following tables will describe the systematic manual testing done to ensure 
 
 The following features were tested as an unlogged-in user:
 
+##### Index page (Unlogged-in User):
+
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
-| **Index Page:** |
 | Splash Image            | Hover    | Indicate link                                                          | Pass    |
 | Splash Image            | Click    | Navigate to home tab                                                   | Pass    |
 | Nav Bar                 | Display  | Show All, Log In, Sign Up tabs                                         | Pass    |
@@ -96,7 +106,11 @@ The following features were tested as an unlogged-in user:
 | Log In tab - nav bar    | Click    | Navigate to Log In page as site tab                                    | Pass    |
 | Sign Up tab - nav bar   | Hover    | Indicate link                                                          | Pass    |
 | Sign Up tab - nav bar   | Click    | Navigate to Sign Up page as site tab                                   | Pass    |
-| **Log In page:** |
+
+##### Log In page (Unlogged-in User):
+
+| Element              | Action  | Expected Result                             | Outcome   |
+|----------------------|---------|---------------------------------------------|-----------|
 | Header and footer    | Display | Consistent with all other pages             | Pass      |
 | Nav Bar              | Display | Indicate navigated tab                      | Pass      |
 | Username Field       | Hover   | Indicate textfield                          | Pass      |
@@ -114,45 +128,53 @@ The following features were tested as an unlogged-in user:
 | Log In button        | Click   | Logs user in, navigates to main, index page | Pass      |
 | Sign Up Here link    | Hover   | Indicate link                               | Pass      |
 | Sign Up Here link    | Click   | Navigate to Sign Up tab                     | Pass      |
-| **Sign Up page:** |
-| Header and footer    | Display | Consistent with all other pages             | Pass |
-| Nav bar              | Display | Indicate navigated tab                      | Pass |
-| Username Field       | Hover   | Indicates textfield                         | Pass |
-| Username Field       | Input   | Cleans input                                | Pass |
-| Username Field       | Input   | Validates input                             | Pass |
-| Unsername Field      | Input   | Accepts input                               | Pass |
-| E-mail Field         | Display | Indicates optional                          | Pass |
-| E-mail Field         | Hover   | Indicates textfield                         | Pass |
-| E-mail Field         | Input   | Cleans input                                | Pass |
-| E-mail Field         | Input   | Validates input                             | Pass |
-| E-mail Field         | Input   | Accepts input                               | Pass |
-| Password Field       | Hover   | Indicates textfield                         | Pass |
-| Password Field       | Input   | Cleans input                                | Pass |
-| Password Field       | Input   | Validates input                             | Pass |
-| Password Field       | Input   | Accepts input                               | Pass |
-| Password Again Field | Hover   | Indicates textfield                         | Pass |
-| Password Again Field | Input   | Cleans input                                | Pass |
-| Password Again Field | Input   | Validates input                             | Pass |
-| Password Again Field | Input   | Accepts input                               | Pass |
-| Password Again Field | Input   | Checks Password Again against Password      | Pass |
-| Sign Up button       | Hover   | Indicate link                               | Pass |
-| Sign Up button       | Click   | Adds user to database                       | Pass |
-| Sign Up button       | Click   | Logs user in, navigates to main, index page | Pass |
-| Log In Here link     | Hover   | Indicate link                               | Pass |
-| Log In Here link     | Click   | Navigate to Log In tab                      | Pass |
-| **Details page:** |
-| Header and footer      | Display | Consistent with all other pages                                    | Pass |
-| Details page           | Display | Title for correct event record                                     | Pass |
-| Details page           | Display | Location for correct event record                                  | Pass |
-| Details page           | Display | Date for correct event record                                      | Pass |
-| Details page           | Display | Registration close date for correct event record                   | Pass |
-| Details page           | Display | Username of event organizer                                        | Pass |
-| Details page           | Display | Number of cars able to register                                    | Pass |
-| Details page           | Display | About this event text box                                          | Pass |
-| Location Map button    | Hover   | Indicate link                                                      | Pass |
-| Location Map button    | Click   | Open google maps link in new browser tab, for correct event record | Pass |
-| Login to register link | Hover   | Indicate link                                                      | Pass |
-| Login to register link | Click   | Navigate to Log In page as site tab                                | Pass |
+
+##### Sign Up page (Unlogged-in User):
+
+| Element              | Action  | Expected Result                             | Outcome |
+|----------------------|---------|---------------------------------------------|---------|
+| Header and footer    | Display | Consistent with all other pages             | Pass    |
+| Nav bar              | Display | Indicate navigated tab                      | Pass    |
+| Username Field       | Hover   | Indicates textfield                         | Pass    |
+| Username Field       | Input   | Cleans input                                | Pass    |
+| Username Field       | Input   | Validates input                             | Pass    |
+| Unsername Field      | Input   | Accepts input                               | Pass    |
+| E-mail Field         | Display | Indicates optional                          | Pass    |
+| E-mail Field         | Hover   | Indicates textfield                         | Pass    |
+| E-mail Field         | Input   | Cleans input                                | Pass    |
+| E-mail Field         | Input   | Validates input                             | Pass    |
+| E-mail Field         | Input   | Accepts input                               | Pass    |
+| Password Field       | Hover   | Indicates textfield                         | Pass    |
+| Password Field       | Input   | Cleans input                                | Pass    |
+| Password Field       | Input   | Validates input                             | Pass    |
+| Password Field       | Input   | Accepts input                               | Pass    |
+| Password Again Field | Hover   | Indicates textfield                         | Pass    |
+| Password Again Field | Input   | Cleans input                                | Pass    |
+| Password Again Field | Input   | Validates input                             | Pass    |
+| Password Again Field | Input   | Accepts input                               | Pass    |
+| Password Again Field | Input   | Checks Password Again against Password      | Pass    |
+| Sign Up button       | Hover   | Indicate link                               | Pass    |
+| Sign Up button       | Click   | Adds user to database                       | Pass    |
+| Sign Up button       | Click   | Logs user in, navigates to main, index page | Pass    |
+| Log In Here link     | Hover   | Indicate link                               | Pass    |
+| Log In Here link     | Click   | Navigate to Log In tab                      | Pass    |
+
+##### Details page (Unlogged-in User)
+
+| Element                | Action  | Expected Result                                                    | Outcome |
+|------------------------|---------|--------------------------------------------------------------------|---------|
+| Header and footer      | Display | Consistent with all other pages                                    | Pass    |
+| Details page           | Display | Title for correct event record                                     | Pass    |
+| Details page           | Display | Location for correct event record                                  | Pass    |
+| Details page           | Display | Date for correct event record                                      | Pass    |
+| Details page           | Display | Registration close date for correct event record                   | Pass    |
+| Details page           | Display | Username of event organizer                                        | Pass    |
+| Details page           | Display | Number of cars able to register                                    | Pass    |
+| Details page           | Display | About this event text box                                          | Pass    |
+| Location Map button    | Hover   | Indicate link                                                      | Pass    |
+| Location Map button    | Click   | Open google maps link in new browser tab, for correct event record | Pass    |
+| Login to register link | Hover   | Indicate link                                                      | Pass    |
+| Login to register link | Click   | Navigate to Log In page as site tab                                | Pass    |
 
 [^1]: Depending on browser settings.
 
@@ -160,9 +182,10 @@ The following features were tested as an unlogged-in user:
 
 The following features were tested while logged in as a User.
 
+##### Index page (User):
+
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
-| **Index Page:** |
 | Splash Image            | Hover    | Indicate link                                                          | Pass    |
 | Splash Image            | Click    | Navigate to home tab                                                   | Pass    |
 | Nav Bar                 | Display  | Show All, Attending, Log Out tabs                                      | Pass    |
@@ -180,7 +203,11 @@ The following features were tested while logged in as a User.
 | All Upcoming Events tab | Display  | Does not display events that happened before today                     | Pass    |
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
-| **Attending Events page:** |
+
+##### Attending Events page (User):
+
+| Element                 | Action   | Expected Result                                                        | Outcome |
+|-------------------------|----------|------------------------------------------------------------------------|---------|
 | Header and footer       | Display  | Consistent with all other pages                                        | Pass    |
 | Nav Bar                 | Display  | Indicated navigated tab                                                | Pass    |
 | Attending Events tab    | Display  | Display attending events                                               | Pass    |
@@ -192,61 +219,82 @@ The following features were tested while logged in as a User.
 | All Upcoming Events tab | Display  | Does not display events that happened before today                     | Pass    |
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
-| **Log Out Page:** |
-| Header and footer | Display | Consistent with all other pages   | Pass |
-| Nav bar           | Display | Indicate navigated tab            | Pass |
-| Log Out button    | Hover   | Indicate link                     | Pass |
-| Log Out button    | Click   | Log user out                      | Pass |
-| Log Out button    | Click   | Redirect user to main, index page | Pass |
-| **Details page:** |
-| Header and footer    | Display | Consistent with all other pages                                    | Pass |
-| Details page         | Display | Title for correct event record                                     | Pass |
-| Details page         | Display | Location for correct event record                                  | Pass |
-| Details page         | Display | Date for correct event record                                      | Pass |
-| Details page         | Display | Registration close date for correct event record                   | Pass |
-| Details page         | Display | Username of event organizer                                        | Pass |
-| Details page         | Display | Number of cars able to register                                    | Pass |
-| Details page         | Display | About this event text box                                          | Pass |
-| Location Map button  | Hover   | Indicate link                                                      | Pass |
-| Location Map button  | Click   | Open google maps link in new browser tab, for correct event record | Pass |
+
+##### Log Out page (User):
+
+| Element           | Action  | Expected Result                   | Outcome |
+|-------------------|---------|-----------------------------------|---------|
+| Header and footer | Display | Consistent with all other pages   | Pass    |
+| Nav bar           | Display | Indicate navigated tab            | Pass    |
+| Log Out button    | Hover   | Indicate link                     | Pass    |
+| Log Out button    | Click   | Log user out                      | Pass    |
+| Log Out button    | Click   | Redirect user to main, index page | Pass    |
+
+##### Details page (User):
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
+| Header and footer    | Display | Consistent with all other pages                                    | Pass    |
+| Details page         | Display | Title for correct event record                                     | Pass    |
+| Details page         | Display | Location for correct event record                                  | Pass    |
+| Details page         | Display | Date for correct event record                                      | Pass    |
+| Details page         | Display | Registration close date for correct event record                   | Pass    |
+| Details page         | Display | Username of event organizer                                        | Pass    |
+| Details page         | Display | Number of cars able to register                                    | Pass    |
+| Details page         | Display | About this event text box                                          | Pass    |
+| Location Map button  | Hover   | Indicate link                                                      | Pass    |
+| Location Map button  | Click   | Open google maps link in new browser tab, for correct event record | Pass    |
 | If registered for event and event is in the future: |
-| Remove Me button     | Hover   | Indicate link                                                      | Pass |
-| Remove Me button     | Click   | Remove user from correct event record attendee list                | Pass |
-| Remove Me button     | Click   | Redirect user to thank you page                                    | Pass |
+| Remove Me button     | Hover   | Indicate link                                                      | Pass    |
+| Remove Me button     | Click   | Remove user from correct event record attendee list                | Pass    |
+| Remove Me button     | Click   | Redirect user to thank you page                                    | Pass    |
 | If not registered for event and event and Registration Closed Date are in the future: |
-| Register Now! button | Hover   | Indicate link                                                      | Pass |
-| Register Now! button | Click   | Add user to correct event record attendee list                     | Pass |
-| Register Now! button | Click   | Redirect user to thank you page                                    | Pass |
+| Register Now! button | Hover   | Indicate link                                                      | Pass    |
+| Register Now! button | Click   | Add user to correct event record attendee list                     | Pass    |
+| Register Now! button | Click   | Redirect user to thank you page                                    | Pass    |
 | If not registered, Registration Closed Date has passed, and event date is in the future: |
-| Registration button  | Renders | Inactive                                                           | Pass |
-| Registration button  | Display | Registration closed                                                | Pass |
-| Registration button  | Hover   | No action                                                          | Pass |
-| Registration button  | Click   | No action                                                          | Pass |
+| Registration button  | Renders | Inactive                                                           | Pass    |
+| Registration button  | Display | Registration closed                                                | Pass    |
+| Registration button  | Hover   | No action                                                          | Pass    |
+| Registration button  | Click   | No action                                                          | Pass    |
 | If not registered, event has reached maximum registration, and event date is in the future: |
-| Registration button  | Renders | Inactive                                                           | Pass |
-| Registration button  | Display | Registration closed                                                | Pass |
-| Registration button  | Hover   | No action                                                          | Pass |
-| Registration button  | Click   | No action                                                          | Pass |
-| **Thank you for registering page:** |
-| Header and footer                | Display | Consistent with all other pages                  | Pass |
-| Thank you for registering page   | Display | Thank correct site user for registering          | Pass |
-| Thank you for registering page   | Display | Confirm user is registered for event             | Pass |
-| View Your Events! button         | Hover   | Indicate link                                    | Pass |
-| View Your Events! button         | Click   | Navigate user to list of their registered events | Pass |
-| **Thank you for unregistering page:** |
-| Header and footer                | Display | Consistent with all other pages                  | Pass |
-| Thank you for unregistering page | Display | Thank correct site user for unregistering        | Pass |
-| Thank you for registering page   | Display | Confirm user is no longer registered for event   | Pass |
-| Check Out Other Events! button   | Hover   | Indicate link                                    | Pass |
-| Check Out Other Events! button   | Click   | Navigate user to list of all upcoming events     | Pass |
+| Registration button  | Renders | Inactive                                                           | Pass    |
+| Registration button  | Display | Registration closed                                                | Pass    |
+| Registration button  | Hover   | No action                                                          | Pass    |
+| Registration button  | Click   | No action                                                          | Pass    |
+
+##### Thank you for registering page:
+
+| Element                          | Action  | Expected Result                                  | Outcome |
+|----------------------------------|---------|--------------------------------------------------|---------|
+| Header and footer                | Display | Consistent with all other pages                  | Pass    |
+| Thank you for registering page   | Display | Thank correct site user for registering          | Pass    |
+| Thank you for registering page   | Display | Confirm user is registered for event             | Pass    |
+| View Your Events! button         | Hover   | Indicate link                                    | Pass    |
+| View Your Events! button         | Click   | Navigate user to list of their registered events | Pass    |
+
+##### Thank you for unregistering page:
+
+| Element                          | Action  | Expected Result                                  | Outcome |
+|----------------------------------|---------|--------------------------------------------------|---------|
+| Header and footer                | Display | Consistent with all other pages                  | Pass    |
+| Thank you for unregistering page | Display | Thank correct site user for unregistering        | Pass    |
+| Thank you for registering page   | Display | Confirm user is no longer registered for event   | Pass    |
+| Check Out Other Events! button   | Hover   | Indicate link                                    | Pass    |
+| Check Out Other Events! button   | Click   | Navigate user to list of all upcoming events     | Pass    |
+
+You should really take a break.<br>
+<a href="https://www.youtube.com/watch?v=dLECCmKnrys" target="_blank">Enjoy this bit of stand up comedy.</a> Don't worry, it opens in a new tab.<br>
+It's six and a half minutes but it's absolutely worth it.
 
 #### Event Organizer
 
 The following features were tested while logged in as an Organizer.
 
+##### Index page (Organizer):
+
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
-| **Index Page:** |
 | Splash Image            | Hover    | Indicate link                                                          | Pass    |
 | Splash Image            | Click    | Navigate to home tab                                                   | Pass    |
 | Nav Bar                 | Display  | Show All, Attending, Log Out tabs                                      | Pass    |
@@ -263,7 +311,11 @@ The following features were tested while logged in as an Organizer.
 | All Upcoming Events tab | Display  | Display Details button                                                 | Pass    |
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
-| **Attending Events page:** |
+
+##### Attending Events page (Organizer):
+
+| Element                 | Action   | Expected Result                                                        | Outcome |
+|-------------------------|----------|------------------------------------------------------------------------|---------|
 | Header and footer       | Display  | Consistent with all other pages                                        | Pass    |
 | Nav Bar                 | Display  | Indicate navigated tab                                                 | Pass    |
 | Attending Events tab    | Display  | Display attending events                                               | Pass    |
@@ -274,75 +326,99 @@ The following features were tested while logged in as an Organizer.
 | Attending Events tab    | Display  | Display Details button                                                 | Pass    |
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
-| **Organized events page:** |
-| Header and footer       | Display   | Consistent with all other pages                        | Pass |
-| Nav Bar                 | Display   | Indicate navigated tab                                 | Pass |
-| Organize New Event card | Display   | Display separated card for creating a new event        | Pass |
-| Organize New Event card | Display   | Display Create Event button                            | Pass |
-| Create Event button     | Hover     | Indicate link                                          | Pass |
-| Create Event button     | Click     | Navigate to create event form                          | Pass |
-| Organized Events tab    | Display   | Display organized events                               | Pass |
-| Organized Events tab    | Display   | Display organized events with the soonest events first | Pass |
-| Organized Events tab    | Display   | Display selected details of appropriate event record   | Pass |
-| Organized Events tab    | Paginate  | Paginate after 5 events                                | Pass |
-| Organized Events tab    | Paginate  | Navigate through pagination pages                      | Pass |
-| Organized Events tab    | Display   | Display Attendee List button on event cards            | Pass |
-| Attendee List button    | Hover     | Indicate link                                          | Pass |
-| Attendee List button    | Click     | Navigate to attendee list page in new browser tab      | Pass |
-| Organized Events tab    | Display   | Display Edit button on event cards                     | Pass |
-| Edit button             | Hover     | Indicate link                                          | Pass |
-| Edit button             | Click     | Navigate to event edit form                            | Pass |
-| Organized Events tab    | Display   | Display Delete button on event cards                   | Pass |
-| Delete button           | Hover     | Indicate link                                          | Pass |
-| Delete button           | Click     | Navigate to delete confirmation page                   | Pass |
-| **Log Out Page:** |
-| Header and footer | Display | Consistent with all other pages   | Pass |
-| Nav bar           | Display | Indicate navigated tab            | Pass |
-| Log Out button    | Hover   | Indicate link                     | Pass |
-| Log Out button    | Click   | Log user out                      | Pass |
-| Log Out button    | Click   | Redirect user to main, index page | Pass |
-| **Details page:** |
-| Header and footer    | Display | Consistent with all other pages                                    | Pass |
-| Details page         | Display | Title for correct event record                                     | Pass |
-| Details page         | Display | Location for correct event record                                  | Pass |
-| Details page         | Display | Date for correct event record                                      | Pass |
-| Details page         | Display | Registration close date for correct event record                   | Pass |
-| Details page         | Display | Username of event organizer                                        | Pass |
-| Details page         | Display | Number of cars able to register                                    | Pass |
-| Details page         | Display | About this event text box                                          | Pass |
-| Location Map button  | Hover   | Indicate link                                                      | Pass |
-| Location Map button  | Click   | Open google maps link in new browser tab, for correct event record | Pass |
+
+##### Organized events page (Organizer):
+
+| Element                 | Action    | Expected Result                                        | Outcome |
+|-------------------------|-----------|--------------------------------------------------------|---------|
+| Header and footer       | Display   | Consistent with all other pages                        | Pass    |
+| Nav Bar                 | Display   | Indicate navigated tab                                 | Pass    |
+| Organize New Event card | Display   | Display separated card for creating a new event        | Pass    |
+| Organize New Event card | Display   | Display Create Event button                            | Pass    |
+| Create Event button     | Hover     | Indicate link                                          | Pass    |
+| Create Event button     | Click     | Navigate to create event form                          | Pass    |
+| Organized Events tab    | Display   | Display organized events                               | Pass    |
+| Organized Events tab    | Display   | Display organized events with the soonest events first | Pass    |
+| Organized Events tab    | Display   | Display selected details of appropriate event record   | Pass    |
+| Organized Events tab    | Paginate  | Paginate after 5 events                                | Pass    |
+| Organized Events tab    | Paginate  | Navigate through pagination pages                      | Pass    |
+| Organized Events tab    | Display   | Display Attendee List button on event cards            | Pass    |
+| Attendee List button    | Hover     | Indicate link                                          | Pass    |
+| Attendee List button    | Click     | Navigate to attendee list page in new browser tab      | Pass    |
+| Organized Events tab    | Display   | Display Edit button on event cards                     | Pass    |
+| Edit button             | Hover     | Indicate link                                          | Pass    |
+| Edit button             | Click     | Navigate to event edit form                            | Pass    |
+| Organized Events tab    | Display   | Display Delete button on event cards                   | Pass    |
+| Delete button           | Hover     | Indicate link                                          | Pass    |
+| Delete button           | Click     | Navigate to delete confirmation page                   | Pass    |
+
+##### Log Out page (Organizer):
+
+| Element           | Action  | Expected Result                   | Outcome |
+|-------------------|---------|-----------------------------------|---------|
+| Header and footer | Display | Consistent with all other pages   | Pass    |
+| Nav bar           | Display | Indicate navigated tab            | Pass    |
+| Log Out button    | Hover   | Indicate link                     | Pass    |
+| Log Out button    | Click   | Log user out                      | Pass    |
+| Log Out button    | Click   | Redirect user to main, index page | Pass    |
+
+##### Details page (Organizer):
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
+| Header and footer    | Display | Consistent with all other pages                                    | Pass    |
+| Details page         | Display | Title for correct event record                                     | Pass    |
+| Details page         | Display | Location for correct event record                                  | Pass    |
+| Details page         | Display | Date for correct event record                                      | Pass    |
+| Details page         | Display | Registration close date for correct event record                   | Pass    |
+| Details page         | Display | Username of event organizer                                        | Pass    |
+| Details page         | Display | Number of cars able to register                                    | Pass    |
+| Details page         | Display | About this event text box                                          | Pass    |
+| Location Map button  | Hover   | Indicate link                                                      | Pass    |
+| Location Map button  | Click   | Open google maps link in new browser tab, for correct event record | Pass    |
 | If registered for event and event is in the future: |
-| Remove Me button     | Hover   | Indicate link                                                      | Pass |
-| Remove Me button     | Click   | Remove user from correct event record attendee list                | Pass |
-| Remove Me button     | Click   | Redirect user to thank you page                                    | Pass |
+| Remove Me button     | Hover   | Indicate link                                                      | Pass    |
+| Remove Me button     | Click   | Remove user from correct event record attendee list                | Pass    |
+| Remove Me button     | Click   | Redirect user to thank you page                                    | Pass    |
 | If not registered for event and event and Registration Closed Date are in the future: |
-| Register Now! button | Hover   | Indicate link                                                      | Pass |
-| Register Now! button | Click   | Add user to correct event record attendee list                     | Pass |
-| Register Now! button | Click   | Redirect user to thank you page                                    | Pass |
+| Register Now! button | Hover   | Indicate link                                                      | Pass    |
+| Register Now! button | Click   | Add user to correct event record attendee list                     | Pass    |
+| Register Now! button | Click   | Redirect user to thank you page                                    | Pass    |
 | If not registered, Registration Closed Date has passed, and event date is in the future: |
-| Registration button  | Renders | Inactive                                                           | Pass |
-| Registration button  | Display | Registration closed                                                | Pass |
-| Registration button  | Hover   | No action                                                          | Pass |
-| Registration button  | Click   | No action                                                          | Pass |
+| Registration button  | Renders | Inactive                                                           | Pass    |
+| Registration button  | Display | Registration closed                                                | Pass    |
+| Registration button  | Hover   | No action                                                          | Pass    |
+| Registration button  | Click   | No action                                                          | Pass    |
 | If not registered, event has reached maximum registration, and event date is in the future: |
-| Registration button  | Renders | Inactive                                                           | Pass |
-| Registration button  | Display | Registration closed                                                | Pass |
-| Registration button  | Hover   | No action                                                          | Pass |
-| Registration button  | Click   | No action                                                          | Pass |
-| **Thank you for registering page:** |
-| Header and footer                | Display | Consistent with all other pages                  | Pass |
-| Thank you for registering page   | Display | Thank correct site user for registering          | Pass |
-| Thank you for registering page   | Display | Confirm user is registered for event             | Pass |
-| View Your Events! button         | Hover   | Indicate link                                    | Pass |
-| View Your Events! button         | Click   | Navigate user to list of their registered events | Pass |
-| **Thank you for unregistering page:** |
-| Header and footer                | Display | Consistent with all other pages                  | Pass |
-| Thank you for unregistering page | Display | Thank correct site user for unregistering        | Pass |
-| Thank you for registering page   | Display | Confirm user is no longer registered for event   | Pass |
-| Check Out Other Events! button   | Hover   | Indicate link                                    | Pass |
-| Check Out Other Events! button   | Click   | Navigate user to list of all upcoming events     | Pass |
-| **Create Event page** |
+| Registration button  | Renders | Inactive                                                           | Pass    |
+| Registration button  | Display | Registration closed                                                | Pass    |
+| Registration button  | Hover   | No action                                                          | Pass    |
+| Registration button  | Click   | No action                                                          | Pass    |
+
+##### Thank you for registering page (Organizer):
+
+| Element                          | Action  | Expected Result                                  | Outcome |
+|----------------------------------|---------|--------------------------------------------------|---------|
+| Header and footer                | Display | Consistent with all other pages                  | Pass    |
+| Thank you for registering page   | Display | Thank correct site user for registering          | Pass    |
+| Thank you for registering page   | Display | Confirm user is registered for event             | Pass    |
+| View Your Events! button         | Hover   | Indicate link                                    | Pass    |
+| View Your Events! button         | Click   | Navigate user to list of their registered events | Pass    |
+
+##### Thank you for unregistering page (Organizer):
+
+| Element                          | Action  | Expected Result                                  | Outcome |
+|----------------------------------|---------|--------------------------------------------------|---------|
+| Header and footer                | Display | Consistent with all other pages                  | Pass    |
+| Thank you for unregistering page | Display | Thank correct site user for unregistering        | Pass    |
+| Thank you for registering page   | Display | Confirm user is no longer registered for event   | Pass    |
+| Check Out Other Events! button   | Hover   | Indicate link                                    | Pass    |
+| Check Out Other Events! button   | Click   | Navigate user to list of all upcoming events     | Pass    |
+
+##### Create Event page (Organizer):
+
+| Element                        | Action  | Expected Result                                                                   | Outcome   |
+|--------------------------------|---------|-----------------------------------------------------------------------------------|-----------|
 | Header and footer              | Display | Consistent with all other pages                                                   | Pass      |
 | Form                           | Display | Form label: Add your event here.                                                  | Pass      |
 | Event Name field               | Display | Label: Your event name:                                                           | Pass      |
@@ -368,8 +444,6 @@ The following features were tested while logged in as an Organizer.
 | Registration Closes field      | Input   | Option for manual input of date picker                                            | Pass      |
 | Registration Closes field      | Input   | Date picker checks manual input date is in the future                             | Pass      |
 | Registration Closes field      | Input   | Date picker excludes dates in the past                                            | Pass      |
-| Registration Closes field      | Input   | Date picker checks manual input date is before event date                         | Fail [^2] |
-| Registration Closes field      | Input   | Date picker excluded dates dates after the event date                             | Fail [^2] |
 | Registration Closes field      | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting if date is not in the future                           | Pass      |
 | Registration Closes Time field | Display | Label: At time:                                                                   | Pass      |
@@ -400,19 +474,24 @@ The following features were tested while logged in as an Organizer.
 | Publish Your Event button      | Hover   | Indicates link                                                                    | Pass      |
 | Publish Your Event button      | Click   | Adds new event record to database                                                 | Pass      |
 | Publish Your Event button      | Click   | Redirects user to thank you for organizing page                                   | Pass      |
-| **Attendee page:** |
-| Attendee page | Open    | Opens in new browser tab                                           | Pass |
-| Attendee page | Display | Very basic Hard Parkers header                                     | Pass |
-| Attendee page | Display | Event title                                                        | Pass |
-| Attendee page | Display | Event location                                                     | Pass |
-| Attendee page | Display | Total number of registered attendees                               | Pass |
-| Attendee page | Display | Maximum number of attendees                                        | Pass |
-| Attendee page | Display | List or registered users and usernames, alphabetically by username | Pass |
-| Attendee page | Display | Footer with only famous Socrates quote                             | Pass |
-| **You should really take a break** |
-| [Enjoy this bit of comedy.](https://www.youtube.com/watch?v=dLECCmKnrys) |
-| It's six and a half minutes but it's absolutely worth it. |
-| **Edit Event page:** |
+
+##### Attendee page (Organizer):
+
+| Element       | Action  | Expected Result                                                    | Outcome |
+|---------------|---------|--------------------------------------------------------------------|---------|
+| Attendee page | Open    | Opens in new browser tab                                           | Pass    |
+| Attendee page | Display | Very basic Hard Parkers header                                     | Pass    |
+| Attendee page | Display | Event title                                                        | Pass    |
+| Attendee page | Display | Event location                                                     | Pass    |
+| Attendee page | Display | Total number of registered attendees                               | Pass    |
+| Attendee page | Display | Maximum number of attendees                                        | Pass    |
+| Attendee page | Display | List or registered users and usernames, alphabetically by username | Pass    |
+| Attendee page | Display | Footer with only famous Socrates quote                             | Pass    |
+
+##### Edit Event page (Organizer):
+
+| Element                        | Action  | Expected Result                                                                   | Outcome   |
+|--------------------------------|---------|-----------------------------------------------------------------------------------|-----------|
 | Header and footer              | Display | Consistent with all other pages                                                   | Pass      |
 | Form                           | Display | Form label: Edit eventname here. with appropriate event name from event record    | Pass      |
 | Event Name field               | Display | Label: Your event name:                                                           | Pass      |
@@ -441,8 +520,6 @@ The following features were tested while logged in as an Organizer.
 | Registration Closes field      | Input   | Option for manual input of date picker                                            | Pass      |
 | Registration Closes field      | Input   | Date picker checks manual input date is in the future                             | Pass      |
 | Registration Closes field      | Input   | Date picker excludes dates in the past                                            | Pass      |
-| Registration Closes field      | Input   | Date picker checks manual input date is before event date                         | Fail [^2] |
-| Registration Closes field      | Input   | Date picker excluded dates dates after the event date                             | Fail [^2] |
 | Registration Closes field      | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting if date is not in the future                           | Pass      |
 | Registration Closes Time field | Display | Label: At time:                                                                   | Pass      |
@@ -476,11 +553,36 @@ The following features were tested while logged in as an Organizer.
 | Publish Your Event button      | Hover   | Indicates link                                                                    | Pass      |
 | Publish Your Event button      | Click   | Adds new event record to database                                                 | Pass      |
 | Publish Your Event button      | Click   | Redirects user to thank you for organizing page                                   | Pass      |
-| **Delete Event confirmation page:** |
 
-| **Thank you for creating your event page:** |
+##### Delete Event confirmation page (Organizer):
 
-| **Thank you for deleting your even page:** |
+| Element                        | Action  | Expected Result                                               | Outcome |
+|--------------------------------|---------|---------------------------------------------------------------|---------|
+| Header and footer              | Display | Consistent with all other pages                               | Pass    |
+| Event delete confirmation page | Display | Display confirmation of deleting the appropriate event record | Pass    |
+| Take Me Back button            | Hover   | Indicate link                                                 | Pass    |
+| Take Me Back button            | Click   | Redirects user to the Organized Events page                   | Pass    |
+| Delete Event button            | Hover   | Indicate link                                                 | Pass    |
+| Delete Event button            | Click   | Deletes appropriate event record from database                | Pass    |
+| Delete Event button            | Click   | Redirects user to Thank You page                              | Pass    |
+
+##### Thank you for creating your event page (Organizer):
+
+| Element                       | Action  | Expected Result                                                     | Outcome |
+|-------------------------------|---------|---------------------------------------------------------------------|---------|
+| Header and Footer             | Display | Consistent with all other pages                                     | Pass    |
+| Event creation thank you page | Display | Display thank you for appropriate user and appropriate event record | Pass    |
+| Events Organized button       | Hober   | Indicate link                                                       | Pass    |
+| Events Organized button       | Click   | Redirects user to the Organized Events page                         | Pass    |
+
+##### Thank you for deleting your even page (Organizer):
+
+| Element                     | Action  | Expected Result                                | Outcome |
+|-----------------------------|---------|------------------------------------------------|---------|
+| Header and footer           | Display | Consistent with all other pages                | Pass    |
+| Event delete thank you page | Display | Thanks appropriate user for deleting event     | Pass    |
+| Events Organized button     | Hover   | Indicate link                                  | Pass    |
+| Events Organized button     | Click   | Redirects user to the Organized Events page    | Pass    |
 
 #### Site Owner
 
