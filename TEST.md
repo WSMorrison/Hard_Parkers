@@ -373,7 +373,7 @@ The following features were tested while logged in as an Organizer.
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
 
-##### Organized events page (Organizer):
+##### Organized Events page (Organizer):
 
 | Element                 | Action    | Expected Result                                        | Outcome |
 |-------------------------|-----------|--------------------------------------------------------|---------|
@@ -689,7 +689,7 @@ The following features were tested while logged in as the site Owner.
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
 
-##### Organized events page (Owner):
+##### Organized Events page (Owner):
 
 | Element                 | Action    | Expected Result                                        | Outcome |
 |-------------------------|-----------|--------------------------------------------------------|---------|
