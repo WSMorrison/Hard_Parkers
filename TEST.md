@@ -663,7 +663,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Events Organized button     | Click   | Redirects user to the Organized Events page    | Pass    |
 
 You deserve a break.<br>
-<a href="https://www.youtube.com/watch?v=dLECCmKnrys" target="_blank">Enjoy this bit of stand up comedy.</a> Don't worry, it opens in a new tab.<br>
+[Enjoy this bit of stand up comedy.](https://www.youtube.com/watch?v=dLECCmKnrys)
 It's six and a half minutes but it's absolutely worth it.
 
 <hr>
