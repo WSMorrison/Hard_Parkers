@@ -109,13 +109,14 @@ The Headline is Bebas Neue. This font was chosen for maximum dramatic impact. It
 
 For the sake of simplicity, the website only has one image. The splash image is intended to give the visitor an idea of what the website is about, with an impactful and emotional image not just of interesting cars at a meet, but lit with the sought golden hour evening light that evokes the feeling of being at a well run car meet with a good, relaxed vibe and good friends. There could be a temptation to allow Organizers to use their own image to capture the attention of Users, but the risk is that the website could end up a mess of incompatable images and styles that would make the site confusing, garish, and unpleasant to look at. This would take away from spirit of a simple, clean, and calm website.
 
-The splash image is by Trevor Yale Ryan, and was originally published on the [Speedhunters](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/). It will serve as a placeholder until an appropriate new image can be taken at a local event.
+The splash image is by [Trevor Yale Ryan](https://www.tyrphoto.com/), and was originally published on the [Speedhunters](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/). It will serve as a placeholder until an appropriate new image can be taken at a local event.
 
 ### Wireframes
 
 One wireframe was made for all sizes of device, as it was intentional from the beginning that the site remain cohesive and similar across all platforms. Like many popular social media platforms, the site is geared around a vertical scroll.
 
 Click on the heading below to view individual wireframes:
+
 <details>
 <summary>Index page Wireframe</summary>
 <br>
@@ -172,6 +173,7 @@ Wireframes were built in [Balsamiq's online application.](https://balsamiq.cloud
 This project required careful planning ahead to make sure that the purpose was clear and the flow through the site is as simple as the design. A flowchart was developed to help visualize where the user would be navigating through the page. The flowchart did not reflect the deployed site exactly, and the ability to sign up or log in at any time was omitted for clarity, but the permissions are shown.
 
 Click below to view the flowchart.
+
 <details>
 <summary>HardParkers development flowchart.</summary>
 <br>
@@ -179,8 +181,9 @@ Click below to view the flowchart.
 ![HardParkers Flowchart](/assets/readme-images/HardParkersFlowchart.png)
 
 </details>
+<br>
 
-Flowrchart was built with [LucidChart.](https://lucid.app/lucidchart/) 
+Flowchart was built with [LucidChart.](https://lucid.app/lucidchart/) 
 
 <br>
 <hr>
@@ -266,7 +269,7 @@ The individual pages have some features unique to each. For demostration purpose
 2. Event details, including the title, date, location, and when registration ends.
 3. Event description.
 4. Button that opens a google.maps page in a new tab so the visitor can see the location on a full map.
-5. Registration button. Currently reflecting that the Organizer is not registered for this event, and allowing the Organizer to registrater.
+5. Registration button. Currently reflecting that the Organizer is not registered for this event, and allowing the Organizer to register.
 
 Examples of the registration button when visitor is already registered and registration is open, left, and when visitor is not registered and registration is closed, right.
 
@@ -357,7 +360,10 @@ In the event create forms, the native Django Crispy forms have defensive code bu
   - The text area automatically strips leading and trailing whitespaces.
 
 Defensive code added includes:
+  - The event name field has additional code that ensures that event names are unique.
   - The date form inputs have additional code that ensures that the dates are in the future.
+  - The event location url field has additional code that ensures that the url is not only valid, but is a valid Google Maps link, in an attempt to defend against malicious links.
+  - The Number of cars field has additional code that prevents a user from publishing a zero or negative number, and also caps the number at 199. This number is not arbitrary, but intends to keep the events organized on the app small.
 
 
 <br>
@@ -366,11 +372,20 @@ Defensive code added includes:
 
 The HardParkers is a fully formed site, but as with anything there are at least a few improvements that could be made to better reflect the usage.
 
-The most interesting future implmentation would be to create a front end control panel for the site Owner. From here, the site owner could do all the User promotion, user and event editing and deletion that they can do in the Django admin panel.
-
-It would also be helpful for a user to be able to register for an event and input what car they are bringing. This would help the event organizer limit the attendance to appropriate vehicles. The obvious continuation of this feature would be allowing an organizer to choose to be able to approve or not approve Users for event attendance. It would also lead to the user being able to register one or more vehicles that are linked to their username, that allows them to choose one or another from the database for registration to an event.
-
-Another future improvement would be to put not just a link to Google Maps, but to integrate a map into the event detail page from the Organizer's input url.
+Some improvements that could be made include:
+  - A front end control panel for the site Owner. It would allow the Owner to:
+    - Promote or demote amy User to or from an Organizer.
+    - Create or delete any User.
+    - Create, edit, or delete any User information.
+    - Create or delete any event.
+    - Create, edit, or delete any event information.
+  - Allow Users to register for events with a specific car. This could potentially take a few forms:
+    - Add a single, specific car during registration.
+    - Add a single, specific car to the SiteUser model that is automatically registered.
+    - Add multiple cars to the SiteUser model, and select which car they want to register for events at the time of registration.
+  - Add static, or interactive, Google Map directly in event details card; not just a link.
+  - Have a dropdown menu for event genre for Organizer to select from, ie "Import," "Euro," "Truck," "Domestic," etc.
+  - Allow a user to filter events by the genres from above, by date, size or by geography. Basically, allow the user to refine their view.
 
 ### Accessibility
 
@@ -400,7 +415,7 @@ This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript pr
 
 - [AmIResponsive](https://ui.dev/amiresponsive)
 - [Balsamiq](https://balsamiq.cloud/)
-- [Boostrap](https://getbootstrap.com/)
+- [Bootstrap](https://getbootstrap.com/)
 - [Bootswatch](https://bootswatch.com/)
 - [Bulk Resize Photos](https://bulkresizephotos.com/en)
 - [Cloudinary](https://cloudinary.com/)
@@ -471,20 +486,23 @@ Information on testing can be found in [the testing ReadMe](/TEST.md)
 - Code Institute instructor Simen Daehlin for almost everything else. [Simen Daehlin Github](https://github.com/Eventyret)
 - Code Institute mentor Jubrile Akolade provided guidance on where to focus time building the project and an almost infinite amount of other support.
 - All of my Code Institute UCD July 2022 cohort, who have been available to answer questions through Slack.
-- Code Institute tutors accessed through the Code Institute LMS have been helpful with understanding various concepts during instruction. In particular Ed for explaining core view concepts that I wasn't understanding and setting this baby bird off to fly with his own wings, and Jason for helping specifically with event.attendee.all() returning the attendee list, instead of letting me smash stuff looking at the many to many relationships and the siteuser user model extension.
+- Code Institute tutors accessed through the Code Institute LMS have been helpful with understanding various concepts during instruction. 
+    - In particular Ed for explaining core concepts about Django views that I wasn't understanding and setting this baby bird off to fly with his own wings.
+    - Also, Jason for helping specifically with event.attendee.all() returning the attendee list, instead of me break the many-to-many relationships in the situser model.
 
 ### Code Used
 
 - Code regarding the MVC architecture is very similar to the Code Institute training code from the I Think Therefore I Blog Lessons. Available on request.
     - Process for modifying Django's built in registration and sign-up code to fit this website was particularly instructive, from the "Adding Authentication - Part 2" lesson.
 - Method for making nav bar elements dynamic were best explained by [Sharma Coding YouTube Channel.](https://www.youtube.com/watch?v=IY_ooX65BnQ).
+- Excellent explanations for how to make custom validators for the Django forms found on [geeksforgeeks.org.](https://www.geeksforgeeks.org/custom-field-validations-in-django-forms/)
 - Basic HTML structure uses the Bootstrap Cards [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/) style library.
 - This Readme file follows the roadmap by Kera Cudmore and her incomperable [readme template and example.](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md)
 
 ### Media
 
 - Favicon icon by [Iconpacks](https://iconpacks.net/?utm_source=link-attribution&utm_content=1641), converted from .png to .ico by [favicon.io.](https://favicon.io/favicon-converter/).
-- Splash image by Trevor Yale Ryan, as published on the HardParkers' dialectical nemesis, [Speedhunters.](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/).
+- Splash image by [Trevor Yale Ryan](https://www.tyrphoto.com/), as published on the HardParkers' dialectical nemesis, [Speedhunters.](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/).
 
 <br>
 <hr>

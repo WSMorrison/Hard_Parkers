@@ -73,13 +73,13 @@ The main ReadMe can be found [here.](/README.md)
 
 <hr>
 
-### Responsiveness
+## Responsiveness
 
 The page was checked for responsiveness by using [AmIResponsive.](https://ui.dev/amiresponsive)
 
 ![Front page of The HardParkers as input to AmIResponsive.](/assets/readme-images/Responsive.png)
 
-### Accessibility
+## Accessibility
 
 Care was taken to make sure the website was accessible.
 
@@ -94,7 +94,7 @@ Accessibility was checked by using Google Chrome [Lighthouse.](https://chrome.go
 
 The accessibility score is less than 100% because the "Background and foreground colors do not have a sufficient contrast ratio," however, changing the colors did not seem to make any difference in the score.
 
-### Code Validation
+## Code Validation
 
 The HTML for the website was put through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Each page of the site was tested by opening the page, viewing page source, and copying and pasting the source code into the validator. This avoided any issues with the template tags upsetting the validator to the point that it did not check the rest of the code. Any errors found were fixed. As credit to Django's automated page generation through template tags, the only errors were in the hand written code of the base.html; a stray closing italic tag in the footer, and an attempt at a responsive break in the blockquote to try to influence the line break that did not have any effect. Both were fixed, and each page was returned without errors.
 
@@ -108,15 +108,24 @@ The Python code was checked with the [Code Institute Python linter](https://pep8
 
 ![CI Python linter representative return](/assets/readme-images/CIPythonLinter.png)
 
-### Systematic Manual Testing
+<br>
+<hr>
+
+## Systematic Manual Testing
+
+<hr>
 
 The following tables will describe the systematic manual testing done to ensure that the app is working properly.
 
-#### Unlogged-in User
+<hr>
+
+### Unlogged-in User
+
+<hr>
 
 The following features were tested as an unlogged-in user:
 
-##### Index page (Unlogged-in User):
+#### Index page (Unlogged-in User):
 
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
@@ -142,7 +151,7 @@ The following features were tested as an unlogged-in user:
 | Sign Up tab - nav bar   | Hover    | Indicate link                                                          | Pass    |
 | Sign Up tab - nav bar   | Click    | Navigate to Sign Up page as site tab                                   | Pass    |
 
-##### Log In page (Unlogged-in User):
+#### Log In page (Unlogged-in User):
 
 | Element              | Action  | Expected Result                             | Outcome   |
 |----------------------|---------|---------------------------------------------|-----------|
@@ -164,7 +173,7 @@ The following features were tested as an unlogged-in user:
 | Sign Up Here link    | Hover   | Indicate link                               | Pass      |
 | Sign Up Here link    | Click   | Navigate to Sign Up tab                     | Pass      |
 
-##### Sign Up page (Unlogged-in User):
+#### Sign Up page (Unlogged-in User):
 
 | Element              | Action  | Expected Result                             | Outcome |
 |----------------------|---------|---------------------------------------------|---------|
@@ -194,7 +203,7 @@ The following features were tested as an unlogged-in user:
 | Log In Here link     | Hover   | Indicate link                               | Pass    |
 | Log In Here link     | Click   | Navigate to Log In tab                      | Pass    |
 
-##### Details page (Unlogged-in User)
+#### Details page (Unlogged-in User)
 
 | Element                | Action  | Expected Result                                                    | Outcome |
 |------------------------|---------|--------------------------------------------------------------------|---------|
@@ -211,12 +220,15 @@ The following features were tested as an unlogged-in user:
 | Login to register link | Hover   | Indicate link                                                      | Pass    |
 | Login to register link | Click   | Navigate to Log In page as site tab                                | Pass    |
 
+<hr>
 
-#### Basic Site User
+### Basic Site User
+
+<hr>
 
 The following features were tested while logged in as a User.
 
-##### Index page (User):
+#### Index page (User):
 
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
@@ -238,7 +250,7 @@ The following features were tested while logged in as a User.
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
 
-##### Attending Events page (User):
+#### Attending Events page (User):
 
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
@@ -254,7 +266,7 @@ The following features were tested while logged in as a User.
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
 
-##### Log Out page (User):
+#### Log Out page (User):
 
 | Element           | Action  | Expected Result                   | Outcome |
 |-------------------|---------|-----------------------------------|---------|
@@ -264,7 +276,7 @@ The following features were tested while logged in as a User.
 | Log Out button    | Click   | Log user out                      | Pass    |
 | Log Out button    | Click   | Redirect user to main, index page | Pass    |
 
-##### Details page (User):
+#### Details page (User):
 
 | Element              | Action  | Expected Result                                                    | Outcome |
 |----------------------|---------|--------------------------------------------------------------------|---------|
@@ -313,7 +325,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Registration button  | Hover   | No action                                                          | Pass    |
 | Registration button  | Click   | No action                                                          | Pass    |
 
-##### Thank you for registering page (User):
+#### Thank you for registering page (User):
 
 | Element                          | Action  | Expected Result                                  | Outcome |
 |----------------------------------|---------|--------------------------------------------------|---------|
@@ -323,7 +335,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | View Your Events! button         | Hover   | Indicate link                                    | Pass    |
 | View Your Events! button         | Click   | Navigate user to list of their registered events | Pass    |
 
-##### Thank you for unregistering page (User):
+#### Thank you for unregistering page (User):
 
 | Element                          | Action  | Expected Result                                  | Outcome |
 |----------------------------------|---------|--------------------------------------------------|---------|
@@ -333,11 +345,15 @@ If not registered, event has reached maximum registration, and event date is in 
 | Check Out Other Events! button   | Hover   | Indicate link                                    | Pass    |
 | Check Out Other Events! button   | Click   | Navigate user to list of all upcoming events     | Pass    |
 
-#### Event Organizer
+<hr>
+
+### Event Organizer
+
+<hr>
 
 The following features were tested while logged in as an Organizer.
 
-##### Index page (Organizer):
+#### Index page (Organizer):
 
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
@@ -358,7 +374,7 @@ The following features were tested while logged in as an Organizer.
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
 
-##### Attending Events page (Organizer):
+#### Attending Events page (Organizer):
 
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
@@ -373,7 +389,7 @@ The following features were tested while logged in as an Organizer.
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
 
-##### Organized Events page (Organizer):
+#### Organized Events page (Organizer):
 
 | Element                 | Action    | Expected Result                                        | Outcome |
 |-------------------------|-----------|--------------------------------------------------------|---------|
@@ -398,7 +414,7 @@ The following features were tested while logged in as an Organizer.
 | Delete button           | Hover     | Indicate link                                          | Pass    |
 | Delete button           | Click     | Navigate to delete confirmation page                   | Pass    |
 
-##### Log Out page (Organizer):
+#### Log Out page (Organizer):
 
 | Element           | Action  | Expected Result                   | Outcome |
 |-------------------|---------|-----------------------------------|---------|
@@ -408,7 +424,7 @@ The following features were tested while logged in as an Organizer.
 | Log Out button    | Click   | Log user out                      | Pass    |
 | Log Out button    | Click   | Redirect user to main, index page | Pass    |
 
-##### Details page (Organizer):
+#### Details page (Organizer):
 
 | Element              | Action  | Expected Result                                                    | Outcome |
 |----------------------|---------|--------------------------------------------------------------------|---------|
@@ -448,15 +464,16 @@ If not registered, Registration Closed Date has passed, and event date is in the
 | Registration button  | Hover   | No action                                                          | Pass    |
 | Registration button  | Click   | No action                                                          | Pass    |
 
-| If not registered, event has reached maximum registration, and event date is in the future: |
+If not registered, event has reached maximum registration, and event date is in the future:
 
-
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Registration button  | Renders | Inactive                                                           | Pass    |
 | Registration button  | Display | Registration closed                                                | Pass    |
 | Registration button  | Hover   | No action                                                          | Pass    |
 | Registration button  | Click   | No action                                                          | Pass    |
 
-##### Thank you for registering page (Organizer):
+#### Thank you for registering page (Organizer):
 
 | Element                          | Action  | Expected Result                                  | Outcome |
 |----------------------------------|---------|--------------------------------------------------|---------|
@@ -466,7 +483,7 @@ If not registered, Registration Closed Date has passed, and event date is in the
 | View Your Events! button         | Hover   | Indicate link                                    | Pass    |
 | View Your Events! button         | Click   | Navigate user to list of their registered events | Pass    |
 
-##### Thank you for unregistering page (Organizer):
+#### Thank you for unregistering page (Organizer):
 
 | Element                          | Action  | Expected Result                                  | Outcome |
 |----------------------------------|---------|--------------------------------------------------|---------|
@@ -476,7 +493,7 @@ If not registered, Registration Closed Date has passed, and event date is in the
 | Check Out Other Events! button   | Hover   | Indicate link                                    | Pass    |
 | Check Out Other Events! button   | Click   | Navigate user to list of all upcoming events     | Pass    |
 
-##### Create Event page (Organizer):
+#### Create Event page (Organizer):
 
 | Element                        | Action  | Expected Result                                                                   | Outcome   |
 |--------------------------------|---------|-----------------------------------------------------------------------------------|-----------|
@@ -536,7 +553,7 @@ If not registered, Registration Closed Date has passed, and event date is in the
 | Publish Your Event button      | Click   | Adds new event record to database                                                 | Pass      |
 | Publish Your Event button      | Click   | Redirects user to thank you for organizing page                                   | Pass      |
 
-##### Attendee page (Organizer):
+#### Attendee page (Organizer):
 
 | Element       | Action  | Expected Result                                                    | Outcome |
 |---------------|---------|--------------------------------------------------------------------|---------|
@@ -549,7 +566,7 @@ If not registered, Registration Closed Date has passed, and event date is in the
 | Attendee page | Display | List or registered users and usernames, alphabetically by username | Pass    |
 | Attendee page | Display | Footer with only famous Socrates quote                             | Pass    |
 
-##### Edit Event page (Organizer):
+#### Edit Event page (Organizer):
 
 | Element                        | Action  | Expected Result                                                                   | Outcome   |
 |--------------------------------|---------|-----------------------------------------------------------------------------------|-----------|
@@ -615,7 +632,7 @@ If not registered, Registration Closed Date has passed, and event date is in the
 | Publish Your Event button      | Click   | Adds new event record to database                                                 | Pass      |
 | Publish Your Event button      | Click   | Redirects user to thank you for organizing page                                   | Pass      |
 
-##### Delete Event confirmation page (Organizer):
+#### Delete Event confirmation page (Organizer):
 
 | Element                        | Action  | Expected Result                                               | Outcome |
 |--------------------------------|---------|---------------------------------------------------------------|---------|
@@ -627,7 +644,7 @@ If not registered, Registration Closed Date has passed, and event date is in the
 | Delete Event button            | Click   | Deletes appropriate event record from database                | Pass    |
 | Delete Event button            | Click   | Redirects user to Thank You page                              | Pass    |
 
-##### Thank you for creating your event page (Organizer):
+#### Thank you for creating your event page (Organizer):
 
 | Element                       | Action  | Expected Result                                                     | Outcome |
 |-------------------------------|---------|---------------------------------------------------------------------|---------|
@@ -636,7 +653,7 @@ If not registered, Registration Closed Date has passed, and event date is in the
 | Events Organized button       | Hover   | Indicate link                                                       | Pass    |
 | Events Organized button       | Click   | Redirects user to the Organized Events page                         | Pass    |
 
-##### Thank you for deleting your event page (Organizer):
+#### Thank you for deleting your event page (Organizer):
 
 | Element                     | Action  | Expected Result                                | Outcome |
 |-----------------------------|---------|------------------------------------------------|---------|
@@ -649,11 +666,15 @@ You deserve a break.<br>
 <a href="https://www.youtube.com/watch?v=dLECCmKnrys" target="_blank">Enjoy this bit of stand up comedy.</a> Don't worry, it opens in a new tab.<br>
 It's six and a half minutes but it's absolutely worth it.
 
-#### Site Owner
+<hr>
+
+### Site Owner
+
+<hr>
 
 The following features were tested while logged in as the site Owner.
 
-##### Index page (Owner):
+#### Index page (Owner):
 
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
@@ -674,7 +695,7 @@ The following features were tested while logged in as the site Owner.
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
 
-##### Attending Events page (Owner):
+#### Attending Events page (Owner):
 
 | Element                 | Action   | Expected Result                                                        | Outcome |
 |-------------------------|----------|------------------------------------------------------------------------|---------|
@@ -689,7 +710,7 @@ The following features were tested while logged in as the site Owner.
 | Details button          | Hover    | Indicate link                                                          | Pass    |
 | Details button          | Click    | Navigate to eventview page and display details of correct event record | Pass    |
 
-##### Organized Events page (Owner):
+#### Organized Events page (Owner):
 
 | Element                 | Action    | Expected Result                                        | Outcome |
 |-------------------------|-----------|--------------------------------------------------------|---------|
@@ -714,7 +735,7 @@ The following features were tested while logged in as the site Owner.
 | Delete button           | Hover     | Indicate link                                          | Pass    |
 | Delete button           | Click     | Navigate to delete confirmation page                   | Pass    |
 
-##### Owner Control Panel page (Owner):
+#### Owner Control Panel page (Owner):
 
 | Element                  | Action  | Expected Result                                           | Outcome |
 |--------------------------|---------|-----------------------------------------------------------|---------|
@@ -723,7 +744,7 @@ The following features were tested while logged in as the site Owner.
 | Admin Panel button       | Hover   | Indicate link                                             | Pass    |
 | Admin Panel button       | Click   | Redirects user to admin panel                             | Pass    |
 
-##### Log Out page (Owner):
+#### Log Out page (Owner):
 
 | Element           | Action  | Expected Result                   | Outcome |
 |-------------------|---------|-----------------------------------|---------|
@@ -733,7 +754,7 @@ The following features were tested while logged in as the site Owner.
 | Log Out button    | Click   | Log user out                      | Pass    |
 | Log Out button    | Click   | Redirect user to main, index page | Pass    |
 
-##### Details page (Owner):
+#### Details page (Owner):
 
 | Element              | Action  | Expected Result                                                    | Outcome |
 |----------------------|---------|--------------------------------------------------------------------|---------|
@@ -782,7 +803,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Registration button  | Hover   | No action                                                          | Pass    |
 | Registration button  | Click   | No action                                                          | Pass    |
 
-##### Thank you for registering page (Owner):
+#### Thank you for registering page (Owner):
 
 | Element                          | Action  | Expected Result                                  | Outcome |
 |----------------------------------|---------|--------------------------------------------------|---------|
@@ -792,7 +813,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | View Your Events! button         | Hover   | Indicate link                                    | Pass    |
 | View Your Events! button         | Click   | Navigate user to list of their registered events | Pass    |
 
-##### Thank you for unregistering page (Owner):
+#### Thank you for unregistering page (Owner):
 
 | Element                          | Action  | Expected Result                                  | Outcome |
 |----------------------------------|---------|--------------------------------------------------|---------|
@@ -802,7 +823,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Check Out Other Events! button   | Hover   | Indicate link                                    | Pass    |
 | Check Out Other Events! button   | Click   | Navigate user to list of all upcoming events     | Pass    |
 
-##### Create Event page (Owner):
+#### Create Event page (Owner):
 
 | Element                        | Action  | Expected Result                                                                   | Outcome   |
 |--------------------------------|---------|-----------------------------------------------------------------------------------|-----------|
@@ -862,7 +883,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Publish Your Event button      | Click   | Adds new event record to database                                                 | Pass      |
 | Publish Your Event button      | Click   | Redirects user to thank you for organizing page                                   | Pass      |
 
-##### Attendee page (Owner):
+#### Attendee page (Owner):
 
 | Element       | Action  | Expected Result                                                    | Outcome |
 |---------------|---------|--------------------------------------------------------------------|---------|
@@ -875,7 +896,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Attendee page | Display | List or registered users and usernames, alphabetically by username | Pass    |
 | Attendee page | Display | Footer with only famous Socrates quote                             | Pass    |
 
-##### Edit Event page (Owner):
+#### Edit Event page (Owner):
 
 | Element                        | Action  | Expected Result                                                                   | Outcome   |
 |--------------------------------|---------|-----------------------------------------------------------------------------------|-----------|
@@ -941,7 +962,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Publish Your Event button      | Click   | Adds new event record to database                                                 | Pass      |
 | Publish Your Event button      | Click   | Redirects user to thank you for organizing page                                   | Pass      |
 
-##### Delete Event confirmation page (Owner):
+#### Delete Event confirmation page (Owner):
 
 | Element                        | Action  | Expected Result                                               | Outcome |
 |--------------------------------|---------|---------------------------------------------------------------|---------|
@@ -953,7 +974,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Delete Event button            | Click   | Deletes appropriate event record from database                | Pass    |
 | Delete Event button            | Click   | Redirects user to Thank You page                              | Pass    |
 
-##### Thank you for creating your event page (Owner):
+#### Thank you for creating your event page (Owner):
 
 | Element                       | Action  | Expected Result                                                     | Outcome |
 |-------------------------------|---------|---------------------------------------------------------------------|---------|
@@ -962,7 +983,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Events Organized button       | Hover   | Indicate link                                                       | Pass    |
 | Events Organized button       | Click   | Redirects user to the Organized Events page                         | Pass    |
 
-##### Thank you for deleting your event page (Owner):
+#### Thank you for deleting your event page (Owner):
 
 | Element                     | Action  | Expected Result                                | Outcome |
 |-----------------------------|---------|------------------------------------------------|---------|
@@ -971,7 +992,7 @@ If not registered, event has reached maximum registration, and event date is in 
 | Events Organized button     | Hover   | Indicate link                                  | Pass    |
 | Events Organized button     | Click   | Redirects user to the Organized Events page    | Pass    |
 
-##### Admin Panel (Owner):
+#### Admin Panel (Owner):
 
 | Capability                 | Outcome |
 |----------------------------|---------|
@@ -989,7 +1010,12 @@ If not registered, event has reached maximum registration, and event date is in 
 | Promote user to organizer  | Pass    |
 | Demote organizer to user   | Pass    |
 
+<br>
+<hr>
+
 ### Representative User Manual Testing
+
+<hr>
 
 In addition to formal manual testing, the site was shown to friends who would be representative as users for this website. Most of these testers are active in the car community, or at least adjacent enough to the car community to provide relevant, valuable feedback.
 
