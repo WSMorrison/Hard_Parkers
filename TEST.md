@@ -2,7 +2,7 @@
 
 The HardParkers website is is a simple, streamlined, and mobile focused resource for automotive enthusiasts to find meets and shows they would like to attend in their area. It allows event organizers to publish their event details and for participants to register to attend, making it simple for organizers to get the word out and easy for enthusiasts to find events that match their interests.
 
-This readme will discuss the testing of the app. Some of the information can also be found on the main ReadMe, but this Testing ReadMe will go into greater detail about the systematic manual testing.
+This ReadMe will discuss the testing of the app. Some of the information can also be found on the main ReadMe, but this Testing ReadMe will go into greater detail about the systematic manual testing.
 
 The site was tested as an unlogged-in visitor, as a logged-in basic user (User), as a logged-in event promoter and organizer (Organizer), and as a logged in the site owner or admin (Owner). Much of the functionality was the same or similar, but permissions were different and there were different aspects of the project that required different aspects of testing.
 
@@ -75,9 +75,9 @@ The main ReadMe can be found [here.](/README.md)
 
 ### Responsiveness
 
-![Front page of The HardParkers as input to AmIResponsive.](/assets/readme-images/Responsive.png)
+The page was checked for responsiveness by using [AmIResponsive.](https://ui.dev/amiresponsive)
 
-[AmIResponsive](https://ui.dev/amiresponsive)
+![Front page of The HardParkers as input to AmIResponsive.](/assets/readme-images/Responsive.png)
 
 ### Accessibility
 
@@ -85,8 +85,10 @@ Care was taken to make sure the website was accessible.
 
   - The page is developed to use high contrast text, simple interface and easy to follow buttons. 
   - Aria labels are on any button that is not labelled.
-  - The tabs are all marked current so that the page indicates where the navigation currently is. 
+  - The tabs are all marked current so that the nav bar indicates where the user is currently navigated. 
   - The HTML follows a clear semantic flow.
+
+Accessibility was checked by using Google Chrome [Lighthouse.](https://chrome.google.com/webstore/detail/lighthouse/)
 
 ![Lighthouse score for page](/assets/readme-images/Lighthouse.png)
 
@@ -94,7 +96,7 @@ The accessibility score is less than 100% because the "Background and foreground
 
 ### Code Validation
 
-The HTML for the website was put through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Each page of the site was tested by opening the page, viewing page source, and copying and pasting the source coude into the validator. This avoided any issues with the template tags upsetting the validator to the point that it did not check the rest of the code. Any errors found they were fixed. As credit to Django's automated page generation through template tags, the only errors were in the hand written code of the base.html; a stray closing italic tag in the footer, and an attempt at a responsive break in the blockquote to try to influence the line break that did not have any effect. Both were fixed, and each page was returned without errors.
+The HTML for the website was put through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Each page of the site was tested by opening the page, viewing page source, and copying and pasting the source code into the validator. This avoided any issues with the template tags upsetting the validator to the point that it did not check the rest of the code. Any errors found were fixed. As credit to Django's automated page generation through template tags, the only errors were in the hand written code of the base.html; a stray closing italic tag in the footer, and an attempt at a responsive break in the blockquote to try to influence the line break that did not have any effect. Both were fixed, and each page was returned without errors.
 
 ![W3C Markup validator representative return](/assets/readme-images/W3CHTMLValidator.png)
 
@@ -156,9 +158,9 @@ The following features were tested as an unlogged-in user:
 | Password Field       | Input   | Accepts good input                          | Pass      |
 | Password Field       | Input   | Obscures keystrokes                         | Pass      |
 | Remember Me checkbox | Click   | Checks box                                  | Pass      |
-| Remember Me checkbox | Clicked | Remembers user                              | Pass [^1] |
+| Remember Me checkbox | Clicked | Remembers user (When allowed by browser)    | Pass      |
 | Log In button        | Hover   | Indicate link                               | Pass      |
-| Log In button        | Click   | Logs user in, navigates to main, index page | Pass      |
+| Log In button        | Click   | Logs user in, navigates to index page       | Pass      |
 | Sign Up Here link    | Hover   | Indicate link                               | Pass      |
 | Sign Up Here link    | Click   | Navigate to Sign Up tab                     | Pass      |
 
@@ -205,11 +207,10 @@ The following features were tested as an unlogged-in user:
 | Details page           | Display | Number of cars able to register                                    | Pass    |
 | Details page           | Display | About this event text box                                          | Pass    |
 | Location Map button    | Hover   | Indicate link                                                      | Pass    |
-| Location Map button    | Click   | Open google maps link in new browser tab, for correct event record | Pass    |
+| Location Map button    | Click   | Open Google Maps link in new browser tab, for correct event record | Pass    |
 | Login to register link | Hover   | Indicate link                                                      | Pass    |
 | Login to register link | Click   | Navigate to Log In page as site tab                                | Pass    |
 
-[^1]: Depending on browser settings.
 
 #### Basic Site User
 
@@ -276,21 +277,37 @@ The following features were tested while logged in as a User.
 | Details page         | Display | Number of cars able to register                                    | Pass    |
 | Details page         | Display | About this event text box                                          | Pass    |
 | Location Map button  | Hover   | Indicate link                                                      | Pass    |
-| Location Map button  | Click   | Open google maps link in new browser tab, for correct event record | Pass    |
-| If registered for event and event is in the future: |
+| Location Map button  | Click   | Open Google Maps link in new browser tab, for correct event record | Pass    |
+
+If registered for event and event is in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Remove Me button     | Hover   | Indicate link                                                      | Pass    |
 | Remove Me button     | Click   | Remove user from correct event record attendee list                | Pass    |
 | Remove Me button     | Click   | Redirect user to thank you page                                    | Pass    |
-| If not registered for event and event and Registration Closed Date are in the future: |
+
+If not registered for event and event and Registration Closed Date are in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Register Now! button | Hover   | Indicate link                                                      | Pass    |
 | Register Now! button | Click   | Add user to correct event record attendee list                     | Pass    |
 | Register Now! button | Click   | Redirect user to thank you page                                    | Pass    |
-| If not registered, Registration Closed Date has passed, and event date is in the future: |
+
+If not registered, Registration Closed Date has passed, and event date is in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Registration button  | Renders | Inactive                                                           | Pass    |
 | Registration button  | Display | Registration closed                                                | Pass    |
 | Registration button  | Hover   | No action                                                          | Pass    |
 | Registration button  | Click   | No action                                                          | Pass    |
-| If not registered, event has reached maximum registration, and event date is in the future: |
+
+If not registered, event has reached maximum registration, and event date is in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Registration button  | Renders | Inactive                                                           | Pass    |
 | Registration button  | Display | Registration closed                                                | Pass    |
 | Registration button  | Hover   | No action                                                          | Pass    |
@@ -315,10 +332,6 @@ The following features were tested while logged in as a User.
 | Thank you for registering page   | Display | Confirm user is no longer registered for event   | Pass    |
 | Check Out Other Events! button   | Hover   | Indicate link                                    | Pass    |
 | Check Out Other Events! button   | Click   | Navigate user to list of all upcoming events     | Pass    |
-
-You should really take a break.<br>
-<a href="https://www.youtube.com/watch?v=dLECCmKnrys" target="_blank">Enjoy this bit of stand up comedy.</a> Don't worry, it opens in a new tab.<br>
-It's six and a half minutes but it's absolutely worth it.
 
 #### Event Organizer
 
@@ -408,21 +421,36 @@ The following features were tested while logged in as an Organizer.
 | Details page         | Display | Number of cars able to register                                    | Pass    |
 | Details page         | Display | About this event text box                                          | Pass    |
 | Location Map button  | Hover   | Indicate link                                                      | Pass    |
-| Location Map button  | Click   | Open google maps link in new browser tab, for correct event record | Pass    |
-| If registered for event and event is in the future: |
+| Location Map button  | Click   | Open Google Maps link in new browser tab, for correct event record | Pass    |
+
+If registered for event and event is in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Remove Me button     | Hover   | Indicate link                                                      | Pass    |
 | Remove Me button     | Click   | Remove user from correct event record attendee list                | Pass    |
 | Remove Me button     | Click   | Redirect user to thank you page                                    | Pass    |
-| If not registered for event and event and Registration Closed Date are in the future: |
+
+If not registered for event and event and Registration Closed Date are in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Register Now! button | Hover   | Indicate link                                                      | Pass    |
 | Register Now! button | Click   | Add user to correct event record attendee list                     | Pass    |
 | Register Now! button | Click   | Redirect user to thank you page                                    | Pass    |
-| If not registered, Registration Closed Date has passed, and event date is in the future: |
+
+If not registered, Registration Closed Date has passed, and event date is in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Registration button  | Renders | Inactive                                                           | Pass    |
 | Registration button  | Display | Registration closed                                                | Pass    |
 | Registration button  | Hover   | No action                                                          | Pass    |
 | Registration button  | Click   | No action                                                          | Pass    |
+
 | If not registered, event has reached maximum registration, and event date is in the future: |
+
+
 | Registration button  | Renders | Inactive                                                           | Pass    |
 | Registration button  | Display | Registration closed                                                | Pass    |
 | Registration button  | Hover   | No action                                                          | Pass    |
@@ -479,11 +507,11 @@ The following features were tested while logged in as an Organizer.
 | Registration Closes field      | Input   | Date picker excludes dates in the past                                            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting if date is not in the future                           | Pass      |
-| Registration Closes Time field | Display | Label: At time:                                                                   | Pass      |
-| Registration Closes Time field | Display | Placeholder is default time as design nudge                                       | Pass      |
-| Registration Closes Time field | Input   | Accepts default placeholder time undedited                                        | Pass      |
-| Registration Closes Time field | Input   | Validates time                                                                    | Pass      |
-| Registration Closes Time field | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Reg. Closes Time field         | Display | Label: At time:                                                                   | Pass      |
+| Reg. Closes Time field         | Display | Placeholder is default time as design nudge                                       | Pass      |
+| Reg. Closes Time field         | Input   | Accepts default placeholder time undedited                                        | Pass      |
+| Reg. Closes Time field         | Input   | Validates time                                                                    | Pass      |
+| Reg. Closes Time field         | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Location field                 | Display | Label: The location:                                                              | Pass      |
 | Location field                 | Hover   | Indicates charfield                                                               | Pass      |
 | Location field                 | Input   | Cleans input                                                                      | Pass      |
@@ -555,11 +583,11 @@ The following features were tested while logged in as an Organizer.
 | Registration Closes field      | Input   | Date picker excludes dates in the past                                            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting if date is not in the future                           | Pass      |
-| Registration Closes Time field | Display | Label: At time:                                                                   | Pass      |
-| Registration Closes Time field | Display | Placeholder is original information from appropriate event record                 | Pass      |
-| Registration Closes Time field | Input   | Accepts default placeholder time undedited                                        | Pass      |
-| Registration Closes Time field | Input   | Validates time                                                                    | Pass      |
-| Registration Closes Time field | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Reg. Closes Time field         | Display | Label: At time:                                                                   | Pass      |
+| Reg. Closes Time field         | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Reg. Closes Time field         | Input   | Accepts default placeholder time undedited                                        | Pass      |
+| Reg. Closes Time field         | Input   | Validates time                                                                    | Pass      |
+| Reg. Closes Time field         | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Location field                 | Display | Label: The location:                                                              | Pass      |
 | Location field                 | Display | Placeholder is original information from appropriate event record                 | Pass      |
 | Location field                 | Hover   | Indicates charfield                                                               | Pass      |
@@ -616,6 +644,10 @@ The following features were tested while logged in as an Organizer.
 | Event delete thank you page | Display | Thanks appropriate user for deleting event     | Pass    |
 | Events Organized button     | Hover   | Indicate link                                  | Pass    |
 | Events Organized button     | Click   | Redirects user to the Organized Events page    | Pass    |
+
+You deserve a break.<br>
+<a href="https://www.youtube.com/watch?v=dLECCmKnrys" target="_blank">Enjoy this bit of stand up comedy.</a> Don't worry, it opens in a new tab.<br>
+It's six and a half minutes but it's absolutely worth it.
 
 #### Site Owner
 
@@ -714,21 +746,37 @@ The following features were tested while logged in as the site Owner.
 | Details page         | Display | Number of cars able to register                                    | Pass    |
 | Details page         | Display | About this event text box                                          | Pass    |
 | Location Map button  | Hover   | Indicate link                                                      | Pass    |
-| Location Map button  | Click   | Open google maps link in new browser tab, for correct event record | Pass    |
-| If registered for event and event is in the future: |
+| Location Map button  | Click   | Open Google Maps link in new browser tab, for correct event record | Pass    |
+
+If registered for event and event is in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Remove Me button     | Hover   | Indicate link                                                      | Pass    |
 | Remove Me button     | Click   | Remove user from correct event record attendee list                | Pass    |
 | Remove Me button     | Click   | Redirect user to thank you page                                    | Pass    |
-| If not registered for event and event and Registration Closed Date are in the future: |
+
+If not registered for event and event and Registration Closed Date are in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Register Now! button | Hover   | Indicate link                                                      | Pass    |
 | Register Now! button | Click   | Add user to correct event record attendee list                     | Pass    |
 | Register Now! button | Click   | Redirect user to thank you page                                    | Pass    |
-| If not registered, Registration Closed Date has passed, and event date is in the future: |
+
+If not registered, Registration Closed Date has passed, and event date is in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Registration button  | Renders | Inactive                                                           | Pass    |
 | Registration button  | Display | Registration closed                                                | Pass    |
 | Registration button  | Hover   | No action                                                          | Pass    |
 | Registration button  | Click   | No action                                                          | Pass    |
-| If not registered, event has reached maximum registration, and event date is in the future: |
+
+If not registered, event has reached maximum registration, and event date is in the future:
+
+| Element              | Action  | Expected Result                                                    | Outcome |
+|----------------------|---------|--------------------------------------------------------------------|---------|
 | Registration button  | Renders | Inactive                                                           | Pass    |
 | Registration button  | Display | Registration closed                                                | Pass    |
 | Registration button  | Hover   | No action                                                          | Pass    |
@@ -785,11 +833,11 @@ The following features were tested while logged in as the site Owner.
 | Registration Closes field      | Input   | Date picker excludes dates in the past                                            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting if date is not in the future                           | Pass      |
-| Registration Closes Time field | Display | Label: At time:                                                                   | Pass      |
-| Registration Closes Time field | Display | Placeholder is default time as design nudge                                       | Pass      |
-| Registration Closes Time field | Input   | Accepts default placeholder time undedited                                        | Pass      |
-| Registration Closes Time field | Input   | Validates time                                                                    | Pass      |
-| Registration Closes Time field | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Reg. Closes Time field         | Display | Label: At time:                                                                   | Pass      |
+| Reg. Closes Time field         | Display | Placeholder is default time as design nudge                                       | Pass      |
+| Reg. Closes Time field         | Input   | Accepts default placeholder time undedited                                        | Pass      |
+| Reg. Closes Time field         | Input   | Validates time                                                                    | Pass      |
+| Reg. Closes Time field         | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Location field                 | Display | Label: The location:                                                              | Pass      |
 | Location field                 | Hover   | Indicates charfield                                                               | Pass      |
 | Location field                 | Input   | Cleans input                                                                      | Pass      |
@@ -861,11 +909,11 @@ The following features were tested while logged in as the site Owner.
 | Registration Closes field      | Input   | Date picker excludes dates in the past                                            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Registration Closes field      | Input   | Prevents form from posting if date is not in the future                           | Pass      |
-| Registration Closes Time field | Display | Label: At time:                                                                   | Pass      |
-| Registration Closes Time field | Display | Placeholder is original information from appropriate event record                 | Pass      |
-| Registration Closes Time field | Input   | Accepts default placeholder time undedited                                        | Pass      |
-| Registration Closes Time field | Input   | Validates time                                                                    | Pass      |
-| Registration Closes Time field | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
+| Reg. Closes Time field         | Display | Label: At time:                                                                   | Pass      |
+| Reg. Closes Time field         | Display | Placeholder is original information from appropriate event record                 | Pass      |
+| Reg. Closes Time field         | Input   | Accepts default placeholder time undedited                                        | Pass      |
+| Reg. Closes Time field         | Input   | Validates time                                                                    | Pass      |
+| Reg. Closes Time field         | Input   | Prevents form from posting and tells user if field is invalid or blank            | Pass      |
 | Location field                 | Display | Label: The location:                                                              | Pass      |
 | Location field                 | Display | Placeholder is original information from appropriate event record                 | Pass      |
 | Location field                 | Hover   | Indicates charfield                                                               | Pass      |
