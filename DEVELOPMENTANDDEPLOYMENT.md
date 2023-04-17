@@ -2,7 +2,7 @@
 
 The HardParkers website is is a simple, streamlined, and mobile focused resource for automotive enthusiasts to find meets and shows they would like to attend in their area. It allows event organizers to publish their event details and for participants to register to attend, making it simple for organizers to get the word out and easy for enthusiasts to find events that match their interests.
 
-This readme will discuss the local development and deployment of the app. It will detail the process of setting up the workspace, the database and file hosing, and deployment.
+This ReadMe will discuss the local development and deployment of the app. It will detail the process of setting up the workspace, the database as well as file hosting, and deployment.
 
 The main ReadMe can be found [here.](/README.md)
 
