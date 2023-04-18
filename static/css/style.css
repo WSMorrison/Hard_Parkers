@@ -55,13 +55,6 @@ footer {
     height: 20rem;
 }
 
-#about-line {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    text-decoration: none;
-    color: #f1f1f1;
-}
-
 .nav-link {
     color: var(--bs-heading-color);
     text-decoration: none;
@@ -139,10 +132,6 @@ footer {
 
     #headline {
         font-size: 10rem;
-    }
-
-    #about-container {
-        height: 17.5rem;
     }
 
 }

@@ -42,7 +42,6 @@ class EventForm(forms.ModelForm):
                                                  }))
 
     event_location_url = forms.CharField(label='Share Google Maps link here:',
-                                         initial='https://www.google.com/maps/',
                                          validators=[google_maps_ok],
                                          widget=forms.URLInput(attrs={
                                           'placeholder': 'https://goo.gl/maps/'
