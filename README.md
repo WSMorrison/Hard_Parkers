@@ -499,12 +499,13 @@ Information on testing can be found in [the testing ReadMe](/TEST.md)
 - Excellent explanations for how to make custom validators for the Django forms found on [geeksforgeeks.org.](https://www.geeksforgeeks.org/custom-field-validations-in-django-forms/)
 - Code for removing Django Auth Socials and Socials Tokens, and from which removing sites was inferred, was found on [Stackoverflow](https://stackoverflow.com/questions/65166963/how-to-hide-unregister-the-accounts-and-social-accounts-created-by-django-allaut)
 - Basic HTML structure uses the Bootstrap Cards [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/) style library.
-- This Readme file follows the roadmap by Kera Cudmore and her incomperable [readme template and example.](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md)
+- This Readme file follows the roadmap by Kera Cudmore and her incomparable [readme template and example.](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md)
 
 ### Media
 
 - Favicon icon by [Iconpacks](https://iconpacks.net/?utm_source=link-attribution&utm_content=1641), converted from .png to .ico by [favicon.io.](https://favicon.io/favicon-converter/).
 - Splash image by [Trevor Yale Ryan](https://www.tyrphoto.com/), as published on the HardParkers' dialectical nemesis, [Speedhunters.](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/).
+- Events "Tofu Delivery Practice," "Giorgetto Giugiaro Show 'N' Shine," "Garage Day: Wheat Beers & Wheel Bearings," and "Spoiler Alert! Movie Night: Corvette Summer 1978" were published by Representative User Jay Tarbell during comprehensive testing. The Event Description for "Spoiler Alert Movie Night Corvette Summer 1978" was taken from the [Corvette Summer IMDB entry](https://www.imdb.com/title/tt0077372/) comment ["Car Wars"](https://www.imdb.com/review/rw3551854/?ref_=tt_urv) by user AlsExGal.
 
 <br>
 <hr>

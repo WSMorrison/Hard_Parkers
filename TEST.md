@@ -1051,23 +1051,23 @@ The following bugs were fixed during development:
     - The code was well explained by [Sharma Coding YouTube Channel.](https://www.youtube.com/watch?v=IY_ooX65BnQ)
 2. The Attending Events page did not list the events in order.
     - Troubleshooting found that the ordering code had been left out of the view.
-    - Duplicated the .orderby('eventdate') code from the EventsList view in the YourEventsList view. 
+    - Duplicated the <code>.orderby('eventdate')</code> code from the EventsList view in the YourEventsList view. 
 3. Eventedit and Eventcreate crashed the site with error 500 if form data didn't match the expected database values.
     - Troubleshooting found that form would not check if the form was valid before saving.
     - Added code to validate the data before saving, and if the data is not valid, it returns prompts on the filled out form to the user.
 4. Static images do not display with debug set to false.
     - Troubleshooting found that despite collecting static files, the media files could not be found in Cloudinary.
     - Stumped two different CI tutors with the problem across 4-5 hours of help.
-    - Ultimately just hard coded the Cloudinary hosted image, which is an inelegant solution but solved the issue.
+    - Ultimately the Cloudinary hosted image was hardcoded into the CSS, which is an inelegant solution but solved the issue.
 5. Heroku deployments fail to push during Heroku automatic and manual deployments.
     - Troubleshooting found that sometimes it do be that way.
     - Just kept making attempts until it works. Was told that this is just how Heroku is sometimes.
 6. The Organized Events list page did not list the events in order.
     - Troubleshooting found that the same issue was repeated; leaving out the ordering code.
-    - Duplicated the .orderby('eventdate') code from the EventsList and YourEventsList views in the EventOrg view.
+    - Duplicated the <code>.orderby('eventdate')</code> code from the EventsList and YourEventsList views in the EventOrg view.
 7. Signing up new user accounts returned error 500.
     - Troubleshooting found that the signup was attempting to send verification emails.
-    - Set ACCOUNT_EMAIL_VERIFICATION = 'none' in settings.py
+    - Set <code>ACCOUNT_EMAIL_VERIFICATION = 'none'</code> in settings.py
 8. User unreg confirmation page thanked the user for registering instead of unregistering.
     - Troubleshooting found that the event unreg button called the wrong view.
     - Changed the url and call, and realized that it's probably a good sign that this could be refacctored to do it all with one page of code, but this is due any minute now.
@@ -1076,16 +1076,22 @@ The following bugs were fixed during development:
     - Fixed the code.
 10. Admin panel showed Socials, Social Tokens, and Sites which are unused.
     - Troubleshooting found these could be excluded in the project level urls.py.
-    - Added code to import the appropriate objects, and added admin.site.unregister() with the appropriate objects.
+    - Added code to import the appropriate objects, and added <code>admin.site.unregister()</code> with the appropriate objects.
 11. Attendee list would return an error instead of the page.
-    - Troubleshooting found event.attendee() would not return a list.
-    - Replaced with event.attendee.all() to return a list.
+    - Troubleshooting found <code>event.attendee()</code> would not return a list.
+    - Replaced with <code>event.attendee.all()</code> to return a list.
 12. Attendee list page listed attendees in order of signup, which is essentially arbitrary and would be useless to an organizer.
     - Troubleshooting found that it would be simple to list attendees in alphabetical order.
-    - Added .order_by('username') to AttendeeList view.
-13. Representative user manual testing found that using a mobile Google Maps app generates a different share link than desktop site, preventing the url from being accepted in the event forms.
+    - Added <code>.order_by('username')</code> to AttendeeList view.
+13. Representative User manual testing found that using a mobile Google Maps app generates a different share link than desktop site, preventing the url from being accepted in the event forms.
     - Troubleshooting found that the app link begins with 'https://maps.app.goo.gl/' instead of 'https://goo.gl/maps/'.
     - Added 'https://maps.app.goo.gl/' to custom validator.
+14. Representative user manual testing found that some special characters in the event name can prevent the URLs and views from working properly, returning error 500s.
+    - Troubleshooting found that the when the special characters were added to the URL in the browser, there were unexpected outcomes.
+    - Added RegexValidator to form.
+15. Representative User manual testing found that if a field in the form was invalid, the page would rerender without the form.
+    - Troubleshooting found that the render should return <code>{'edit_form': edit_form}</code> instead of <code>{'event_form': edit_form}</code>.
+    - Not entirely sure why it's not <code>'event_form'</code> but ok. 
 
 #### Unfixed Bugs:
 
@@ -1098,7 +1104,6 @@ The following bugs have not yet been fixed:
     - The form could be hardcoded or restructured without Crispy forms.
 3. Representative user manual testing failed to post an event and instead returned a blank form on one known occasion.
     - Could not duplicate the error on subsequent attempts; but form error codes and confirmation pages should prevent this.
-
 
 <hr>
 For educational purposes only.

@@ -44,7 +44,7 @@ Once the repository was generated, the following steps were taken to install the
     6. The app was created: <code>python3 manage.py startapp hpapp</code>
 
   - In the project, "hardparkers" folder, the settings.py file is opened and modified:
-    1. Add the app the end of the <code>INSTALLED_APPS = [ ]</code> section, add: <code>'HPAPP',</code> 
+    1. Add the app the end of the <code>INSTALLED_APPS = [ ]</code> section, by adding: <code>'HPAPP',</code> 
     2. Save the file <kbd>ctrl</kbd> + <kbd>s</kbd>
 
   - Back in the Terminal:
@@ -70,7 +70,7 @@ Create an Elephant SQL account if there isn't an existing one, then log in to ac
     <code>hardparkers</code> was selected as the database name.<br>
     "Tiny Turtle (Free)" is an appropriate plan for a project of this size.
   4. Click the green "Select Region" button in the bottom right.
-  5. Select an appropriate data center, one nearest to your location is ideal.
+  5. Select an appropriate data center, the nearest location is ideal.
   6. Click the green "Review" button in the bottom right.
   7. Check that all the details are correct, and if they are, click the green "Create instance" button in the bottom right.
   8. From the Elephant SQL dashboard, click on your database name.
