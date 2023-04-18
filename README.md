@@ -386,6 +386,7 @@ Some improvements that could be made include:
   - Add static, or interactive, Google Map directly in event details card; not just a link.
   - Have a dropdown menu for event genre for Organizer to select from, ie "Import," "Euro," "Truck," "Domestic," etc.
   - Allow a user to filter events by the genres from above, by date, size or by geography. Basically, allow the user to refine their view.
+  - Email event attendees under certain conditions, like events getting moved, edited, cancelled, or even just a few days prior to the event.
 
 ### Accessibility
 

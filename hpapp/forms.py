@@ -11,7 +11,7 @@ from datetime import datetime
 
 # Custom validators.
 def google_maps_ok(value):
-    if value.startswith('https://goo.gl/maps/') is False:
+    if value.startswith('https://goo.gl/maps/') and value.startswith('https://maps.app.goo.gl/') is False:
         raise forms.ValidationError('On Google Maps copy and paste from SHARE')
 
 
@@ -41,6 +41,7 @@ class EventForm(forms.ModelForm):
                                                  }))
 
     event_location_url = forms.CharField(label='Share Google Maps link here:',
+                                         initial='https://www.google.com/maps/',
                                          validators=[google_maps_ok],
                                          widget=forms.URLInput(attrs={
                                           'placeholder': 'https://goo.gl/maps/'
