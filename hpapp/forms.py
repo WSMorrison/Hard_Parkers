@@ -11,8 +11,9 @@ from datetime import datetime
 
 # Custom validators.
 def google_maps_ok(value):
-    if value.startswith('https://goo.gl/maps/') and value.startswith('https://maps.app.goo.gl/') is False:
-        raise forms.ValidationError('On Google Maps copy and paste from SHARE')
+    if value.startswith('https://goo.gl/maps/') is False:
+        if value.startswith('https://maps.app.goo.gl/') is False:
+            raise forms.ValidationError('On Google Maps copy from SHARE')
 
 
 def number_cars_ok(value):
@@ -26,7 +27,7 @@ def number_cars_ok(value):
 class EventForm(forms.ModelForm):
     event_name = forms.CharField(label='Your event name:',
                                  validators=[RegexValidator(
-                                  '[+-/%]', inverse_match=True
+                                  '[+-/%#@]', inverse_match=True
                                   )])
     event_date = forms.DateTimeField(label='The event date:',
                                      widget=forms.TextInput(attrs={
