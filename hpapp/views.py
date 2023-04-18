@@ -141,11 +141,8 @@ class EventEdit(View):
             if edit_form.is_valid():
                 edit_form.save()
             else:
-                edit_form = EventForm(instance=event)
-
                 return render(request, 'eventedit.html',
-                              {'event_form': edit_form,
-                               'event': event})
+                              {'edit_form': edit_form})
 
             return render(request, 'eventthanks.html', {'event': event})
 

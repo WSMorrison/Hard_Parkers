@@ -27,8 +27,11 @@ def number_cars_ok(value):
 class EventForm(forms.ModelForm):
     event_name = forms.CharField(label='Your event name:',
                                  validators=[RegexValidator(
-                                  '[+-/%#@]', inverse_match=True
-                                  )])
+                                  '[+-/%#@]',
+                                  inverse_match=True)],
+                                 widget=forms.TextInput(attrs={
+                                    'placeholder': 'Cannot include [+-/%#@]'
+                                  }))
     event_date = forms.DateTimeField(label='The event date:',
                                      widget=forms.TextInput(attrs={
                                        'type': 'date', 'min':
