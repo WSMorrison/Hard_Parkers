@@ -1,6 +1,7 @@
 from .models import Event
 from django import forms
 from django.core import validators
+from django.core.validators import RegexValidator
 from django.core.exceptions import ValidationError
 from crispy_forms.helper import FormHelper, Layout
 from crispy_forms.layout import Layout, Field, MultiField, Div, Fieldset
@@ -23,6 +24,10 @@ def number_cars_ok(value):
 
 # Form for Event creation and Event editing
 class EventForm(forms.ModelForm):
+    event_name = forms.CharField(label='Your event name:',
+                                 validators=[RegexValidator(
+                                  '[+-/%]', inverse_match=True
+                                  )])
     event_date = forms.DateTimeField(label='The event date:',
                                      widget=forms.TextInput(attrs={
                                        'type': 'date', 'min':
