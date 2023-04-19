@@ -7,6 +7,7 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
 [AmIResponsive](https://ui.dev/amiresponsive)
 
 ### The deployed site can be found here: [The HardParkers](https://hardparkers.herokuapp.com/)
+#### The repository in GitHub can be found here: [WSMorrison/HardParkers](https://github.com/WSMorrison/Hard_Parkers)
 
 <br>
 <hr>
@@ -15,43 +16,38 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
 
 <hr>
 
-* [User Experience](#user-experience)
-  * [User Stories](#user-stories)
-
-* [Design](#design)
-  * [Colour Scheme](#colour-scheme)
-  * [Typography](#typography)
-  * [Imagery](#imagery)
-
-* [Planning](#planning)
-  * [Wireframes](#wireframes)
-  * [Flowchart](#flowchart)
-
-* [Features](#features)
-  * [General Features on All Pages](#general-features-on-all-pages)
-  * [Features of Individual Pages](#features-of-individual-pages)
-  * [Defensive Design](#defensive-design)
-  * [Future Implementations](#future-implementations)
-  * [Accessibility](#accessibility)
-
-* [Technologies Used](#technologies-used)
-  * [Languages Used](#languages-used)
-  * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
-
-* [Local Development and Deployment](#local-development-and-deployment)
-  * [Note On Commit History](#note-on-commit-history)
-  * [Local Development](#local-development)
-  * [Deployment](#deployment)
-  * [How to Fork or Clone](#how-to-fork-or-clone)
-
-* [Testing](#testing)
-  * [Code Validation](#code-validation)
-  * [Systematic Manual Testing](#systematic-manual-testing)
-  * [Representative User Manual Testing](#representative-user-manual-testing)
-
-* [Credits](#credits)
-  * [Code Used](#code-used)
-  * [Media](#media)
+- [User Experience](#user-experience)
+  - [User Stories](#user-stories)
+- [Design](#design)
+  - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+  - [Imagery](#imagery)
+- [Planning](#planning)
+  - [Models](#models)
+  - [Wireframes](#wireframes)
+  - [Flowchart](#flowchart)
+  - [User Stories and Agile Technologies](#user-stories-and-agile-technologies)
+- [Features](#features)
+  - [General Features on All Pages](#general-features-on-all-pages)
+  - [Features of Individual Pages](#features-of-individual-pages)
+  - [Defensive Design](#defensive-design)
+  - [Future Implementations](#future-implementations)
+  - [Accessibility](#accessibility)
+- [Technologies Used](#technologies-used)
+  - [Languages Used](#languages-used)
+  - [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+- [Local Development and Deployment](#local-development-and-deployment)
+  - [Note On Commit History](#note-on-commit-history)
+  - [Local Development](#local-development)
+  - [Deployment](#deployment)
+  - [How to Fork or Clone](#how-to-fork-or-clone)
+- [Testing](#testing)
+  - [Code Validation](#code-validation)
+  - [Systematic Manual Testing](#systematic-manual-testing)
+  - [Representative User Manual Testing](#representative-user-manual-testing)
+- [Credits](#credits)
+  - [Code Used](#code-used)
+  - [Media](#media)
 
 <br>
 <hr>
@@ -240,6 +236,18 @@ Click below to view the flowchart.
 <br>
 
 Flowchart was built with [LucidChart.](https://lucid.app/lucidchart/) 
+
+### User Stories and Agile Technologies
+
+Agile techniques and technologies were used during the initial planning stages and then throughout the entire development process.
+
+GitHub's built in [Issues](https://github.com/features/issues) and [Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) functionalities were used. During initial planning, several User Stories were made as issues, and a couple Epic User Stories were made to track the bulk of them. This made it easy to track what was done, what needed to get done, and what was in the middle of doing. Of course, as with any project, several new issues were created to handle changing user stories, new functionalities, and to handle bugs as they were encountered. To orgainze these issues more, the issues were labeled as MVP, for Minimum Viable Product issues that must be completed for project submission, Styling, Documentation, Bugs, Testing, and Epic. This made it simple to filter the issues and see what needed to be done and prioritize issues based on development time available, similar to the agile technique of Timeboxing. An aditional label was crated, Quickwin, for feature implementation or bug fixes that were thought to require low time commitments, so that when development time was limited on any given day it was easy to find something that needed doing, or for when frustrations with larger issues were running high, some quantifyable progress could be made to provide momentum and avoid task burnout.
+
+There are several Enhancement labels still on the board in the Todo column, most of which are relics of the initial planning stages. These were made into future implementations after consultation with mentors and instructors when project scope was discussed.
+
+The HardParkers project hosted in GitHub can be found [here.](https://github.com/users/WSMorrison/projects/5)
+The Issues in the HardParkers repository can be found [here.](https://github.com/WSMorrison/Hard_Parkers/issues)
+
 
 <br>
 <hr>
@@ -490,6 +498,8 @@ This project uses HTML, CSS, [Python](https://www.python.org/) and Javascript pr
 - [Elephant SQL](https://www.elephantsql.com/)
 - [Favicon.io](https://favicon.io/)
 - [GitHub](https://github.com/)
+- [GitHub Issues](https://github.com/features/issues)
+- [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 - [GitPod](https://gitpod.io/)
 - [Gnu Image Manipulation Program](https://www.gimp.org/)
 - [Google Fonts](https://fonts.google.com/)
