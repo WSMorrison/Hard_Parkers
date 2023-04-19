@@ -22,6 +22,8 @@ The HardParkers website is is a simple, streamlined, and mobile focused resource
   * [Colour Scheme](#colour-scheme)
   * [Typography](#typography)
   * [Imagery](#imagery)
+
+* [Planning](#planning)
   * [Wireframes](#wireframes)
   * [Flowchart](#flowchart)
 
@@ -110,6 +112,60 @@ The Headline is Bebas Neue. This font was chosen for maximum dramatic impact. It
 For the sake of simplicity, the website only has one image. The splash image is intended to give the visitor an idea of what the website is about, with an impactful and emotional image not just of interesting cars at a meet, but lit with the sought golden hour evening light that evokes the feeling of being at a well run car meet with a good, relaxed vibe and good friends. There could be a temptation to allow Organizers to use their own image to capture the attention of Users, but the risk is that the website could end up a mess of incompatable images and styles that would make the site confusing, garish, and unpleasant to look at. This would take away from spirit of a simple, clean, and calm website.
 
 The splash image is by [Trevor Yale Ryan](https://www.tyrphoto.com/), and was originally published on the [Speedhunters](http://www.speedhunters.com/2020/01/slippers-and-sunsets-the-osixhi-meet/). It will serve as a placeholder until an appropriate new image can be taken at a local event.
+
+<br>
+<hr>
+
+## Planning
+
+<hr>
+
+A project of even such a small scope as this requires careful planning before any development can begin.
+
+### Models
+
+Originally, the intent was to use two different custom models plus an extension of the Django Auth user model. The User Car model was abandoned entirely for the scope of this project, and the initial outline for the Event model changed significantly before deployment. The models are shown below as originally planned:
+
+**Event model**
+
+This model was changed significantly through development as scope changed and real world application showed other functionalities were needed.
+
+| Key                     | Field        | Form          |
+|-------------------------|--------------|---------------|
+| Event Name              | Text         | Charfield     |
+| Event Description       | Text         | Text area     |
+| Event Date              | Datetime     | Datefield     |
+| Event Time              | Datetime     | Timefield     |
+| Number of cars          | Integer      | Integer field |
+| Number of featured cars | Integer      | Integer field |
+| Event Location          | Text         | Charfield     |
+| Google Maps link        | URL          | URLfield      |
+| Tshirt available?       | Boolean      | Checkbox      |
+| Registered Users        | Many to Many | User Object   |
+
+**Car model**
+
+This model was ultimately abandoned but included features like consideration as a feature car and whether the user was interested in an event Tshirt as part of their registration.
+
+| Key                      | Field   | Form                             |
+|--------------------------|---------|----------------------------------|
+| Year                     | Integer | Dropdown                         |
+| Make                     | Text    | Dropdown or Charfield            |
+| Model                    | Text    | Conditional Dropdon or Charfield |
+| Origin                   | Text    | Dropdown                         |
+| Major modifications      | Text    | Textarea                         |
+| VIP consideration        | Boolean | Checkbox                         |
+| VIP approved             | Boolean | Not on form                      |
+| Tshirt with registration | Boolean | Checkbox                         |
+
+**SiteUser model**
+
+| Key                      | Field      | Form        |
+|--------------------------|------------|-------------|
+| User                     | One to One | User object |
+| Organizer                | Boolean    |             |
+| Owner                    | Boolean    |             |
+
 
 ### Wireframes
 
@@ -370,7 +426,7 @@ Defensive code added includes:
 
 ### Future Implementations
 
-The HardParkers is a fully formed site, but as with anything there are at least a few improvements that could be made to better reflect the usage.
+The HardParkers is a fully formed site, but as with anything there are at least a few improvements that could be made to better reflect the usage. There are many possibilities for the concept of the HardParkers to grow and better serve the enthusiast community. Many of these enhancements are within the development skillset expected by Code Institute by this point, but the scope of the project was pared down with guidance from mentors and instructors until it was more commensurate with what those skills could get done before the project submission date. As such, there are several of these enhancements still on the Todo list of the HardParkers project board on GitHub.
 
 Some improvements that could be made include:
   - A front end control panel for the site Owner. It would allow the Owner to:
@@ -379,10 +435,16 @@ Some improvements that could be made include:
     - Create, edit, or delete any User information.
     - Create or delete any event.
     - Create, edit, or delete any event information.
+    - Additionally, there could be an approve event function.
   - Allow Users to register for events with a specific car. This could potentially take a few forms:
     - Add a single, specific car during registration.
     - Add a single, specific car to the SiteUser model that is automatically registered.
     - Add multiple cars to the SiteUser model, and select which car they want to register for events at the time of registration.
+  - Allow Organizers to promote featured cars.
+    - Organizers could set a number of "featured" cars for an event.
+    - Users could submit their car for feature consideration.
+    - Organizers could then approve or not approve a User's entry as a "feature" car for the event.
+    - Organizers could choose to implement a list of featured cars as part of the event details.
   - Add static, or interactive, Google Map directly in event details card; not just a link.
   - Have a dropdown menu for event genre for Organizer to select from, ie "Import," "Euro," "Truck," "Domestic," etc.
   - Allow a user to filter events by the genres from above, by date, size or by geography. Basically, allow the user to refine their view.
