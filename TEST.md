@@ -1022,15 +1022,25 @@ If not registered, event has reached maximum registration, and event date is in 
 
 In addition to formal manual testing, the site was shown to friends who would be representative as users for this website. Most of these testers are active in the car community, or at least adjacent enough to the car community to provide relevant, valuable feedback.
 
-- Despite the Code Institute instruction suggesting the website is too visually plain, representative user testers appreciated the simple and clear design.
-- Representative user testers were able to visit the site, view event lists and event details.
+- Despite the Code Institute instruction suggesting the website is too visually plain, representative User testers appreciated the simple and clear design.
+- Representative User testers were able to visit the site, view event lists and event details.
 - Navigation was clear and easy to follow.
 - Users were able to sign up for user accounts.
 - Users were able to register for events they liked.
 - Users were able to view a list of events they were registered for.
 - Users were able to unregister for events they decided they didn't like.
-- Users given the persmissions were able to create events and edit events easily.
-- Some input was given about the map URL field and the defensive design was adjusted to make it more simple.
+- Users given the permissions were able to create events easily.
+    - Feedback was given and addressed about certain special characters causing errors.
+    - Feedback was given and addressed about form validation error copy being vague.
+- Users given the permissions were able to edit events easily.
+    - Feedback was given and addressed about an error regarding form validation in the edit view.
+- Users were able to input event location URLs without issue.
+    - Feedback was given and addressed about URL examples and behavior nudging.
+    - Feedback was given and considered, but ultimately rejected, about having the URL be optional or allowing non-Google Maps sources. 
+        - The feature is considered too important to the purpose of the site.
+        - Non-Google Maps sources are considered non-standard and potentially unreliable, and would conflict with the simplicity and consistency the HardParkers intends to provide.
+        - The maps link is considered an MVP for future feature implementations.
+    - Feedback was given and addressed about URLs being different from different Google Maps sources, particularly mobile app sources which the HardParkers intends to directly target.
 - The printable attendee list printed without any formatting adjustments for a straightforward print. It was also tested for printing to a .pdf, which it did directly and without issue.
 
 <br>
@@ -1104,6 +1114,7 @@ The following bugs have not yet been fixed:
     - The form could be hardcoded or restructured without Crispy forms.
 3. Representative user manual testing failed to post an event and instead returned a blank form on one known occasion.
     - Could not duplicate the error on subsequent attempts; but form error codes and confirmation pages should prevent this.
+    - Possibly a result of Fixed Bug 15, above. 
 
 <hr>
 For educational purposes only.
