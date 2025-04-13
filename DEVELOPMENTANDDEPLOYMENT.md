@@ -87,7 +87,7 @@ Open the env.py file:
 
 >Update:
 >
->Elephant SQL shuttered in early 2025. The [Neon](https://neon.tech/) was selected to host the website because it has free hosting for Postgres, and is easy to use.
+>Elephant SQL shuttered in early 2025. [Neon](https://neon.tech/) was selected to host the website because it has free hosting for Postgres, and is easy to use.
 >
 >Create a Neon account if there isn't an existing one, then log in to access the dashboard.
 >
@@ -106,7 +106,7 @@ Open the env.py file:
 >
 >At the development environment command line, migrate the models to the SQL database by running the command <kbd>python3 manage.py migrate</kbd>.
 >
->If the website is deployed, the database url will need to be updated.
+>If the website is deployed, the database url will need to be updated in the deployment platform. The Hardparkers website is using Heroku.
 >
 >  1. Log into Heroku.
 >  2. Open the Hard_Parkers dashboard.
