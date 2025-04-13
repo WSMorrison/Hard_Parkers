@@ -29,12 +29,15 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 0
+DEBUG = 1
 
 # UNCOMMENT THIS WHEN SETTING DEBUG TO FALSE!
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['hardparkers.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['hardparkers.herokuapp.com',
+                'localhost',
+                '8000-wsmorrison-hardparkers-hmy2vuscaop.ws-us118.gitpod.io'
+                ]
 
 
 # Application definition
